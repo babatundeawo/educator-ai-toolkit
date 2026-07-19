@@ -57,10 +57,9 @@
     </header>
 
     <div class="container">
-
       <span class="breadcrumb-eyebrow">Tool 2 of 2</span>
       <h1>Weekly Lesson Note Generator</h1>
-      <p class="lede">Generates a complete weekly lesson note booklet, objectives, presentation steps, evaluation and assignments for every period, for any subject and class, from your e-notes or from a topic list alone.</p>
+      <p class="lede">Turns your e-notes or topic list into a complete lesson note booklet for any subject, class and week. Follow the steps below in order.</p>
 
       <div class="kpi-row">
         <div class="kpi"><span class="num">40</span><span class="lbl">Min per period</span></div>
@@ -69,77 +68,46 @@
         <div class="kpi"><span class="num">4+</span><span class="lbl">Steps, each with an elaborate note</span></div>
       </div>
 
-      <!-- WHAT IT DOES -->
-      <section class="section">
-        <h2>What it does</h2>
-        <p>For any subject, class and term, a single Project can hold materials for <strong>as many subjects and classes as you teach</strong>. Claude works out which materials belong to your request, fetches your state's official school calendar to compute the real dates for the requested week (including mid-term breaks), and writes a complete booklet covering every period in that week.</p>
-        <p>Every period includes: Behavioural Objectives, Entry Behaviour, Instructional Materials, Reference Materials (all as real bulleted lists), Introduction, Presentation (minimum 4 steps, each split into a Teacher's To-Do and a Students' Note written like a genuine notebook page, with proper mathematical formatting for any formula or calculation), a listed Evaluation, Conclusion, and a listed Assignment.</p>
-      </section>
+      <div class="stepper" data-stepper>
+        <p class="stepper-progress" data-stepper-progress><span class="dot"></span>Step 1 of 5</p>
 
-      <!-- TWO MODES -->
-      <section class="section">
-        <h2>Two supported modes, use whichever you have</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <span class="tag">Mode A, Enote mode</span>
-            <p style="margin-bottom:0;">You already have full e-notes with lesson content, definitions, examples, diagrams and exercises. Claude draws content primarily from your e-note, then the optional textbook, then credible online sources.</p>
-          </div>
-          <div class="card">
-            <span class="tag">Mode B, Topic-list mode</span>
-            <p style="margin-bottom:0;">You only have a weekly topic list (subject, class, session, topics, no content). Claude builds the full lesson content from credible online educational sources and standard textbooks.</p>
-          </div>
-        </div>
-        <div class="callout callout-info">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
-          <div><p>Mode detection is automatic and applies <strong>per Subject + Class</strong>. One subject can use Mode A while another uses Mode B, inside the very same Project.</p></div>
-        </div>
-      </section>
-
-      <!-- HOW TO ASK -->
-      <section class="section">
-        <h2>How to ask for it</h2>
-        <p>Always state the <strong>Subject</strong> and <strong>Class</strong>, plus the <strong>Week number</strong>. The <strong>Term is optional</strong>, Claude works it out by checking which set of materials contains that week number.</p>
-        <div class="card">
-          <ul style="margin-bottom:0;">
-            <li>"Generate Week 3, Physics, SS2"</li>
-            <li>"Generate Week 5, 2nd Term, Chemistry, SS1"</li>
-            <li>"Generate Week 1, Third Term, Basic Science, JSS1"</li>
-          </ul>
-        </div>
-        <p>Before producing the document, Claude confirms the Subject, Class, Term, Week number, computed dates, and any mid-term break or public holiday affecting that week.</p>
-      </section>
-
-      <hr class="flag-rule">
-
-      <!-- SETUP -->
-      <section class="section">
-        <h2>Setting up this tool</h2>
-
-        <div class="step-card">
+        <!-- STEP 1 -->
+        <details class="step-card" open>
           <span class="step-num">1</span>
-          <h3>Create a Project</h3>
-          <p>Create one Project dedicated to lesson notes, name it something like <span class="filename-chip">Lesson Note Generator</span>. One Project can hold materials for as many subjects and classes as you need.</p>
-        </div>
+          <summary>
+            <div><h3>Create a Project</h3><div class="step-teaser">One Project holds every subject and class you teach</div></div>
+          </summary>
+          <div class="step-body">
+            <p>In Claude, create one Project dedicated to lesson notes, name it something like <span class="filename-chip">Lesson Note Generator</span>. New to Claude? <a href="getting-started.html">Install it and create an account first →</a></p>
+            <div class="step-next-row">
+              <button class="btn btn-primary btn-sm" data-next-step>Project created, next step →</button>
+            </div>
+          </div>
+        </details>
 
-        <div class="step-card">
+        <!-- STEP 2 -->
+        <details class="step-card">
           <span class="step-num">2</span>
-          <h3>Edit and paste the instruction</h3>
-          <p>Open your Project's <strong>Project Instructions</strong> field. Before pasting the text below, edit the three placeholder lines near the top, then paste the whole thing in and save.</p>
-          <ul>
-            <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{SCHOOL_NAME}</span>, your school's full official name. Appears on every lesson note booklet, and overrides any school name found in an uploaded e-note.</li>
-            <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{STATE}</span>, the Nigerian state whose Ministry of Education school calendar Claude should fetch for computing weekly dates, e.g. "Oyo State."</li>
-            <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{LOCATION_CONTEXT}</span>: a short description of your students' everyday environment, so examples and the Entry Behaviour section feel relatable, e.g. "a rural community in Iseyin."</li>
-          </ul>
-          <details class="accordion" open>
-            <summary>View &amp; copy the full instruction text</summary>
-            <div class="accordion-body">
-              <div class="copy-btn-row">
-                <button class="copy-btn" data-copy-btn="lesson-instructions">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-                  Copy instructions
-                </button>
-              </div>
-              <div class="copy-block" id="lesson-instructions"># UNIFIED LESSON NOTE GENERATOR — ALL TERMS, ALL SUBJECTS, ALL CLASSES
+          <summary>
+            <div><h3>Edit and paste the instruction</h3><div class="step-teaser">Three details to fill in, then one copy &amp; paste</div></div>
+          </summary>
+          <div class="step-body">
+            <p>Open the Project's <strong>Project Instructions</strong> field. Before pasting, fill in these three placeholders in the text below:</p>
+            <ul>
+              <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{SCHOOL_NAME}</span>, your school's full name. Appears on every booklet.</li>
+              <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{STATE}</span>, the Nigerian state whose school calendar Claude should fetch, e.g. "Oyo State."</li>
+              <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{LOCATION_CONTEXT}</span>, your students' everyday environment, e.g. "a rural community in Iseyin."</li>
+            </ul>
+            <details class="accordion" open>
+              <summary>View &amp; copy the full instruction text</summary>
+              <div class="accordion-body">
+                <div class="copy-btn-row">
+                  <button class="copy-btn" data-copy-btn="lesson-instructions">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                    Copy instructions
+                  </button>
+                </div>
+                <div class="copy-block" id="lesson-instructions"># UNIFIED LESSON NOTE GENERATOR — ALL TERMS, ALL SUBJECTS, ALL CLASSES
 
 ---
 
@@ -517,163 +485,151 @@ Save to the outputs directory and present it to the user.
 8. Apply the document formatting specification.
 9. Confirm the Subject, Class, Term, Week, and computed dates in a brief preamble, then save and present the `.docx` file to the user.
 </div>
+              </div>
+            </details>
+            <div class="step-next-row">
+              <button class="btn btn-primary btn-sm" data-next-step>Pasted &amp; saved, next step →</button>
             </div>
-          </details>
-        </div>
-
-        <div class="step-card">
-          <span class="step-num">3</span>
-          <h3>Upload your materials</h3>
-          <p>Each Subject + Class combination needs its own set of three files, one per term. Name them clearly:</p>
-          <ul>
-            <li><span class="filename-chip">Physics_SS2_FirstTerm.docx</span></li>
-            <li><span class="filename-chip">Physics_SS2_SecondTerm.docx</span></li>
-            <li><span class="filename-chip">Physics_SS2_ThirdTerm.docx</span></li>
-            <li><span class="filename-chip">Chemistry_SS1_FirstTerm.docx</span></li>
-            <li><span class="filename-chip">Chemistry_SS1_FirstTerm_TopicList.docx</span> <em>(if using Mode B)</em></li>
-          </ul>
-          <div class="callout callout-success">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            <div><p>You can upload sets for as many subjects/classes as you teach in this one Project, one subject can use Mode A while another uses Mode B.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <hr class="flag-rule">
-
-      <!-- DATE COMPUTATION -->
-      <section class="section">
-        <h2>How the dates are computed</h2>
-        <ol>
-          <li>Claude identifies the official resumption date for the relevant term (the Monday of Week 1).</li>
-          <li>Week <em>n</em> Monday = Term Resumption Monday + (<em>n</em> − 1) × 7 days.</li>
-          <li>Week <em>n</em> Friday = Week <em>n</em> Monday + 4 days.</li>
-          <li>If a mid-term break falls on the Thursday to Friday of that week, the lesson week runs Monday to Wednesday only, and the break is noted explicitly.</li>
-          <li>If a mid-term break covers the whole computed week, Claude re-maps to the first teaching week after the break and tells you.</li>
-          <li>If a public holiday falls within the week, it's noted in the header, and lesson notes are still generated for the remaining teaching days.</li>
-        </ol>
-        <p style="color:var(--ink-soft); font-size:.92rem;">Dates are always fetched fresh from your state's Ministry of Education calendar, never hardcoded.</p>
-      </section>
-
-      <!-- PERIOD COUNT -->
-      <section class="section">
-        <h2>Periods per week</h2>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Subject</th><th>Periods per week</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Mathematics</strong></td><td>4 periods</td></tr>
-              <tr><td><strong>English Language</strong></td><td>4 periods</td></tr>
-              <tr><td><strong>All other subjects</strong></td><td>3 periods</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>Subtopics are distributed evenly across all periods in the week, with no repetition, if there are more subtopics than periods, the later periods carry the extra ones.</p>
-      </section>
-
-      <!-- DOCUMENT STRUCTURE -->
-      <section class="section">
-        <h2>What's inside every period</h2>
-        <div class="grid grid-2">
-          <div class="card"><span class="tag">Behavioural Objectives</span><p style="margin-bottom:0;">3 to 5 clear, measurable objectives students should achieve by lesson's end.</p></div>
-          <div class="card"><span class="tag">Entry Behaviour</span><p style="margin-bottom:0;">Prior knowledge students need, connected to the new topic and made relatable to your students' environment.</p></div>
-          <div class="card"><span class="tag">Instructional Materials</span><p style="margin-bottom:0;">Real or improvised teaching materials, including locally sourced ones, as a genuine bulleted list.</p></div>
-          <div class="card"><span class="tag">Reference Materials</span><p style="margin-bottom:0;">Textbook(s) and page ranges as a bulleted list (Mode A: from the e-note; Mode B: standard textbook + a credible online source).</p></div>
-          <div class="card"><span class="tag">Introduction</span><p style="margin-bottom:0;">Oral questions linking prior knowledge to the new topic; topic written on the board and copied.</p></div>
-          <div class="card"><span class="tag">Presentation</span><p style="margin-bottom:0;">Minimum 4 steps. Each step has a short Teacher's To-Do plus a Students' Note that reads like a real notebook page: a mini-heading, elaborated paragraphs, and formulas/calculations in proper mathematical formatting.</p></div>
-          <div class="card"><span class="tag">Evaluation</span><p style="margin-bottom:0;">3 to 5 written questions as a numbered list, students answer in their notebooks while the teacher supervises and corrects.</p></div>
-          <div class="card"><span class="tag">Conclusion</span><p style="margin-bottom:0;">A summary revisiting the main points, plus 2 to 3 oral revision questions.</p></div>
-          <div class="card"><span class="tag">Assignment</span><p style="margin-bottom:0;">One or more take-home tasks as a numbered/lettered list, board-ready for students to copy, never a single blended paragraph.</p></div>
-        </div>
-        <div class="callout callout-warn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.7 18a2 2 0 0 0 1.8 3h15a2 2 0 0 0 1.8-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-          <div><p>Periods run one after another in the same document with no page break between them, only a thin horizontal line separates them. Content is never repeated across periods within the same week.</p></div>
-        </div>
-      </section>
-
-      <!-- FORMATTING -->
-      <section class="section">
-        <h2>Word document formatting</h2>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Property</th><th>Value</th></tr></thead>
-            <tbody>
-              <tr><td>Font</td><td>Times New Roman</td></tr>
-              <tr><td>Font size</td><td>12pt body · 14pt bold period headers · 16pt bold document header</td></tr>
-              <tr><td>Paper size</td><td>A4</td></tr>
-              <tr><td>Margins</td><td>Narrow, 0.5" on all sides</td></tr>
-              <tr><td>Line spacing</td><td>Single, with 6pt spacing after each paragraph</td></tr>
-              <tr><td>Page breaks</td><td>None between periods. A thin rule line separates them instead</td></tr>
-              <tr><td>Alignment</td><td>Justified body text; centred document header</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- OUTPUT FILE -->
-      <section class="section">
-        <h2>Output file</h2>
-        <p>One .docx file per request, named:</p>
-        <span class="filename-chip">[Class]_[Subject]_[Term]Term_Week[n]_LessonNote.docx</span>
-      </section>
-
-      <!-- QUALITY CONTROL -->
-      <section class="section">
-        <details class="accordion">
-          <summary>Behind the scenes, quality control rules &amp; full workflow</summary>
-          <div class="accordion-body">
-            <h4>Quality control rules</h4>
-            <ol>
-              <li>Clear, formal, classroom-ready British English (UK), except Yoruba (pure Yoruba with full tonal marks) and Arabic (full Arabic script).</li>
-              <li>Presentation steps never fewer than 4 per period.</li>
-              <li>Every step contains both a Teacher's To-Do and a Students' Note, clearly labelled and visually separated, never merged into one paragraph.</li>
-              <li>Every Students' Note reads like a genuine notebook page: a bolded mini-heading, fully elaborated paragraphs with bolded key terms, properly formatted formulas on their own line, and a complete stepwise worked example where numerical, never a single short sentence or generic boilerplate.</li>
-              <li>Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks are all genuine bulleted or numbered lists, one item per line, never a single run-on paragraph.</li>
-              <li>All formulas, equations, and calculations anywhere in the document use proper mathematical formatting (true fractions, superscripts, subscripts, symbols), never flattened plain text.</li>
-              <li>The school name always matches your configured {SCHOOL_NAME}, overriding any name found in uploaded materials.</li>
-              <li>Layout and quality stay identical regardless of who generates the document, or which subject/class.</li>
-              <li>Dates are always computed dynamically from the fetched state calendar, never hardcoded.</li>
-              <li>Mid-term break adjustments are clearly noted in the week header and dates.</li>
-              <li>No content repeats across periods within the same week.</li>
-              <li>Subtopics are distributed evenly and logically across all periods.</li>
-              <li>Each period immediately follows the previous one, no page breaks.</li>
-              <li>Only the exact Subject + Class + Term materials containing the requested week are used, never mixed with other materials.</li>
-              <li>Before generating, Claude confirms Subject, Class, Term, Week, computed dates, and any holiday/break affecting that week.</li>
-            </ol>
-            <h4>Full workflow</h4>
-            <ol>
-              <li>Parse Subject, Class, Week number, and Term (if stated), ask if Subject or Class is missing or ambiguous.</li>
-              <li>Locate the correct materials for that Subject + Class and detect Mode A or B.</li>
-              <li>If the term wasn't specified, determine it from which material set contains the requested week.</li>
-              <li>Fetch the current state school calendar online.</li>
-              <li>Compute the Monday to Friday date range; check for mid-term breaks and public holidays.</li>
-              <li>Detect the subject and apply the correct period count.</li>
-              <li>Build the lesson note booklet following the document structure, splitting every Presentation Step into a Teacher's To-Do and a fully elaborated, multi-paragraph Students' Note.</li>
-              <li>Apply the document formatting specification.</li>
-              <li>Confirm the Subject, Class, Term, Week and computed dates, then save and present the file.</li>
-            </ol>
           </div>
         </details>
-      </section>
+
+        <!-- STEP 3 -->
+        <details class="step-card">
+          <span class="step-num">3</span>
+          <summary>
+            <div><h3>Upload your materials</h3><div class="step-teaser">One set of files per subject + class</div></div>
+          </summary>
+          <div class="step-body">
+            <div class="grid grid-2">
+              <div class="card">
+                <span class="tag">Mode A, have e-notes</span>
+                <p style="margin-bottom:0;">Upload three files, one per term, with full lesson content. Claude uses these first.</p>
+              </div>
+              <div class="card">
+                <span class="tag">Mode B, topic list only</span>
+                <p style="margin-bottom:0;">Upload three topic lists (subject, class, topics, no content). Claude builds the content from credible sources.</p>
+              </div>
+            </div>
+            <p>Name files clearly so Claude can match them to your request:</p>
+            <ul>
+              <li><span class="filename-chip">Physics_SS2_FirstTerm.docx</span></li>
+              <li><span class="filename-chip">Physics_SS2_SecondTerm.docx</span></li>
+              <li><span class="filename-chip">Physics_SS2_ThirdTerm.docx</span></li>
+              <li><span class="filename-chip">Chemistry_SS1_FirstTerm_TopicList.docx</span> <em>(Mode B example)</em></li>
+            </ul>
+            <div class="callout callout-success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              <div><p>Upload sets for as many subjects/classes as you teach, in this one Project. One subject can use Mode A while another uses Mode B.</p></div>
+            </div>
+            <div class="step-next-row">
+              <button class="btn btn-primary btn-sm" data-next-step>Uploaded, next step →</button>
+            </div>
+          </div>
+        </details>
+
+        <!-- STEP 4 -->
+        <details class="step-card">
+          <span class="step-num">4</span>
+          <summary>
+            <div><h3>Ask for a lesson note</h3><div class="step-teaser">One sentence, in the Project chat</div></div>
+          </summary>
+          <div class="step-body">
+            <p>State the <strong>Subject</strong>, <strong>Class</strong>, and <strong>Week number</strong>. Term is optional, Claude works it out for you.</p>
+            <div class="card">
+              <ul style="margin-bottom:0;">
+                <li>"Generate Week 3, Physics, SS2"</li>
+                <li>"Generate Week 5, 2nd Term, Chemistry, SS1"</li>
+                <li>"Generate Week 1, Third Term, Basic Science, JSS1"</li>
+              </ul>
+            </div>
+            <p style="margin-bottom:0;">Claude confirms the Subject, Class, Term, Week, dates, and any mid-term break before producing the document.</p>
+            <div class="step-next-row">
+              <button class="btn btn-primary btn-sm" data-next-step>Got my document, next step →</button>
+            </div>
+          </div>
+        </details>
+
+        <!-- STEP 5 -->
+        <details class="step-card">
+          <span class="step-num">5</span>
+          <summary>
+            <div><h3>What you'll get back</h3><div class="step-teaser">One .docx booklet, every period covered</div></div>
+          </summary>
+          <div class="step-body">
+            <p>A file named <span class="filename-chip">[Class]_[Subject]_[Term]Term_Week[n]_LessonNote.docx</span>, with every period containing:</p>
+            <div class="grid grid-2">
+              <div class="card"><span class="tag">Behavioural Objectives</span><p style="margin-bottom:0;">3 to 5 clear, measurable objectives, as a list.</p></div>
+              <div class="card"><span class="tag">Entry Behaviour</span><p style="margin-bottom:0;">Prior knowledge, linked to your students' environment.</p></div>
+              <div class="card"><span class="tag">Instructional &amp; Reference Materials</span><p style="margin-bottom:0;">Both as bulleted lists, with page ranges for references.</p></div>
+              <div class="card"><span class="tag">Presentation</span><p style="margin-bottom:0;">Minimum 4 steps. Each has a Teacher's To-Do plus a Students' Note that reads like a real notebook page, formulas and calculations properly formatted.</p></div>
+              <div class="card"><span class="tag">Evaluation &amp; Assignment</span><p style="margin-bottom:0;">Both as numbered lists, never one blended paragraph.</p></div>
+              <div class="card"><span class="tag">Formatting</span><p style="margin-bottom:0;">Times New Roman, A4, narrow margins, no page breaks between periods.</p></div>
+            </div>
+            <details class="accordion">
+              <summary>See the full rulebook, dates, periods, formatting &amp; quality control</summary>
+              <div class="accordion-body">
+                <h4>How the dates are computed</h4>
+                <ol>
+                  <li>Claude finds the term's official resumption date (Monday of Week 1).</li>
+                  <li>Week <em>n</em> Monday = Resumption Monday + (<em>n</em> − 1) × 7 days; Week <em>n</em> Friday = that Monday + 4 days.</li>
+                  <li>A Thursday–Friday mid-term break shortens the week to Monday–Wednesday, noted explicitly.</li>
+                  <li>A break covering the whole week re-maps to the next teaching week.</li>
+                  <li>A public holiday inside the week is noted, remaining days still get notes.</li>
+                </ol>
+                <h4>Periods per week</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th>Subject</th><th>Periods</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong>Mathematics</strong></td><td>4</td></tr>
+                      <tr><td><strong>English Language</strong></td><td>4</td></tr>
+                      <tr><td><strong>All other subjects</strong></td><td>3</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4>Word formatting</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+                    <tbody>
+                      <tr><td>Font</td><td>Times New Roman, 12pt body</td></tr>
+                      <tr><td>Paper</td><td>A4, narrow margins (0.5")</td></tr>
+                      <tr><td>Spacing</td><td>Single, 6pt after each paragraph</td></tr>
+                      <tr><td>Page breaks</td><td>None between periods, a thin rule line instead</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4>Quality control rules</h4>
+                <ol>
+                  <li>Clear, formal British English (UK), except Yoruba (pure Yoruba, full tonal marks) and Arabic (full Arabic script).</li>
+                  <li>Every step has both a Teacher's To-Do and a notebook-style Students' Note, never merged.</li>
+                  <li>Instructional Materials, Reference Materials, Evaluation, and Assignment are always real lists.</li>
+                  <li>Formulas and calculations always use proper mathematical formatting.</li>
+                  <li>The school name always matches your configured {SCHOOL_NAME}.</li>
+                  <li>Dates are always computed fresh from the fetched state calendar.</li>
+                  <li>No content repeats across periods within the same week.</li>
+                  <li>Only the exact Subject + Class + Term materials for the requested week are used.</li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </details>
+      </div>
 
       <!-- TIPS -->
       <section class="section">
-        <h2>Helpful tips</h2>
+        <h2>Quick reference</h2>
         <ul>
-          <li><strong>Missing details?</strong> Claude asks instead of guessing if Subject or Class is unclear.</li>
-          <li><strong>Multiple subjects uploaded?</strong> Always name your request with Subject + Class so Claude knows which materials to use.</li>
-          <li><strong>Yoruba subject?</strong> Lesson notes are generated entirely in pure Yoruba with full tonal marks.</li>
-          <li><strong>Arabic subject?</strong> Lesson notes are generated entirely in full Arabic script.</li>
-          <li><strong>Presentation steps?</strong> Each step shows a short Teacher's To-Do followed by a Students' Note written exactly like a real notebook page, mini-heading, elaborated paragraphs, and any formula or calculation properly typeset, never a single thin sentence.</li>
-          <li><strong>Materials, evaluation, assignment?</strong> Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks are always real bulleted/numbered lists, never one run-on paragraph.</li>
-          <li><strong>Mid-term breaks/holidays?</strong> Claude checks the calendar automatically and adjusts the date range for you.</li>
+          <li><strong>Missing details?</strong> Claude asks instead of guessing.</li>
+          <li><strong>Yoruba / Arabic subject?</strong> Generated entirely in that language's full script.</li>
+          <li><strong>Not happy with a result?</strong> Just reply in the same chat, e.g. "make Step 3 shorter."</li>
         </ul>
         <div class="table-wrap">
           <table>
             <thead><tr><th>What you want</th><th>What to type</th></tr></thead>
             <tbody>
-              <tr><td>Lesson note (term unspecified)</td><td>Generate Week [n], [Subject], [Class]</td></tr>
-              <tr><td>Lesson note (term specified)</td><td>Generate Week [n], [Term] Term, [Subject], [Class]</td></tr>
+              <tr><td>Term unspecified</td><td>Generate Week [n], [Subject], [Class]</td></tr>
+              <tr><td>Term specified</td><td>Generate Week [n], [Term] Term, [Subject], [Class]</td></tr>
             </tbody>
           </table>
         </div>

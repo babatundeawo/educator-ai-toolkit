@@ -57,14 +57,13 @@
     </header>
 
     <div class="container">
-
       <span class="breadcrumb-eyebrow">Tool 1 of 2</span>
       <h1>Exam, Marking Guide &amp; Revision File Generator</h1>
-      <p class="lede">Turn your uploaded e-notes into a properly formatted examination question paper with its own marking guide, or into a self-study revision file, for any term, subject and class.</p>
+      <p class="lede">Turns your e-notes into a formatted exam with marking guide, or a self-study revision file. Follow the steps below in order.</p>
 
       <div class="callout callout-warn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.7 18a2 2 0 0 0 1.8 3h15a2 2 0 0 0 1.8-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-        <div><p><strong>Not yet tailored to English Language or Mathematics</strong> (Mathematics especially, because of diagrams). Hold off on those two subjects until a tailored version is ready, every other subject works fully today.</p></div>
+        <div><p>Not yet tailored to English Language or Mathematics. Every other subject works fully today.</p></div>
       </div>
 
       <div class="kpi-row">
@@ -74,76 +73,45 @@
         <div class="kpi"><span class="num">70</span><span class="lbl">Total marks</span></div>
       </div>
 
-      <!-- WHAT IT PRODUCES -->
-      <section class="section">
-        <h2>What it produces</h2>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Exam</th><th>Revision file</th></tr></thead>
-            <tbody>
-              <tr>
-                <td>Question paper (Section A: 30 objective questions, Section B: theory) <strong>plus</strong> a separate Marking Guide. 70 marks total. Two separate .docx files.</td>
-                <td>Summary notes for every topic, plus practice questions with full answers underneath each one, in one Word document. A self-study pack for students.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      <div class="stepper" data-stepper>
+        <p class="stepper-progress" data-stepper-progress><span class="dot"></span>Step 1 of 5</p>
 
-      <!-- HOW TO ASK -->
-      <section class="section">
-        <h2>How to ask for it</h2>
-        <p>Always state the <strong>Term</strong>, <strong>Subject</strong> and <strong>Class</strong>, and make clear whether you want an <strong>exam</strong> or a <strong>revision file</strong>. If any of these is missing or unclear, Claude will ask you to confirm rather than guess.</p>
-        <div class="grid grid-2">
-          <div class="card">
-            <span class="tag">Exam requests</span>
-            <ul style="margin-bottom:0;">
-              <li>"Generate First Term Examination for Physics SS2"</li>
-              <li>"Create 2nd term exam, Basic Science, JSS1"</li>
-              <li>"Third term, Mathematics, JSS3"</li>
-            </ul>
-          </div>
-          <div class="card">
-            <span class="tag">Revision file requests</span>
-            <ul style="margin-bottom:0;">
-              <li>"Generate a revision file for Second Term, Physics, SS2"</li>
-              <li>"Create revision notes for First Term, Basic Science, JSS1"</li>
-              <li>"Third term revision file for Chemistry SS1"</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <hr class="flag-rule">
-
-      <!-- SETUP -->
-      <section class="section">
-        <h2>Setting up this tool</h2>
-
-        <div class="step-card">
+        <!-- STEP 1 -->
+        <details class="step-card" open>
           <span class="step-num">1</span>
-          <h3>Create a Project</h3>
-          <p>Create one Project dedicated to exams and revision files, name it something like <span class="filename-chip">Exam &amp; Revision Generator</span>. It can hold materials for as many subjects and classes as you need, so you only ever need this one Project.</p>
-        </div>
+          <summary>
+            <div><h3>Create a Project</h3><div class="step-teaser">One Project holds every subject and class you teach</div></div>
+          </summary>
+          <div class="step-body">
+            <p>In Claude, create one Project dedicated to exams and revision files, name it something like <span class="filename-chip">Exam &amp; Revision Generator</span>. New to Claude? <a href="getting-started.html">Install it and create an account first →</a></p>
+            <div class="step-next-row">
+              <button class="btn btn-primary btn-sm" data-next-step>Project created, next step →</button>
+            </div>
+          </div>
+        </details>
 
-        <div class="step-card">
+        <!-- STEP 2 -->
+        <details class="step-card">
           <span class="step-num">2</span>
-          <h3>Edit and paste the instruction</h3>
-          <p>Open your Project's <strong>Project Instructions</strong> / <strong>Custom Instructions</strong> field. Before pasting the text below, edit the two placeholder lines near the top with your own school's details, then paste the whole thing in and save.</p>
-          <ul>
-            <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{SCHOOL_NAME}</span>, your school's full official name. Appears on every generated exam header.</li>
-            <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{SCHOOL_ADDRESS}</span>, your school's address, e.g. "Apapa, Moniya, Ibadan."</li>
-          </ul>
-          <details class="accordion" open>
-            <summary>View &amp; copy the full instruction text</summary>
-            <div class="accordion-body">
-              <div class="copy-btn-row">
-                <button class="copy-btn" data-copy-btn="exam-instructions">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-                  Copy instructions
-                </button>
-              </div>
-              <div class="copy-block" id="exam-instructions"># PROJECT INSTRUCTIONS — Automated Examination, Marking Guide &amp; Revision File Generator
+          <summary>
+            <div><h3>Edit and paste the instruction</h3><div class="step-teaser">Two details to fill in, then one copy &amp; paste</div></div>
+          </summary>
+          <div class="step-body">
+            <p>Open the Project's <strong>Project Instructions</strong> field. Before pasting, fill in these two placeholders in the text below:</p>
+            <ul>
+              <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{SCHOOL_NAME}</span>, your school's full name. Appears on every exam header.</li>
+              <li><span class="placeholder" style="background:var(--gold-tint); color:var(--gold-deep); padding:1px 6px; border-radius:6px; font-family:var(--font-mono); font-size:.85rem;">{SCHOOL_ADDRESS}</span>, e.g. "Apapa, Moniya, Ibadan."</li>
+            </ul>
+            <details class="accordion" open>
+              <summary>View &amp; copy the full instruction text</summary>
+              <div class="accordion-body">
+                <div class="copy-btn-row">
+                  <button class="copy-btn" data-copy-btn="exam-instructions">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+                    Copy instructions
+                  </button>
+                </div>
+                <div class="copy-block" id="exam-instructions"># PROJECT INSTRUCTIONS — Automated Examination, Marking Guide &amp; Revision File Generator
 
 <span class="placeholder">**{SCHOOL_NAME: [Insert your school's full official name here, e.g. "Knowledge Base International Schools"]}**</span>
 
@@ -372,124 +340,144 @@ Save to the outputs directory and present it to the user.
 5. Apply the simpler header (Section 11) and standard body formatting (Section 9).
 6. Save the single file with a descriptive name and present it to the user.
 </div>
+              </div>
+            </details>
+            <div class="step-next-row">
+              <button class="btn btn-primary btn-sm" data-next-step>Pasted &amp; saved, next step →</button>
             </div>
-          </details>
-        </div>
+          </div>
+        </details>
 
-        <div class="step-card">
+        <!-- STEP 3 -->
+        <details class="step-card">
           <span class="step-num">3</span>
-          <h3>Upload your e-notes</h3>
-          <p>Upload e-notes for every subject and class you want covered, named clearly so Claude can match them, e.g.:</p>
-          <ul>
-            <li><span class="filename-chip">Physics_SS2_FirstTerm.docx</span></li>
-            <li><span class="filename-chip">Physics_SS2_SecondTerm.docx</span></li>
-            <li><span class="filename-chip">Physics_SS2_ThirdTerm.docx</span></li>
-            <li><span class="filename-chip">BasicScience_JSS1_FirstTerm.docx</span></li>
-          </ul>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Class type</th><th>Terms to upload</th></tr></thead>
-              <tbody>
-                <tr><td><strong>JSS3 / SS3</strong></td><td>1st Term and 2nd Term only, there is no 3rd term exam for these classes.</td></tr>
-                <tr><td><strong>JSS1, JSS2, SS1, SS2</strong></td><td>All 3 terms, 1st, 2nd, and 3rd Term.</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <hr class="flag-rule">
-
-      <!-- HOW IT FINDS NOTES -->
-      <section class="section">
-        <h2>How Claude locates the right e-note(s)</h2>
-        <ol>
-          <li>It searches your uploaded files for filenames matching the requested Subject + Class + Term.</li>
-          <li>For a <strong>First</strong> or <strong>Second Term</strong> request, it uses only that single matching e-note.</li>
-          <li>For a <strong>Third Term</strong> request, it locates all three e-notes (1st, 2nd and 3rd term) for that Subject + Class.</li>
-          <li>If no exact match is found, or more than one file plausibly matches, it lists the candidate filenames and asks you to confirm, it never silently guesses.</li>
-          <li>The Subject and Class are read exactly as they appear in the e-note itself, and used to populate the document header.</li>
-        </ol>
-      </section>
-
-      <!-- COMPOSITION RULES -->
-      <section class="section">
-        <h2>Exam composition rules</h2>
-        <p><strong>First or Second Term request:</strong> 100% of both Section A and Section B comes from that single term's e-note.</p>
-        <p><strong>Third Term request:</strong> content is blended from all three terms, in this fixed ratio:</p>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Source</th><th>Objective (Section A)</th><th>Theory (Section B)</th></tr></thead>
-            <tbody>
-              <tr><td>1st Term e-note</td><td>5 questions</td><td>1 question</td></tr>
-              <tr><td>2nd Term e-note</td><td>5 questions</td><td>1 question</td></tr>
-              <tr><td>3rd Term e-note</td><td>20 questions</td><td>4 questions (3 regular + 1 extra)</td></tr>
-              <tr><td><strong>Total</strong></td><td><strong>30 questions</strong></td><td><strong>6 questions offered</strong></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p style="color:var(--ink-soft); font-size:.92rem;">Conceptually this is a 20% / 20% / 60% split across 1st / 2nd / 3rd term, realised as the fixed counts above.</p>
-        <div class="callout callout-info">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
-          <div><p>Within any single e-note, questions are spread evenly across its topics, never clustered on just one or two. And each time you generate an exam, even for the same term/subject/class, the question selection, angle and phrasing is varied, so repeat requests don't produce an identical paper.</p></div>
-        </div>
-      </section>
-
-      <!-- SECTION A -->
-      <section class="section">
-        <h2>Section A, Objective questions (30 marks)</h2>
-        <ul>
-          <li>30 questions, 1 mark each, each with exactly 4 options lettered <strong>A to D</strong>.</li>
-          <li>Question and options run together on a single paragraph/line, for example: <em>"1. What is the SI unit of force? A. Newton B. Joule C. Watt D. Pascal"</em>, never split across separate lines.</li>
-          <li>1st/2nd term papers: all 30 questions from that term's e-note.</li>
-          <li>3rd term papers: 5 from 1st term, 5 from 2nd term, 20 from 3rd term, mixed into a randomised order, not grouped by source term.</li>
-          <li>Correct answers (A/B/C/D) are randomly and evenly distributed, no more than 2 to 3 in a row share the same letter, and no single letter dominates.</li>
-        </ul>
-      </section>
-
-      <!-- SECTION B -->
-      <section class="section">
-        <h2>Section B, Theory questions (40 marks)</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <span class="tag">1st / 2nd term papers</span>
-            <ul style="margin-bottom:0;">
-              <li>5 questions, all from that term's e-note</li>
-              <li>Candidates answer <strong>any 4 of 5</strong></li>
-              <li>10 marks per answered question → 40 marks total</li>
-              <li>Structured subparts, e.g. 1a, 1b, 1ci, 1cii</li>
+          <summary>
+            <div><h3>Upload your e-notes</h3><div class="step-teaser">Named clearly, so Claude can match them</div></div>
+          </summary>
+          <div class="step-body">
+            <ul>
+              <li><span class="filename-chip">Physics_SS2_FirstTerm.docx</span></li>
+              <li><span class="filename-chip">Physics_SS2_SecondTerm.docx</span></li>
+              <li><span class="filename-chip">Physics_SS2_ThirdTerm.docx</span></li>
+              <li><span class="filename-chip">BasicScience_JSS1_FirstTerm.docx</span></li>
             </ul>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Class type</th><th>Terms to upload</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>JSS3 / SS3</strong></td><td>1st and 2nd Term only, no 3rd term exam for these classes.</td></tr>
+                  <tr><td><strong>JSS1, JSS2, SS1, SS2</strong></td><td>All 3 terms.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="margin-bottom:0; color:var(--ink-soft); font-size:.92rem;">If a filename is ambiguous, Claude lists the candidates and asks you to confirm rather than guessing.</p>
+            <div class="step-next-row">
+              <button class="btn btn-primary btn-sm" data-next-step>Uploaded, next step →</button>
+            </div>
           </div>
-          <div class="card">
-            <span class="tag">3rd term papers</span>
-            <ul style="margin-bottom:0;">
-              <li>6 questions: 1 from 1st term, 1 from 2nd term, 4 from 3rd term (3 regular + 1 extra)</li>
-              <li>Candidates answer <strong>any 5 of 6</strong></li>
-              <li>8 marks per answered question → 40 marks total</li>
-              <li>Structured subparts summing to 8 marks each</li>
-            </ul>
+        </details>
+
+        <!-- STEP 4 -->
+        <details class="step-card">
+          <span class="step-num">4</span>
+          <summary>
+            <div><h3>Ask for an exam or revision file</h3><div class="step-teaser">One sentence, in the Project chat</div></div>
+          </summary>
+          <div class="step-body">
+            <p>Always state the <strong>Term</strong>, <strong>Subject</strong>, and <strong>Class</strong>, and make clear whether you want an exam or a revision file.</p>
+            <div class="grid grid-2">
+              <div class="card">
+                <span class="tag">Exam requests</span>
+                <ul style="margin-bottom:0;">
+                  <li>"Generate First Term Examination for Physics SS2"</li>
+                  <li>"Create 2nd term exam, Basic Science, JSS1"</li>
+                  <li>"Third term, Mathematics, JSS3"</li>
+                </ul>
+              </div>
+              <div class="card">
+                <span class="tag">Revision file requests</span>
+                <ul style="margin-bottom:0;">
+                  <li>"Generate a revision file for Second Term, Physics, SS2"</li>
+                  <li>"Create revision notes for First Term, Basic Science, JSS1"</li>
+                  <li>"Third term revision file for Chemistry SS1"</li>
+                </ul>
+              </div>
+            </div>
+            <p style="margin-bottom:0;">Missing or unclear details? Claude asks you to confirm rather than guessing.</p>
+            <div class="step-next-row">
+              <button class="btn btn-primary btn-sm" data-next-step>Got my document, next step →</button>
+            </div>
           </div>
-        </div>
-        <p><strong>Total exam marks: 30 + 40 = 70</strong>, regardless of term.</p>
-      </section>
+        </details>
 
-      <!-- CANDIDATE INSTRUCTIONS -->
-      <section class="section">
-        <h2>Candidate instructions</h2>
-        <p>Standard instructions are drafted automatically near the top of the paper, for example:</p>
-        <ul>
-          <li>"Answer ALL questions in Section A."</li>
-          <li>"Answer ANY FOUR (4) questions in Section B.", 1st/2nd term papers</li>
-          <li>"Answer ANY FIVE (5) questions in Section B.", 3rd term papers</li>
-        </ul>
-      </section>
-
-      <!-- HEADERS -->
-      <section class="section">
-        <h2>Document headers</h2>
-        <h3>Question paper</h3>
-        <p>Centered, bold, on separate lines, slightly larger than body text:</p>
-        <div class="copy-block" style="max-height:none;">{SCHOOL_NAME}
+        <!-- STEP 5 -->
+        <details class="step-card">
+          <span class="step-num">5</span>
+          <summary>
+            <div><h3>What you'll get back</h3><div class="step-teaser">A properly formatted, ready-to-print Word file</div></div>
+          </summary>
+          <div class="step-body">
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Request</th><th>Files you get</th></tr></thead>
+                <tbody>
+                  <tr><td>Exam</td><td><span class="filename-chip">…_Questions.docx</span> + <span class="filename-chip">…_MarkingGuide.docx</span></td></tr>
+                  <tr><td>Revision file</td><td><span class="filename-chip">…_RevisionFile.docx</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="grid grid-2">
+              <div class="card">
+                <span class="tag">Exam</span>
+                <p style="margin-bottom:0;">Section A: 30 objective questions (A–D), 30 marks. Section B: theory questions, 40 marks. Third Term blends all three terms in a fixed ratio.</p>
+              </div>
+              <div class="card">
+                <span class="tag">Revision file</span>
+                <p style="margin-bottom:0;">Summary notes for every topic, plus practice questions with the answer directly underneath each one. Always 100% from the single requested term.</p>
+              </div>
+            </div>
+            <details class="accordion">
+              <summary>See the full rulebook, section breakdowns, headers &amp; workflow</summary>
+              <div class="accordion-body">
+                <h4>How Claude locates the right e-note(s)</h4>
+                <ol>
+                  <li>Matches your uploaded filenames to the requested Subject + Class + Term.</li>
+                  <li>First/Second Term request → uses only that single e-note.</li>
+                  <li>Third Term request → locates all three e-notes for that Subject + Class.</li>
+                  <li>No exact match, or more than one plausible match → lists candidates and asks you to confirm.</li>
+                </ol>
+                <h4>Exam composition rules</h4>
+                <p>1st/2nd Term: 100% of both sections from that term's e-note. 3rd Term blends all three, in this fixed ratio:</p>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th>Source</th><th>Objective (A)</th><th>Theory (B)</th></tr></thead>
+                    <tbody>
+                      <tr><td>1st Term</td><td>5</td><td>1</td></tr>
+                      <tr><td>2nd Term</td><td>5</td><td>1</td></tr>
+                      <tr><td>3rd Term</td><td>20</td><td>4 (3 regular + 1 extra)</td></tr>
+                      <tr><td><strong>Total</strong></td><td><strong>30</strong></td><td><strong>6 offered</strong></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4>Section A, Objective (30 marks)</h4>
+                <ul>
+                  <li>30 questions, 1 mark each, 4 options lettered A–D, question and options on one line.</li>
+                  <li>Answer key is randomly and evenly distributed, never dominated by one letter.</li>
+                </ul>
+                <h4>Section B, Theory (40 marks)</h4>
+                <div class="grid grid-2">
+                  <div class="card">
+                    <span class="tag">1st / 2nd term</span>
+                    <p style="margin-bottom:0;">5 questions, answer any 4, 10 marks each.</p>
+                  </div>
+                  <div class="card">
+                    <span class="tag">3rd term</span>
+                    <p style="margin-bottom:0;">6 questions (1+1+4), answer any 5, 8 marks each.</p>
+                  </div>
+                </div>
+                <h4>Document headers</h4>
+                <p>Question paper:</p>
+                <div class="copy-block" style="max-height:none;">{SCHOOL_NAME}
 {SCHOOL_ADDRESS}
 SUBJECT: [from e-note]
 CLASS: [from e-note]
@@ -497,9 +485,8 @@ CLASS: [from e-note]
 
 Name: _______________________________
 Date: _____________  Time Allowed: _____________</div>
-        <h3>Marking guide</h3>
-        <p>Simpler header, no school name/address, bold and centered:</p>
-        <div class="copy-block" style="max-height:none;">MARKING GUIDE — [SUBJECT] [CLASS] [TERM] TERM EXAMINATION
+                <p>Marking guide:</p>
+                <div class="copy-block" style="max-height:none;">MARKING GUIDE — [SUBJECT] [CLASS] [TERM] TERM EXAMINATION
 
 Section A: 1-A, 2-C, 3-B, 4-D, 5-A, ... (through 30)
 
@@ -507,104 +494,42 @@ Section B:
 Question 1
 1a. [question text] — Model answer ... (3 marks)
 1b. [question text] — Model answer ... (3 marks)
-1ci. [question text] — Model answer ... (2 marks)
-1cii. [question text] — Model answer ... (2 marks)
 Total: 10 marks</div>
-      </section>
-
-      <!-- FORMATTING -->
-      <section class="section">
-        <h2>Word document formatting</h2>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Property</th><th>Value</th></tr></thead>
-            <tbody>
-              <tr><td>Font</td><td>Times New Roman, 11pt body text</td></tr>
-              <tr><td>Margins</td><td>Narrow, 0.5" on all sides</td></tr>
-              <tr><td>Line spacing</td><td>Single, minimal extra spacing between questions</td></tr>
-              <tr><td>Question paper length</td><td>Kept within 2 pages where possible (completeness prioritised if a conflict arises)</td></tr>
-              <tr><td>Marking guide length</td><td>No strict page limit</td></tr>
-              <tr><td>Headers</td><td>Bold, centered, slightly larger than body text</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- REVISION FILE -->
-      <section class="section">
-        <h2>Revision file: a different request type</h2>
-        <p>Triggered by asking for a "revision file," "revision notes," or similar, for a given Term + Subject + Class.</p>
-        <div class="callout callout-important">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.7 18a2 2 0 0 0 1.8 3h15a2 2 0 0 0 1.8-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-          <div><p><strong>Key difference from the exam:</strong> a revision file is always 100% from the single requested term's e-note, even a "Third Term revision file" does not mix in 1st or 2nd term content. There is no ratio-splitting here.</p></div>
-        </div>
-        <h3>Content structure (one Word document)</h3>
-        <ol>
-          <li><strong>Summary Notes</strong>, concise key points under a heading for every topic covered that term. No topics skipped.</li>
-          <li><strong>Practice Questions</strong>, theory-style only (no objective/A to D questions), spread evenly across all topics, each immediately followed by its full answer directly underneath. No separate answer key and no withheld answers, this is a self-study document.</li>
-        </ol>
-        <p>There's no mark allocation and no "answer any X of Y" instruction here, every question presented gets an answer, since it's a study aid rather than a graded exam.</p>
-        <h3>Header</h3>
-        <div class="copy-block" style="max-height:none;">REVISION NOTES — [SUBJECT] [CLASS] [TERM] TERM</div>
-        <p>Same body formatting as the exam files (Times New Roman 11pt, narrow 0.5" margins), but with no page limit, it runs as long as needed to properly cover the term. Question selection and phrasing vary across repeat requests, just like the exam.</p>
-      </section>
-
-      <!-- OUTPUT FILES -->
-      <section class="section">
-        <h2>Output files</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <span class="tag">Exam request → two files</span>
-            <ul style="margin-bottom:0;">
-              <li><span class="filename-chip">[Class]_[Subject]_[Term]Term_Questions.docx</span></li>
-              <li><span class="filename-chip">[Class]_[Subject]_[Term]Term_MarkingGuide.docx</span></li>
-            </ul>
-          </div>
-          <div class="card">
-            <span class="tag">Revision file request → one file</span>
-            <ul style="margin-bottom:0;">
-              <li><span class="filename-chip">[Class]_[Subject]_[Term]Term_RevisionFile.docx</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- WORKFLOW ACCORDION -->
-      <section class="section">
-        <details class="accordion">
-          <summary>Behind the scenes, the full workflow Claude follows</summary>
-          <div class="accordion-body">
-            <h4>For an exam</h4>
-            <ol>
-              <li>Parse Term, Subject, Class, ask if anything is missing or ambiguous.</li>
-              <li>Identify and confirm the correct e-note(s) in your uploaded files.</li>
-              <li>Apply the correct term-based composition ratio.</li>
-              <li>Draft Section A (30 objective questions, single-paragraph format, randomised answer key) and Section B (term-appropriate count/marks/subparts), spread across topics, varied from prior generations.</li>
-              <li>Build the formatted Question Paper.</li>
-              <li>Build the formatted Marking Guide.</li>
-              <li>Save both files with descriptive names and present them together.</li>
-            </ol>
-            <h4>For a revision file</h4>
-            <ol>
-              <li>Parse Term, Subject, Class, ask if anything is missing or ambiguous.</li>
-              <li>Identify and confirm the correct e-note for that single term only (no cross-term mixing, even for Third Term).</li>
-              <li>Build the Summary Notes section covering every topic.</li>
-              <li>Add the Practice Questions section, each with its answer directly underneath.</li>
-              <li>Apply the simpler header and standard body formatting.</li>
-              <li>Save the single file with a descriptive name and present it.</li>
-            </ol>
+                <p>Revision file:</p>
+                <div class="copy-block" style="max-height:none;">REVISION NOTES — [SUBJECT] [CLASS] [TERM] TERM</div>
+                <h4>Word formatting</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+                    <tbody>
+                      <tr><td>Font</td><td>Times New Roman, 11pt body</td></tr>
+                      <tr><td>Margins</td><td>Narrow, 0.5" on all sides</td></tr>
+                      <tr><td>Question paper length</td><td>Within 2 pages where possible</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h4>Full workflow</h4>
+                <ol>
+                  <li>Parse Term, Subject, Class, ask if anything is missing.</li>
+                  <li>Identify and confirm the correct e-note(s).</li>
+                  <li>Apply the term-based composition ratio.</li>
+                  <li>Draft Section A and Section B, spread across topics, varied each time.</li>
+                  <li>Build the Question Paper and the Marking Guide (or the Summary Notes + Practice Questions for a revision file).</li>
+                  <li>Save and present the file(s).</li>
+                </ol>
+              </div>
+            </details>
           </div>
         </details>
-      </section>
+      </div>
 
       <!-- TIPS -->
       <section class="section">
-        <h2>Helpful tips</h2>
+        <h2>Quick reference</h2>
         <ul>
-          <li><strong>Missing details?</strong> Claude asks instead of guessing if the term, subject or class is unclear.</li>
-          <li><strong>Not happy with the result?</strong> Type feedback in the same chat, e.g. "Redo Section A" or "Make theory harder."</li>
+          <li><strong>Not happy with a result?</strong> Reply in the same chat, e.g. "Redo Section A" or "Make theory harder."</li>
           <li><strong>Want a fresh version?</strong> Run the same request again, questions vary each time.</li>
-          <li><strong>Adding more subjects?</strong> Go back to your Project's knowledge files and upload more e-notes any time.</li>
+          <li><strong>Adding more subjects?</strong> Upload more e-notes to the same Project any time.</li>
         </ul>
         <div class="table-wrap">
           <table>
@@ -612,8 +537,7 @@ Total: 10 marks</div>
             <tbody>
               <tr><td>1st / 2nd Term exam</td><td>Generate [First/Second] Term Examination for [Subject] [Class]</td></tr>
               <tr><td>3rd Term exam</td><td>Generate Third Term Examination for [Subject] [Class]</td></tr>
-              <tr><td>1st / 2nd Term revision</td><td>Generate a revision file for [First/Second] Term, [Subject], [Class]</td></tr>
-              <tr><td>3rd Term revision</td><td>Generate a revision file for Third Term, [Subject], [Class]</td></tr>
+              <tr><td>Revision file</td><td>Generate a revision file for [Term], [Subject], [Class]</td></tr>
             </tbody>
           </table>
         </div>

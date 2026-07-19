@@ -98,6 +98,41 @@
   });
 })();
 
+// ---- Step-by-step reveal wizard ----
+(function () {
+  "use strict";
+  document.querySelectorAll("[data-stepper]").forEach(function (stepper) {
+    var steps = Array.prototype.slice.call(stepper.querySelectorAll("details.step-card"));
+    var progress = stepper.querySelector("[data-stepper-progress]");
+
+    function currentIndex() {
+      var openIdx = 0;
+      steps.forEach(function (s, i) { if (s.open) openIdx = i; });
+      return openIdx;
+    }
+    function updateProgress() {
+      if (!progress) return;
+      progress.innerHTML =
+        '<span class="dot"></span>Step ' + (currentIndex() + 1) + " of " + steps.length;
+    }
+
+    steps.forEach(function (step, i) {
+      step.addEventListener("toggle", updateProgress);
+      var nextBtn = step.querySelector("[data-next-step]");
+      if (nextBtn && steps[i + 1]) {
+        nextBtn.addEventListener("click", function () {
+          steps[i + 1].open = true;
+          updateProgress();
+          setTimeout(function () {
+            steps[i + 1].scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 60);
+        });
+      }
+    });
+    updateProgress();
+  });
+})();
+
 // ---- Scroll reveal ----
 (function () {
   "use strict";
