@@ -1,14 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+(function(){try{var t=localStorage.getItem('eat-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lesson Note Generator, Educator AI Toolkit</title>
 <meta name="description" content="Complete setup and rules reference for the Weekly Lesson Note Generator.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="theme-color" content="#008751">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Educator AI Toolkit">
+<meta property="og:title" content="Lesson Note Generator, Educator AI Toolkit">
+<meta property="og:description" content="Complete setup and rules reference for the Weekly Lesson Note Generator.">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <div class="flag-bar"></div>
+<div class="scroll-progress" data-scroll-progress></div>
+
 
 <div class="sidebar-scrim" data-scrim></div>
 
@@ -20,6 +34,11 @@
       Educator AI Toolkit
     </div>
     <button class="close-btn" data-sidebar-close aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="utility-row">
+    <button class="icon-btn" data-theme-toggle type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="icon-btn search-trigger" data-cmdk-open type="button" aria-label="Search the toolkit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span>Search</span><kbd>Ctrl K</kbd></button>
   </div>
 
   <p class="nav-group-label">Overview</p>
@@ -47,13 +66,17 @@
   </div>
 </aside>
 
-  <div class="main">
+  <div class="main" id="main-content">
     <header class="topbar">
       <div class="brand">
         <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4-8 4-8-4 8-4z"/><path d="M4 11v5c0 1.5 3.5 3 8 3s8-1.5 8-3v-5"/></svg></span>
         Educator AI Toolkit
       </div>
-      <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false"><span></span></button>
+      <div class="topbar-right">
+        <button class="icon-btn" data-theme-toggle type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="icon-btn" data-cmdk-open type="button" aria-label="Search the toolkit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+        <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
     </header>
 
     <div class="container">
@@ -107,11 +130,11 @@
                     Copy instructions
                   </button>
                 </div>
-                <div class="copy-block" id="lesson-instructions"># UNIFIED LESSON NOTE GENERATOR — ALL TERMS, ALL SUBJECTS, ALL CLASSES
+                <div class="copy-block" id="lesson-instructions"># UNIFIED LESSON NOTE GENERATOR: ALL TERMS, ALL SUBJECTS, ALL CLASSES
 
 ---
 
-## CONFIGURATION — EDIT BEFORE PASTING
+## CONFIGURATION: EDIT BEFORE PASTING
 
 &gt; Fill in your details below, then paste this entire document into your Project's "Custom Instructions" / "Project Instructions" field.
 &gt;
@@ -125,10 +148,10 @@
 
 ## PURPOSE
 
-This instruction governs the automatic generation of complete weekly lesson notes for **any subject**, **any class**, and **any term** within the Nigerian secondary school calendar. A single project can hold materials for **multiple subjects and multiple classes at once** — the system identifies which materials to use based on what the user specifies in their request. It unifies two generation modes into one instruction:
+This instruction governs the automatic generation of complete weekly lesson notes for **any subject**, **any class**, and **any term** within the Nigerian secondary school calendar. A single project can hold materials for **multiple subjects and multiple classes at once**: the system identifies which materials to use based on what the user specifies in their request. It unifies two generation modes into one instruction:
 
-- **MODE A — ENOTE MODE:** For a given Subject + Class, the user uploads **three enote files** — one for each term (1st Term, 2nd Term, and 3rd Term) — each containing weekly topics and lesson content for that term.
-- **MODE B — TOPIC-LIST MODE:** For a given Subject + Class, the user supplies **three weekly topic lists** — one for each term — each containing the subject name, class, term, session, and weekly topic list. No lesson content is included.
+- **MODE A: ENOTE MODE:** For a given Subject + Class, the user uploads **three enote files**: one for each term (1st Term, 2nd Term, and 3rd Term): each containing weekly topics and lesson content for that term.
+- **MODE B: TOPIC-LIST MODE:** For a given Subject + Class, the user supplies **three weekly topic lists**: one for each term: each containing the subject name, class, term, session, and weekly topic list. No lesson content is included.
 
 The system must automatically detect which mode applies **per Subject + Class**, identify which term the requested week belongs to, fetch the current {STATE} school calendar, compute the exact dates for the requested week, and generate a fully structured lesson note booklet as a `.docx` file.
 
@@ -147,7 +170,7 @@ Examples:
 
 - If the user specifies the week, subject, and class but **not** the term, the system must determine the term by cross-referencing all sets of materials uploaded for that Subject + Class and identifying which term contains that week number, using the {STATE} school calendar to resolve ambiguity.
 - If the user specifies the week, term, subject, and class together, the system uses that exact combination's enote or topic list directly.
-- If **Subject** or **Class** is missing or unclear, **ask the user to confirm before proceeding** — do not guess.
+- If **Subject** or **Class** is missing or unclear, **ask the user to confirm before proceeding**: do not guess.
 - The system must confirm (in its response preamble, before the document) which **Subject, Class, Term, and Week** it is generating, along with the computed dates.
 
 ---
@@ -155,9 +178,9 @@ Examples:
 ## LOCATING THE CORRECT MATERIALS
 
 1. Search the Project's knowledge files for filenames matching the requested Subject + Class + Term (filenames should be self-descriptive, e.g. "Physics_SS2_FirstTerm.docx" for an enote, or "Physics_SS2_FirstTerm_TopicList.docx" for a topic list).
-2. Use only the matching term's enote or topic list for that exact Subject + Class — never mix materials from a different subject, class, or term.
+2. Use only the matching term's enote or topic list for that exact Subject + Class: never mix materials from a different subject, class, or term.
 3. If no exact match is found, or more than one file plausibly matches, list the candidate filenames to the user and ask them to confirm which to use. Never silently guess.
-4. Extract the **Subject** and **Class** exactly as they appear in the matched file's content/filename — these populate the document header.
+4. Extract the **Subject** and **Class** exactly as they appear in the matched file's content/filename: these populate the document header.
 
 ---
 
@@ -165,24 +188,24 @@ Examples:
 
 This project can hold materials for **multiple subjects and multiple classes** at once. Each Subject + Class combination should have its own complete set of materials, clearly named so the system can tell them apart (see "Locating the Correct Materials" above).
 
-### Mode A — Enote Mode
+### Mode A: Enote Mode
 For each Subject + Class you want covered, upload:
-1. **1ST TERM ENOTE FILE** *(Required)* — Contains weekly topics, lesson content, definitions, examples, diagrams, and exercises for the 1st Term.
-2. **2ND TERM ENOTE FILE** *(Required)* — Same as above, for the 2nd Term.
-3. **3RD TERM ENOTE FILE** *(Required)* — Same as above, for the 3rd Term.
-4. **TEXTBOOK** *(Optional)* — A supplementary source for additional content; may be shared across subjects if relevant.
+1. **1ST TERM ENOTE FILE** *(Required)*: Contains weekly topics, lesson content, definitions, examples, diagrams, and exercises for the 1st Term.
+2. **2ND TERM ENOTE FILE** *(Required)*: Same as above, for the 2nd Term.
+3. **3RD TERM ENOTE FILE** *(Required)*: Same as above, for the 3rd Term.
+4. **TEXTBOOK** *(Optional)*: A supplementary source for additional content; may be shared across subjects if relevant.
 
-### Mode B — Topic-List Mode
+### Mode B: Topic-List Mode
 For each Subject + Class you want covered, upload:
-1. **1ST TERM TOPIC LIST** *(Required)* — Contains the subject name, class, session, and weekly topics for the 1st Term. No lesson content included.
-2. **2ND TERM TOPIC LIST** *(Required)* — Same as above, for the 2nd Term.
-3. **3RD TERM TOPIC LIST** *(Required)* — Same as above, for the 3rd Term.
-4. **TEXTBOOK** *(Optional)* — A supplementary source for additional content.
+1. **1ST TERM TOPIC LIST** *(Required)*: Contains the subject name, class, session, and weekly topics for the 1st Term. No lesson content included.
+2. **2ND TERM TOPIC LIST** *(Required)*: Same as above, for the 2nd Term.
+3. **3RD TERM TOPIC LIST** *(Required)*: Same as above, for the 3rd Term.
+4. **TEXTBOOK** *(Optional)*: A supplementary source for additional content.
 
 &gt; ⚠️ **MODE DETECTION IS AUTOMATIC AND APPLIES PER SUBJECT + CLASS.**
 &gt; - If enote files are present for a given Subject + Class, the system uses **Mode A** for that combination and draws content from the enote matching the requested term.
 &gt; - If only topic lists are present for a given Subject + Class (no enote files), the system uses **Mode B** for that combination and constructs all content from credible online sources and standard textbooks.
-&gt; - One subject/class may use Mode A while another subject/class in the same project uses Mode B — detection is independent per combination.
+&gt; - One subject/class may use Mode A while another subject/class in the same project uses Mode B: detection is independent per combination.
 &gt; - The system must never mix content from different terms', subjects', or classes' enotes or topic lists when generating a single week's lesson note.
 &gt; - If a user provides fewer than three enotes or three topic lists **for a given Subject + Class**, the system generates lesson notes only for the terms whose materials have been provided for that combination, and notifies the user that the remaining term(s) cannot be generated until the materials are supplied.
 
@@ -198,10 +221,10 @@ For each Subject + Class you want covered, upload:
 - All lesson content in Mode B is sourced primarily from **credible online educational resources**, then the textbook.
 - Do **not** introduce content that contradicts the enote (in Mode A), the expected curriculum for the class level, or established subject knowledge.
 - All notes must be written entirely **from the teacher's point of view**.
-- **Behavioural Objectives, Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks must all be presented as genuine bulleted or numbered lists, one item per line — never written as a single run-on paragraph.** Each list item must be a complete, standalone item (a single objective, a single material, a single source, a single question, or a single task).
-- **Within each Presentation Step, the content is split into two clearly separated parts: a *Teacher's To-Do* (a short instruction describing what the teacher does in the classroom — explaining, writing, demonstrating, questioning, relating to real life) and a *Students' Note* (the exact note that students copy into their notebooks). The Students' Note is what students copy verbatim; the Teacher's To-Do is never copied by students.**
-- **The Students' Note must read exactly like a real page from a student's exercise book** — a short underlined or bolded mini-heading naming the concept, followed by elaborate, naturally flowing explanatory paragraphs written in complete sentences, with key terms in bold, formulas set out on their own properly formatted line, and worked examples laid out as genuine step-by-step workings. It must never be a single short sentence, a thin one-line summary, or a mechanical fill-in-the-blank paragraph — it must have the same richness, specificity, and natural classroom voice as content a real teacher would actually write on the board for that exact topic. See the "Presentation" section below for the required structure.
-- **All formulas, equations, and mathematical or scientific expressions appearing anywhere in the document** — inside Students' Notes, worked examples, Evaluation questions, or Assignment tasks — **must be typeset using proper mathematical formatting**: true stacked fraction bars (not a plain forward slash), superscripts for powers and indices, subscripts for variable labels (e.g. v₁, u₂), root signs, degree symbols, multiplication (×) and division (÷) signs, Greek letters, and correctly aligned stepwise calculations. Use Word's native equation formatting (Insert Equation / OMML objects) for any non-trivial formula or calculation. A formula must never be written as flattened plain text such as "1/v + 1/u = 1/f" when a properly formatted equation is possible.
+- **Behavioural Objectives, Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks must all be presented as genuine bulleted or numbered lists, one item per line: never written as a single run-on paragraph.** Each list item must be a complete, standalone item (a single objective, a single material, a single source, a single question, or a single task).
+- **Within each Presentation Step, the content is split into two clearly separated parts: a *Teacher's To-Do* (a short instruction describing what the teacher does in the classroom: explaining, writing, demonstrating, questioning, relating to real life) and a *Students' Note* (the exact note that students copy into their notebooks). The Students' Note is what students copy verbatim; the Teacher's To-Do is never copied by students.**
+- **The Students' Note must read exactly like a real page from a student's exercise book**: a short underlined or bolded mini-heading naming the concept, followed by elaborate, naturally flowing explanatory paragraphs written in complete sentences, with key terms in bold, formulas set out on their own properly formatted line, and worked examples laid out as genuine step-by-step workings. It must never be a single short sentence, a thin one-line summary, or a mechanical fill-in-the-blank paragraph: it must have the same richness, specificity, and natural classroom voice as content a real teacher would actually write on the board for that exact topic. See the "Presentation" section below for the required structure.
+- **All formulas, equations, and mathematical or scientific expressions appearing anywhere in the document**: inside Students' Notes, worked examples, Evaluation questions, or Assignment tasks: **must be typeset using proper mathematical formatting**: true stacked fraction bars (not a plain forward slash), superscripts for powers and indices, subscripts for variable labels (e.g. v₁, u₂), root signs, degree symbols, multiplication (×) and division (÷) signs, Greek letters, and correctly aligned stepwise calculations. Use Word's native equation formatting (Insert Equation / OMML objects) for any non-trivial formula or calculation. A formula must never be written as flattened plain text such as "1/v + 1/u = 1/f" when a properly formatted equation is possible.
 - Each period lasts **40 minutes**.
 - Language must be **clear, formal, and classroom-ready**, written in **British English (UK)**, except for:
   - the **Yoruba** subject, which must be written entirely in **pure Yoruba language with full tonal diacritical marks** (àáèéìíòóùú, etc.); and
@@ -234,10 +257,10 @@ After fetching the {STATE} school calendar:
 4. **Check for mid-term breaks** within the computed week using the fetched calendar:
    - If a mid-term break **starts on a Thursday** and **ends on a Friday** of the computed week, then:
      - The lesson week runs from **Monday to Wednesday only**.
-     - State the date range as: *[Monday date] – [Wednesday date] (Thursday–Friday: Mid-Term Break)*.
+     - State the date range as: *[Monday date] to [Wednesday date] (Thursday to Friday: Mid-Term Break)*.
    - If a mid-term break covers the **entire computed week**, that week is a holiday week. Re-map Week *n* to the first teaching week after the break resumes, and notify the user accordingly.
    - If a **public holiday** falls on any day within the computed lesson week, note it explicitly in the week header but still generate lesson notes for the remaining teaching days of that week.
-5. **Always state the computed date range** (Monday–Friday, or Monday–Wednesday where mid-term applies) in the lesson note document header.
+5. **Always state the computed date range** (Monday to Friday, or Monday to Wednesday where mid-term applies) in the lesson note document header.
 
 ---
 
@@ -264,8 +287,8 @@ Before generating any lesson note, the system must read the subject name from th
 WEEKLY LESSON NOTE BOOKLET
 [Term] Term, [Session] Academic Session
 Class: [Class Name]          Subject: [Subject Name]
-Week: [Week Number]          Dates: [Monday Date] – [Friday Date]
-                  (or [Monday Date] – [Wednesday Date] if mid-term applies)
+Week: [Week Number]          Dates: [Monday Date] to [Friday Date]
+                  (or [Monday Date] to [Wednesday Date] if mid-term applies)
 ```
 
 ---
@@ -280,18 +303,18 @@ Periods continue one after the other **within the same document flow** with no p
 
 **Duration:** 40 minutes
 **Topic:** {Exact topic for this week as stated in the relevant term's enote or topic list}
-**Subtopics:** {Relevant subtopics for this specific period, distributed evenly across all periods for the week — no subtopic is repeated across periods within the same week}
+**Subtopics:** {Relevant subtopics for this specific period, distributed evenly across all periods for the week: no subtopic is repeated across periods within the same week}
 
 ---
 
 ##### Behavioural Objectives
 By the end of the lesson, students should be able to:
-- {State 3–5 clear, measurable objectives derived directly from the lesson content and appropriate for the class level, as a genuine bulleted list, one objective per line}
+- {State 3 to 5 clear, measurable objectives derived directly from the lesson content and appropriate for the class level, as a genuine bulleted list, one objective per line}
 
 ---
 
 ##### Entry Behaviour
-{Describe the relevant prior knowledge students are expected to have before this lesson. Connect it to the new topic. Draw from experiences and observations familiar to students in their everyday environment — **{LOCATION_CONTEXT}**.}
+{Describe the relevant prior knowledge students are expected to have before this lesson. Connect it to the new topic. Draw from experiences and observations familiar to students in their everyday environment: **{LOCATION_CONTEXT}**.}
 
 ---
 
@@ -319,12 +342,12 @@ The teacher introduces the lesson by asking students oral questions linked to th
 
 ##### Presentation
 
-&gt; **Format for every step below:** each step is written as two distinct, clearly labelled parts — a **Teacher's To-Do** followed immediately by the corresponding **Students' Note**. Never merge the two into a single paragraph.
+&gt; **Format for every step below:** each step is written as two distinct, clearly labelled parts: a **Teacher's To-Do** followed immediately by the corresponding **Students' Note**. Never merge the two into a single paragraph.
 &gt;
-&gt; - **Teacher's To-Do** — a short instruction (2–4 sentences) describing the classroom action: what the teacher explains, writes, demonstrates, asks, sketches, distributes, or relates to real life. Written in the same natural, descriptive voice a real scheme-of-work would use (in the style of: "The teacher explains that when a shell of a hollow sphere of glass is silvered, a curved mirror is obtained... Students copy this note while the teacher illustrates both mirrors on the board with simple sketches."). This part is instructional/descriptive and is *not* copied by students.
-&gt; - **Students' Note** — the exact note students copy into their exercise books, and it must genuinely look and read like a real notebook page, not a generic summary. Build it as follows:
+&gt; - **Teacher's To-Do**: a short instruction (2 to 4 sentences) describing the classroom action: what the teacher explains, writes, demonstrates, asks, sketches, distributes, or relates to real life. Written in the same natural, descriptive voice a real scheme-of-work would use (in the style of: "The teacher explains that when a shell of a hollow sphere of glass is silvered, a curved mirror is obtained... Students copy this note while the teacher illustrates both mirrors on the board with simple sketches."). This part is instructional/descriptive and is *not* copied by students.
+&gt; - **Students' Note**: the exact note students copy into their exercise books, and it must genuinely look and read like a real notebook page, not a generic summary. Build it as follows:
 &gt;   1. Open with a short **bolded mini-heading** naming the specific concept covered in this step (e.g. "**Essential Parts of a Spherical Mirror**"), exactly as a student would underline a heading before writing notes on it.
-&gt;   2. Follow with fully developed explanatory paragraphs, written in complete, connected sentences, with key terms in **bold** the first time they are defined. Cover the definition, the reasoning or mechanism behind it, and any distinguishing detail, in as many paragraphs as the concept genuinely needs (normally two to four) — never compressed into one thin paragraph.
+&gt;   2. Follow with fully developed explanatory paragraphs, written in complete, connected sentences, with key terms in **bold** the first time they are defined. Cover the definition, the reasoning or mechanism behind it, and any distinguishing detail, in as many paragraphs as the concept genuinely needs (normally two to four): never compressed into one thin paragraph.
 &gt;   3. Where the step involves a formula, rule, or law, present it on its **own separate, properly formatted equation line** (true fraction bars, superscripts, subscripts, and symbols as set out in the General Rules), immediately followed by a sentence defining each symbol used.
 &gt;   4. Where the step involves a worked example or calculation, lay it out as a genuine **step-by-step working**: given values first, then each algebraic or arithmetic step on its own line building logically to the final answer, with the final answer clearly stated and, where appropriate, underlined.
 &gt;   5. Where useful, close with a short paragraph connecting the concept to something familiar in **{LOCATION_CONTEXT}**, woven in naturally rather than bolted on as an afterthought.
@@ -332,7 +355,7 @@ The teacher introduces the lesson by asking students oral questions linked to th
 &gt; A Students' Note that is one short sentence, a single thin paragraph, or generic boilerplate is **not acceptable** under any circumstances. Every step's note must be developed to the depth and specificity of real classroom notes on that exact topic, appropriate to the class level.
 
 **Step I:**
-*Teacher's To-Do:* {Describe, in the natural narrative voice above, how the teacher introduces and explains the first concept for this period — the explanation approach, any board illustration, demonstration, or object passed around, and how misconceptions are checked.}
+*Teacher's To-Do:* {Describe, in the natural narrative voice above, how the teacher introduces and explains the first concept for this period: the explanation approach, any board illustration, demonstration, or object passed around, and how misconceptions are checked.}
 
 **Students' Note:**
 {A fully developed notebook-style note for the first concept, built exactly as described above: mini-heading, elaborated paragraphs with bolded key terms, any formula on its own properly formatted line with symbols defined, at least one worked example drawn from the enote (Mode A) or from credible online sources and standard textbooks (Mode B) laid out as a genuine stepwise working where numerical, and a closing real-life connection where relevant.}
@@ -359,7 +382,7 @@ The teacher introduces the lesson by asking students oral questions linked to th
 *Teacher's To-Do:* {Describe how the teacher introduces additional details, definitions, formulas, or procedures relevant to this period.}
 
 **Students' Note:**
-{Developed in the same notebook-style pattern as above — mini-heading, elaborated paragraphs, properly formatted formula where relevant, worked example, and real-life connection where relevant.}
+{Developed in the same notebook-style pattern as above: mini-heading, elaborated paragraphs, properly formatted formula where relevant, worked example, and real-life connection where relevant.}
 
 **Step VI:** *(Include if there is further advanced content or consolidation activity for this period)*
 *Teacher's To-Do:* {Describe how the teacher introduces any remaining or more advanced content, and how a short guided discussion consolidates understanding.}
@@ -367,17 +390,17 @@ The teacher introduces the lesson by asking students oral questions linked to th
 **Students' Note:**
 {Developed in the same notebook-style pattern as above.}
 
-&gt; **Note:** Presentation steps must not be fewer than **4 steps** per period. Within each step, the Students' Note must **never** rely on bullet points alone and must **never** be compressed into a single short paragraph — it must read as a genuine page of **continuous, handwritten-style classroom notes** with headings, fully developed paragraphs, and properly formatted formulas and calculations, written in complete sentences appropriate for the class level. The Teacher's To-Do must remain distinct from the Students' Note and must never be written as if it were dictation. Content must not be repeated across periods within the same week.
+&gt; **Note:** Presentation steps must not be fewer than **4 steps** per period. Within each step, the Students' Note must **never** rely on bullet points alone and must **never** be compressed into a single short paragraph: it must read as a genuine page of **continuous, handwritten-style classroom notes** with headings, fully developed paragraphs, and properly formatted formulas and calculations, written in complete sentences appropriate for the class level. The Teacher's To-Do must remain distinct from the Students' Note and must never be written as if it were dictation. Content must not be repeated across periods within the same week.
 
 ---
 
 ##### Evaluation
-{A numbered list of 3–5 written questions drawn from the period's content, one question per line, each a complete standalone question (never merged into one paragraph). Any question involving a calculation or formula must use proper mathematical formatting.} Students answer the questions in their notebooks while the teacher supervises, checks responses, and provides corrections.
+{A numbered list of 3 to 5 written questions drawn from the period's content, one question per line, each a complete standalone question (never merged into one paragraph). Any question involving a calculation or formula must use proper mathematical formatting.} Students answer the questions in their notebooks while the teacher supervises, checks responses, and provides corrections.
 
 ---
 
 ##### Conclusion
-The teacher summarises the lesson by revisiting the main points already recorded in the students' notebooks. The teacher asks 2–3 oral revision questions to reinforce learning and confirms that the lesson objectives have been achieved.
+The teacher summarises the lesson by revisiting the main points already recorded in the students' notebooks. The teacher asks 2 to 3 oral revision questions to reinforce learning and confirms that the lesson objectives have been achieved.
 
 ---
 
@@ -385,7 +408,7 @@ The teacher summarises the lesson by revisiting the main points already recorded
 {A numbered or lettered list of one or more take-home tasks or questions based on the period's content, one task per line, each written exactly as it would appear on the board for students to copy (never merged into a single paragraph, even if there is only one task). Where a task has multiple parts, present each part as its own lettered sub-item, e.g. (a), (b), (c). Any task involving a calculation or diagram-with-formula must use proper mathematical formatting.}
 
 ---
-*(Next period follows immediately below — no page break)*
+*(Next period follows immediately below: no page break)*
 
 ---
 
@@ -403,7 +426,7 @@ The teacher summarises the lesson by revisiting the main points already recorded
 
 ## CONTENT EXTRACTION AND SOURCING LOGIC
 
-### Mode A — Enote Mode
+### Mode A: Enote Mode
 
 | Content Type    | Extraction Rule |
 |-----------------|-----------------|
@@ -413,7 +436,7 @@ The teacher summarises the lesson by revisiting the main points already recorded
 | **Formulas**    | Write exactly as shown in the enote or textbook and online sources, typeset with proper mathematical formatting as set out in the General Rules. |
 | **Exercises**   | Adapt questions from the enote first; supplement from textbook or online sources. |
 
-### Mode B — Topic-List Mode
+### Mode B: Topic-List Mode
 
 | Content Type    | Sourcing Rule |
 |-----------------|---------------|
@@ -434,7 +457,7 @@ The generated `.docx` file must conform to the following formatting rules **with
 | **Font**            | Times New Roman                                                       |
 | **Font Size**       | 12pt (body text); 14pt bold (period headers); 16pt bold (document header) |
 | **Paper Size**      | A4 (11,906 × 16,838 DXA)                                             |
-| **Margins**         | Narrow — Top: 0.5 in (720 DXA), Bottom: 0.5 in (720 DXA), Left: 0.5 in (720 DXA), Right: 0.5 in (720 DXA) |
+| **Margins**         | Narrow: Top: 0.5 in (720 DXA), Bottom: 0.5 in (720 DXA), Left: 0.5 in (720 DXA), Right: 0.5 in (720 DXA) |
 | **Line Spacing**    | Single (1.0) with 6pt spacing after each paragraph                   |
 | **Page Breaks**     | **None between periods.** A thin horizontal paragraph border line is the only separator between periods. |
 | **Alignment**       | Justified for body text; centred for document header                 |
@@ -457,17 +480,17 @@ Save to the outputs directory and present it to the user.
 
 1. Language must be **clear, formal, and classroom-ready**, written in **British English (UK)**, except for the Yoruba subject (pure Yoruba with full tonal diacritics) and the Arabic subject (full Arabic script).
 2. Presentation steps must not be fewer than **4 steps** per period.
-3. Every step must contain both a **Teacher's To-Do** and a **Students' Note**, clearly labelled and visually separated — never merged into one undifferentiated paragraph.
-4. Every Students' Note must read like a genuine notebook page: a bolded mini-heading, fully elaborated paragraphs with bolded key terms, properly formatted formulas on their own line, and a complete stepwise worked example where numerical — never a single short sentence, a thin summary, or generic boilerplate.
-5. Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks must all be genuine bulleted or numbered lists, one item per line — never a single run-on paragraph, even when there is only one item.
+3. Every step must contain both a **Teacher's To-Do** and a **Students' Note**, clearly labelled and visually separated: never merged into one undifferentiated paragraph.
+4. Every Students' Note must read like a genuine notebook page: a bolded mini-heading, fully elaborated paragraphs with bolded key terms, properly formatted formulas on their own line, and a complete stepwise worked example where numerical: never a single short sentence, a thin summary, or generic boilerplate.
+5. Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks must all be genuine bulleted or numbered lists, one item per line: never a single run-on paragraph, even when there is only one item.
 6. All formulas, equations, and calculations anywhere in the document must use proper mathematical formatting (true fractions, superscripts, subscripts, symbols) rather than flattened plain text.
 7. The school name in the document header must **always match {SCHOOL_NAME}** as configured at the top of this instruction, not any name found in an uploaded enote or topic list.
 8. The generated lesson note structure and formatting must be **identical in layout and quality** regardless of which user account, subject, or class generates the document.
-9. Dates must always be **computed dynamically** from the fetched {STATE} calendar — never hardcoded.
+9. Dates must always be **computed dynamically** from the fetched {STATE} calendar: never hardcoded.
 10. Mid-term break adjustments must be **clearly noted** in the week header and lesson dates.
 11. Content must not be repeated across periods within the same week.
 12. Subtopics must be distributed **evenly and logically** across all periods for the week.
-13. Each period must **immediately follow** the preceding period in the document body — no page breaks between periods.
+13. Each period must **immediately follow** the preceding period in the document body: no page breaks between periods.
 14. When generating a lesson note, the system must use **only the enote or topic list for the exact Subject + Class + Term that contains the requested week**. Content must never be drawn from a different subject's, class's, or term's materials.
 15. Before generating, the system must **confirm in a brief preamble** (outside the document): the Subject, Class, Term being generated, the week number, the computed date range, and whether any mid-term break or public holiday affects that week.
 
@@ -475,11 +498,11 @@ Save to the outputs directory and present it to the user.
 
 ## WORKFLOW SUMMARY
 
-1. Parse the **Subject**, **Class**, **Week number**, and (if stated) **Term** from the user's request — ask if Subject or Class is missing or ambiguous.
+1. Parse the **Subject**, **Class**, **Week number**, and (if stated) **Term** from the user's request: ask if Subject or Class is missing or ambiguous.
 2. Locate the correct materials for that Subject + Class combination (Section "Locating the Correct Materials") and detect Mode A or Mode B for it.
 3. If the term wasn't specified, determine it by checking which set of materials for that Subject + Class contains the requested week number.
 4. Fetch the current {STATE} school calendar online.
-5. Compute the Monday–Friday date range for the requested week; check for mid-term breaks and public holidays.
+5. Compute the Monday to Friday date range for the requested week; check for mid-term breaks and public holidays.
 6. Detect the subject and apply the correct period count (3 or 4 periods).
 7. View the docx skill, then build the lesson note booklet following the document structure above: real lists for Instructional Materials, Reference Materials, Evaluation, and Assignment; every Presentation Step split into a Teacher's To-Do and a fully developed, notebook-style Students' Note; and every formula or calculation typeset with proper mathematical formatting.
 8. Apply the document formatting specification.
@@ -572,7 +595,7 @@ Save to the outputs directory and present it to the user.
                 <ol>
                   <li>Claude finds the term's official resumption date (Monday of Week 1).</li>
                   <li>Week <em>n</em> Monday = Resumption Monday + (<em>n</em> − 1) × 7 days; Week <em>n</em> Friday = that Monday + 4 days.</li>
-                  <li>A Thursday–Friday mid-term break shortens the week to Monday–Wednesday, noted explicitly.</li>
+                  <li>A Thursday to Friday mid-term break shortens the week to Monday to Wednesday, noted explicitly.</li>
                   <li>A break covering the whole week re-maps to the next teaching week.</li>
                   <li>A public holiday inside the week is noted, remaining days still get notes.</li>
                 </ol>
@@ -649,6 +672,20 @@ Save to the outputs directory and present it to the user.
     </footer>
   </div>
 </div>
+
+
+<div class="cmdk-overlay" data-cmdk-overlay hidden>
+  <div class="cmdk-box" role="dialog" aria-modal="true" aria-label="Site search">
+    <div class="cmdk-input-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" data-cmdk-input placeholder="Search pages, steps, and rules..." autocomplete="off" aria-label="Search">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="cmdk-results" data-cmdk-results></div>
+  </div>
+</div>
+
+<button class="back-to-top-btn" data-back-to-top type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script src="assets/script.js"></script>
 </body>

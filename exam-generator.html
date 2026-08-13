@@ -1,14 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+(function(){try{var t=localStorage.getItem('eat-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exam &amp; Revision Generator, Educator AI Toolkit</title>
 <meta name="description" content="Complete setup and rules reference for the Automated Examination, Marking Guide and Revision File Generator.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="theme-color" content="#008751">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Educator AI Toolkit">
+<meta property="og:title" content="Exam &amp; Revision Generator, Educator AI Toolkit">
+<meta property="og:description" content="Complete setup and rules reference for the Automated Examination, Marking Guide and Revision File Generator.">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <div class="flag-bar"></div>
+<div class="scroll-progress" data-scroll-progress></div>
+
 
 <div class="sidebar-scrim" data-scrim></div>
 
@@ -20,6 +34,11 @@
       Educator AI Toolkit
     </div>
     <button class="close-btn" data-sidebar-close aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="utility-row">
+    <button class="icon-btn" data-theme-toggle type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="icon-btn search-trigger" data-cmdk-open type="button" aria-label="Search the toolkit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span>Search</span><kbd>Ctrl K</kbd></button>
   </div>
 
   <p class="nav-group-label">Overview</p>
@@ -47,13 +66,17 @@
   </div>
 </aside>
 
-  <div class="main">
+  <div class="main" id="main-content">
     <header class="topbar">
       <div class="brand">
         <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4-8 4-8-4 8-4z"/><path d="M4 11v5c0 1.5 3.5 3 8 3s8-1.5 8-3v-5"/></svg></span>
         Educator AI Toolkit
       </div>
-      <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false"><span></span></button>
+      <div class="topbar-right">
+        <button class="icon-btn" data-theme-toggle type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <button class="icon-btn" data-cmdk-open type="button" aria-label="Search the toolkit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+        <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
     </header>
 
     <div class="container">
@@ -111,7 +134,7 @@
                     Copy instructions
                   </button>
                 </div>
-                <div class="copy-block" id="exam-instructions"># PROJECT INSTRUCTIONS — Automated Examination, Marking Guide &amp; Revision File Generator
+                <div class="copy-block" id="exam-instructions"># PROJECT INSTRUCTIONS: Automated Examination, Marking Guide &amp; Revision File Generator
 
 <span class="placeholder">**{SCHOOL_NAME: [Insert your school's full official name here, e.g. "Knowledge Base International Schools"]}**</span>
 
@@ -134,12 +157,12 @@ Before creating any Word file, always view `/mnt/skills/public/docx/SKILL.md` fi
 The user must always state the **Term**, **Subject**, and **Class** in their request, and make clear whether they want an **exam** or a **revision file**. Example prompts:
 
 - "Generate First Term Examination for Physics SS2"
-- "Create 2nd term exam — Basic Science, JSS1"
+- "Create 2nd term exam: Basic Science, JSS1"
 - "Third term, Mathematics, JSS3"
 - "Generate a revision file for Second Term, Physics, SS2"
 - "Create revision notes for First Term, Basic Science, JSS1"
 
-If the Term, Subject, Class, or request type (exam vs. revision file) is missing or unclear from the request, **ask the user to confirm before proceeding** — do not guess.
+If the Term, Subject, Class, or request type (exam vs. revision file) is missing or unclear from the request, **ask the user to confirm before proceeding**: do not guess.
 
 ---
 
@@ -149,7 +172,7 @@ If the Term, Subject, Class, or request type (exam vs. revision file) is missing
 2. For a **First Term** or **Second Term** request: locate only that single matching term's e-note.
 3. For a **Third Term** request: locate all three matching e-notes (1st, 2nd, 3rd term) for that Subject + Class.
 4. If no exact match is found, or more than one file plausibly matches, list the candidate filenames to the user and ask them to confirm which to use. Never silently guess.
-5. Extract the **Subject** and **Class** exactly as they appear in the e-note content/filename — these will populate the document header.
+5. Extract the **Subject** and **Class** exactly as they appear in the e-note content/filename: these will populate the document header.
 
 ---
 
@@ -171,26 +194,26 @@ Pull from all three e-notes in this ratio:
 Note: the percentages discussed conceptually are 20% / 20% / 60% (1st / 2nd / 3rd term), realized as the fixed question counts above.
 
 ### Topic spread
-Within any single e-note, distribute questions evenly across the different topics/lessons covered — do not cluster questions on only one or two topics.
+Within any single e-note, distribute questions evenly across the different topics/lessons covered: do not cluster questions on only one or two topics.
 
 ### Variation across requests
 Each time an exam is generated (even for the same Subject/Class/Term), vary question selection, angle, and phrasing. Do not reproduce an identical paper on repeat requests.
 
 ---
 
-## 4. SECTION A — OBJECTIVE (30 marks)
+## 4. SECTION A: OBJECTIVE (30 marks)
 
 - 30 questions, 1 mark each.
-- Each question has exactly 4 options, lettered **A–D**.
-- **Each question and its 4 options must be written on a single paragraph/line** — stem and options run together (e.g., `1. What is the SI unit of force? A. Newton B. Joule C. Watt D. Pascal`). Do not place options on separate lines.
+- Each question has exactly 4 options, lettered **A to D**.
+- **Each question and its 4 options must be written on a single paragraph/line**: stem and options run together (e.g., `1. What is the SI unit of force? A. Newton B. Joule C. Watt D. Pascal`). Do not place options on separate lines.
 - **Term-specific composition:**
   - 1st/2nd term request → all 30 questions from that term's e-note.
   - 3rd term request → 5 from 1st term e-note, 5 from 2nd term e-note, 20 from 3rd term e-note (order them in a randomized/mixed sequence, not grouped by source).
-- **Answer distribution:** correct answers (A/B/C/D) must be well and randomly distributed across the 30 questions. Avoid long runs of the same correct letter (no more than 2–3 in a row), and avoid any one letter being heavily over-represented.
+- **Answer distribution:** correct answers (A/B/C/D) must be well and randomly distributed across the 30 questions. Avoid long runs of the same correct letter (no more than 2 to 3 in a row), and avoid any one letter being heavily over-represented.
 
 ---
 
-## 5. SECTION B — THEORY
+## 5. SECTION B: THEORY
 
 ### First Term or Second Term request
 - 5 questions, all from that term's e-note.
@@ -219,7 +242,7 @@ Draft standard instructions near the top of the question paper, adapting the Sec
 
 ---
 
-## 7. DOCUMENT HEADER — QUESTION PAPER
+## 7. DOCUMENT HEADER: QUESTION PAPER
 
 Centered, bold, on separate lines, slightly larger than body text (enough to look like a letterhead but not so large the paper exceeds 2 pages):
 
@@ -241,12 +264,12 @@ Then the candidate instructions (Section 6), then Section A, then Section B.
 
 ---
 
-## 8. DOCUMENT HEADER — MARKING GUIDE
+## 8. DOCUMENT HEADER: MARKING GUIDE
 
 Simpler header only (no school name/address/letterhead), bold and centered:
 
 ```
-MARKING GUIDE — [SUBJECT] [CLASS] [TERM] TERM EXAMINATION
+MARKING GUIDE: [SUBJECT] [CLASS] [TERM] TERM EXAMINATION
 ```
 
 ### Section A in the Marking Guide
@@ -257,10 +280,10 @@ Just the answer key, compactly listed, e.g.:
 **Repeat the full original question text** (including all subparts) above each model answer, then provide the model answer with **marks allocated per subpart**, summing to 8 or 10 marks depending on term, e.g.:
 ```
 Question 1
-1a. [question text] — Model answer ... (3 marks)
-1b. [question text] — Model answer ... (3 marks)
-1ci. [question text] — Model answer ... (2 marks)
-1cii. [question text] — Model answer ... (2 marks)
+1a. [question text]: Model answer ... (3 marks)
+1b. [question text]: Model answer ... (3 marks)
+1ci. [question text]: Model answer ... (2 marks)
+1cii. [question text]: Model answer ... (2 marks)
 Total: 10 marks
 ```
 
@@ -288,27 +311,27 @@ Save both to the outputs directory and present both files to the user together a
 
 ## 11. REVISION FILE (separate request type from the exam)
 
-Triggered when the user asks for a "revision file," "revision notes," or similar — for a given Term + Subject + Class.
+Triggered when the user asks for a "revision file," "revision notes," or similar, for a given Term + Subject + Class.
 
 ### Source rule (important difference from the exam)
-Unlike the exam, the revision file is **always 100% from the single requested term's e-note** — even if the user asks for a "Third Term revision file," do **not** mix in 1st/2nd term content. No ratio splitting applies here.
+Unlike the exam, the revision file is **always 100% from the single requested term's e-note**: even if the user asks for a "Third Term revision file," do **not** mix in 1st/2nd term content. No ratio splitting applies here.
 
 ### Content structure
 A single Word document containing two parts, in this order:
 
-1. **Summary Notes** — concise key-point notes organized under a heading for each topic/lesson covered in that term's e-note. Cover all topics in the e-note; don't skip any.
-2. **Practice Questions** — theory-style questions only (no objective/A-D questions). Spread questions evenly across all topics covered, the same way as exam topic spread. Each question is immediately followed by its full answer/explanation directly underneath it (no separate answer key, no withheld answers — this is a self-study document).
+1. **Summary Notes**: concise key-point notes organized under a heading for each topic/lesson covered in that term's e-note. Cover all topics in the e-note; don't skip any.
+2. **Practice Questions**: theory-style questions only (no objective/A-D questions). Spread questions evenly across all topics covered, the same way as exam topic spread. Each question is immediately followed by its full answer/explanation directly underneath it (no separate answer key, no withheld answers: this is a self-study document).
 
-There is no fixed mark allocation and no "answer any X of Y" instruction for the revision file — it's a study aid, not a graded exam, so every question presented gets an answer.
+There is no fixed mark allocation and no "answer any X of Y" instruction for the revision file: it's a study aid, not a graded exam, so every question presented gets an answer.
 
 ### Header (simpler, like the marking guide)
 Bold, centered:
 ```
-REVISION NOTES — [SUBJECT] [CLASS] [TERM] TERM
+REVISION NOTES: [SUBJECT] [CLASS] [TERM] TERM
 ```
 
 ### Formatting
-Same body formatting as the exam files: Times New Roman 11pt, narrow margins (0.5" all sides). No 2-page limit on this file — let it run as long as needed to properly cover the term's content.
+Same body formatting as the exam files: Times New Roman 11pt, narrow margins (0.5" all sides). No 2-page limit on this file: let it run as long as needed to properly cover the term's content.
 
 ### Variation across requests
 Same as the exam: vary phrasing/question selection on repeat requests rather than reproducing an identical file.
@@ -324,7 +347,7 @@ Save to the outputs directory and present it to the user.
 ## 12. WORKFLOW SUMMARY
 
 **If the request is for an exam:**
-1. Parse Term, Subject, Class from the user's request — ask if any are missing/ambiguous.
+1. Parse Term, Subject, Class from the user's request: ask if any are missing/ambiguous.
 2. Identify and confirm the correct e-note(s) in the Project's knowledge files.
 3. Apply the correct term-based composition ratio (Section 3).
 4. Draft Section A (30 objective questions, single-paragraph format, randomized answer key) and Section B (theory, term-appropriate count/marks/subparts), spreading questions across topics and varying content from prior generations.
@@ -333,7 +356,7 @@ Save to the outputs directory and present it to the user.
 7. Save both files with descriptive names and present them to the user.
 
 **If the request is for a revision file:**
-1. Parse Term, Subject, Class from the user's request — ask if any are missing/ambiguous.
+1. Parse Term, Subject, Class from the user's request: ask if any are missing/ambiguous.
 2. Identify and confirm the correct e-note for that single term only (no cross-term mixing, even for Third Term requests).
 3. View the docx skill, then build the Summary Notes section covering every topic in that e-note.
 4. Add the Practice Questions section (theory-style, evenly spread across topics, each with its answer directly underneath).
@@ -429,7 +452,7 @@ Save to the outputs directory and present it to the user.
             <div class="grid grid-2">
               <div class="card">
                 <span class="tag">Exam</span>
-                <p style="margin-bottom:0;">Section A: 30 objective questions (A–D), 30 marks. Section B: theory questions, 40 marks. Third Term blends all three terms in a fixed ratio.</p>
+                <p style="margin-bottom:0;">Section A: 30 objective questions (A to D), 30 marks. Section B: theory questions, 40 marks. Third Term blends all three terms in a fixed ratio.</p>
               </div>
               <div class="card">
                 <span class="tag">Revision file</span>
@@ -461,7 +484,7 @@ Save to the outputs directory and present it to the user.
                 </div>
                 <h4>Section A, Objective (30 marks)</h4>
                 <ul>
-                  <li>30 questions, 1 mark each, 4 options lettered A–D, question and options on one line.</li>
+                  <li>30 questions, 1 mark each, 4 options lettered A to D, question and options on one line.</li>
                   <li>Answer key is randomly and evenly distributed, never dominated by one letter.</li>
                 </ul>
                 <h4>Section B, Theory (40 marks)</h4>
@@ -486,17 +509,17 @@ CLASS: [from e-note]
 Name: _______________________________
 Date: _____________  Time Allowed: _____________</div>
                 <p>Marking guide:</p>
-                <div class="copy-block" style="max-height:none;">MARKING GUIDE — [SUBJECT] [CLASS] [TERM] TERM EXAMINATION
+                <div class="copy-block" style="max-height:none;">MARKING GUIDE: [SUBJECT] [CLASS] [TERM] TERM EXAMINATION
 
 Section A: 1-A, 2-C, 3-B, 4-D, 5-A, ... (through 30)
 
 Section B:
 Question 1
-1a. [question text] — Model answer ... (3 marks)
-1b. [question text] — Model answer ... (3 marks)
+1a. [question text]: Model answer ... (3 marks)
+1b. [question text]: Model answer ... (3 marks)
 Total: 10 marks</div>
                 <p>Revision file:</p>
-                <div class="copy-block" style="max-height:none;">REVISION NOTES — [SUBJECT] [CLASS] [TERM] TERM</div>
+                <div class="copy-block" style="max-height:none;">REVISION NOTES: [SUBJECT] [CLASS] [TERM] TERM</div>
                 <h4>Word formatting</h4>
                 <div class="table-wrap">
                   <table>
@@ -557,6 +580,20 @@ Total: 10 marks</div>
     </footer>
   </div>
 </div>
+
+
+<div class="cmdk-overlay" data-cmdk-overlay hidden>
+  <div class="cmdk-box" role="dialog" aria-modal="true" aria-label="Site search">
+    <div class="cmdk-input-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" data-cmdk-input placeholder="Search pages, steps, and rules..." autocomplete="off" aria-label="Search">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="cmdk-results" data-cmdk-results></div>
+  </div>
+</div>
+
+<button class="back-to-top-btn" data-back-to-top type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script src="assets/script.js"></script>
 </body>

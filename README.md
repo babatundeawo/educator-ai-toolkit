@@ -11,6 +11,18 @@ Plus `index.html` (home), `getting-started.html` (Claude account + Project setup
 This is a plain static site, no build step, no framework, no dependencies beyond
 Google Fonts (loaded via CDN in `assets/style.css`). It works as-is on GitHub Pages.
 
+## What's in this version
+
+- Light and dark mode, remembered per visitor, with no flash on page load.
+- A site-wide search (press Ctrl+K or `/`, or tap the search icon) that jumps
+  straight to any page or section.
+- A scroll progress bar, a back-to-top button, and a skip-to-content link for
+  keyboard and screen-reader users.
+- A richer home page: a "how it works" walkthrough, a feature grid for both
+  tools, and a note-to-supervisors section (`index.html#about`) that the FAQ
+  page already links to.
+- No em dashes or en dashes anywhere in the copy.
+
 ## Hosting it on GitHub Pages
 
 1. Create a new GitHub repository (public repos get free Pages hosting).
@@ -47,9 +59,13 @@ custom domain or inside a `/repo-name/` subpath.
 - The mobile menu, copy-to-clipboard buttons, and active-link highlighting are all
   handled by `assets/script.js`, no changes needed unless you add new pages
   (in which case, copy the `<aside class="sidebar">` block from any existing page).
-- To add a new page, duplicate an existing `.html` file, update its `<title>`,
+- To add a new page, duplicate an existing `.html` file (it already carries the
+  sidebar, the search index entries, the theme toggle, and the back-to-top
+  button), update its `<title>`, `<meta name="description">` and `og:*` tags,
   and add a matching `<li><a href="...">` entry to the sidebar nav on **every**
   page (there's no shared template, this is a plain multi-page static site).
+- To make a new page searchable, add an entry for it to the `SITE_INDEX` array
+  near the top of `assets/script.js`.
 
 ## Credit
 
