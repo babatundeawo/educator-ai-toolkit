@@ -1,5 +1,7 @@
 # Educator AI Toolkit, Website
 
+**Live:** https://babatundeawo.github.io/educator-ai-toolkit/
+
 A free, mobile-first reference site for Nigerian educators, covering two Claude AI setups:
 
 1. **Exam, Marking Guide & Revision File Generator** (`exam-generator.html`)
