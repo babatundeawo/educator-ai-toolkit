@@ -77,12 +77,9 @@
   "use strict";
 
   var SITE_INDEX = [
-    { title: "Home", sub: "Overview of the toolkit", href: "index.html", group: "Overview" },
-    { title: "For supervisors and administrators", sub: "Why this strengthens documentation standards", href: "index.html#about", group: "Overview" },
-    { title: "Getting Started", sub: "Install Claude and create your first Project", href: "getting-started.html", group: "Overview" },
-    { title: "Download Claude and sign up", sub: "Browser, iPhone, Android, or desktop", href: "getting-started.html", group: "Getting Started" },
-    { title: "Create a Project", sub: "One per tool, holds every subject and class", href: "getting-started.html", group: "Getting Started" },
+    { title: "Home", sub: "Choose which tool to set up", href: "index.html", group: "Overview" },
     { title: "Exam and Revision Generator", sub: "Turns e-notes into an exam, marking guide, or revision file", href: "exam-generator.html", group: "The Tools" },
+    { title: "Download Claude and sign up", sub: "Browser, iPhone, Android, or desktop", href: "exam-generator.html", group: "Exam and Revision Generator" },
     { title: "Exam composition rules", sub: "Section A, Section B, and the Third Term blend ratio", href: "exam-generator.html", group: "Exam and Revision Generator" },
     { title: "Revision file rules", sub: "Summary notes plus answered practice questions", href: "exam-generator.html", group: "Exam and Revision Generator" },
     { title: "Lesson Note Generator", sub: "Turns e-notes or topic lists into a weekly lesson note booklet", href: "lesson-note-generator.html", group: "The Tools" },
@@ -212,45 +209,9 @@
 (function () {
   "use strict";
 
-  // ---- Mobile sidebar drawer ----
-  var hamburger = document.querySelector("[data-hamburger]");
-  var sidebar = document.querySelector("[data-sidebar]");
-  var scrim = document.querySelector("[data-scrim]");
-  var closeBtn = document.querySelector("[data-sidebar-close]");
-
-  function openSidebar() {
-    if (!sidebar) return;
-    sidebar.classList.add("is-open");
-    scrim.classList.add("is-open");
-    hamburger.setAttribute("aria-expanded", "true");
-    document.body.style.overflow = "hidden";
-  }
-  function closeSidebar() {
-    if (!sidebar) return;
-    sidebar.classList.remove("is-open");
-    scrim.classList.remove("is-open");
-    hamburger.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
-  }
-  if (hamburger) {
-    hamburger.addEventListener("click", function () {
-      var isOpen = sidebar.classList.contains("is-open");
-      isOpen ? closeSidebar() : openSidebar();
-    });
-  }
-  if (scrim) scrim.addEventListener("click", closeSidebar);
-  if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeSidebar();
-  });
-  // Close drawer automatically if a nav link is tapped (mobile)
-  document.querySelectorAll(".nav-list a").forEach(function (a) {
-    a.addEventListener("click", closeSidebar);
-  });
-
   // ---- Highlight active nav link based on current page ----
   var current = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-list a[href]").forEach(function (a) {
+  document.querySelectorAll(".nav-links a[href]").forEach(function (a) {
     var href = a.getAttribute("href").split("/").pop();
     if (href === current) a.classList.add("active");
   });
@@ -343,7 +304,7 @@
 // ---- Scroll reveal ----
 (function () {
   "use strict";
-  var targets = document.querySelectorAll(".section, .tool-card, .kpi, .card");
+  var targets = document.querySelectorAll(".section, .choice-card, .kpi, .card");
   if (!("IntersectionObserver" in window) || !targets.length) return;
   targets.forEach(function (el) { el.classList.add("reveal"); });
   var io = new IntersectionObserver(
