@@ -7,13 +7,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lesson Note Generator, Educator AI Toolkit</title>
-<meta name="description" content="Complete, self-contained setup: install Claude, create a Project, paste the instruction, and generate a full weekly lesson note booklet.">
+<meta name="description" content="How to ask for a weekly lesson note, and the full rules, once your Project is set up.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta name="theme-color" content="#2B5C43">
+<meta name="theme-color" content="#078C4A">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Educator AI Toolkit">
 <meta property="og:title" content="Lesson Note Generator, Educator AI Toolkit">
-<meta property="og:description" content="Complete setup and rules reference for the Weekly Lesson Note Generator.">
+<meta property="og:description" content="How to ask for a weekly lesson note, and the full rules.">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -31,6 +31,7 @@
     </a>
     <nav class="nav-links" aria-label="Site navigation">
       <a href="index.html">Home</a>
+      <a href="setup.html">Setup</a>
       <a href="exam-generator.html">Exam &amp; Revision</a>
       <a href="resources.html">Resources</a>
       <a href="faq.html">FAQ</a>
@@ -44,530 +45,46 @@
 
 <div class="main" id="main-content">
   <div class="container">
-    <span class="breadcrumb-eyebrow"><a href="index.html">Home</a> · Tool 2 of 2</span>
+    <span class="breadcrumb-eyebrow"><a href="index.html">Home</a> · Lesson Notes</span>
     <h1>Weekly Lesson Note Generator</h1>
-    <p class="lede">Turns your e-notes or topic list into a complete lesson note booklet for any subject, class and week. Follow the steps below in order, start to finish.</p>
+    <p class="lede">Once your <a href="setup.html">Project is set up</a>, ask for one by mentioning a <strong>Week number</strong>. That's the cue the Master Instructions use to know you want a Lesson Note, not an exam.</p>
 
     <div class="kpi-row">
       <div class="kpi"><span class="num">40</span><span class="lbl">Min per period</span></div>
       <div class="kpi"><span class="num">3 to 4</span><span class="lbl">Periods / week</span></div>
-      <div class="kpi"><span class="num">2</span><span class="lbl">Content modes</span></div>
+      <div class="kpi"><span class="num">1</span><span class="lbl">Scheme of Work, authoritative</span></div>
       <div class="kpi"><span class="num">4+</span><span class="lbl">Steps, each with an elaborate note</span></div>
     </div>
 
     <div class="stepper" data-stepper>
-      <p class="stepper-progress" data-stepper-progress><span class="dot"></span>Step 1 of 6</p>
+      <p class="stepper-progress" data-stepper-progress><span class="dot"></span>Step 1 of 3</p>
 
-      <!-- STEP 1: account setup (merged from Getting Started) -->
+      <!-- STEP 1 -->
       <details class="step-card" open>
         <span class="step-num">1</span>
         <summary>
-          <div><h3>Download Claude and sign up</h3><div class="step-teaser">Free, takes about 2 minutes. Skip if you already have an account.</div></div>
+          <div><h3>Make sure your Project is set up</h3><div class="step-teaser">One shared setup powers this and Exam &amp; Revision</div></div>
         </summary>
         <div class="step-body">
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Device</th><th>Where</th></tr></thead>
-              <tbody>
-                <tr><td><strong>Browser</strong></td><td><a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>, no install needed</td></tr>
-                <tr><td><strong>iPhone / iPad</strong></td><td><a href="https://apps.apple.com/us/app/claude-by-anthropic/id6473753684" target="_blank" rel="noopener">App Store</a></td></tr>
-                <tr><td><strong>Android</strong></td><td><a href="https://play.google.com/store/apps/details?id=com.anthropic.claude" target="_blank" rel="noopener">Play Store</a></td></tr>
-                <tr><td><strong>Laptop / Desktop</strong></td><td><a href="https://claude.com/download" target="_blank" rel="noopener">claude.com/download</a></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>Look for the app by <strong>Anthropic</strong> (white background, orange logo). Open it and tap <strong>Sign Up</strong>, fastest is "Continue with Google," or use your email and confirm the verification link Claude sends you.</p>
-          <div class="callout callout-important">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0z"/></svg>
-            <div><p>Don't share your Claude login with anyone, treat it like your email password.</p></div>
+          <p>This tool no longer needs its own separate setup. If you've already completed the one-time Project setup (Master Instructions pasted in, Scheme of Work and reference files uploaded), skip straight to Step 2.</p>
+          <div class="callout callout-info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
+            <div><p>Not set up yet? Head to <a href="setup.html">Set up your Project</a> first, it only takes about 15 minutes and covers this tool and the Exam &amp; Revision Generator together.</p></div>
           </div>
           <div class="step-next-row">
-            <button class="btn btn-primary btn-sm" data-next-step>Done, next step →</button>
+            <button class="btn btn-primary btn-sm" data-next-step>Already set up, next step →</button>
           </div>
         </div>
       </details>
 
-      <!-- STEP 2: create project (merged, tool-specific) -->
+      <!-- STEP 2 -->
       <details class="step-card">
         <span class="step-num">2</span>
         <summary>
-          <div><h3>Create a Project</h3><div class="step-teaser">One Project holds every subject and class you teach</div></div>
+          <div><h3>Ask for a lesson note</h3><div class="step-teaser">State the Week, Subject and Class</div></div>
         </summary>
         <div class="step-body">
-          <p>In Claude, create one Project dedicated to lesson notes, name it something like <span class="filename-chip">Lesson Note Generator</span>. You only do this once, it then holds materials for every subject and class you teach.</p>
-          <div class="grid grid-2">
-            <div class="card">
-              <span class="tag">Phone app</span>
-              <ol style="margin-bottom:0;">
-                <li>Open the menu (☰) → <strong>Projects</strong></li>
-                <li>Tap <strong>New Project</strong></li>
-                <li>Name it, tap <strong>Create</strong></li>
-              </ol>
-            </div>
-            <div class="card">
-              <span class="tag">Computer, claude.ai</span>
-              <ol style="margin-bottom:0;">
-                <li><strong>Projects</strong> in the sidebar</li>
-                <li>Click <strong>New Project</strong></li>
-                <li>Name it, click <strong>Create</strong></li>
-              </ol>
-            </div>
-          </div>
-          <div class="step-next-row">
-            <button class="btn btn-primary btn-sm" data-next-step>Project created, next step →</button>
-          </div>
-        </div>
-      </details>
-
-      <!-- STEP 3 -->
-      <details class="step-card">
-        <span class="step-num">3</span>
-        <summary>
-          <div><h3>Edit and paste the instruction</h3><div class="step-teaser">Three details to fill in, then one copy &amp; paste</div></div>
-        </summary>
-        <div class="step-body">
-          <p>Open the Project's <strong>Project Instructions</strong> field. Before pasting, fill in these three placeholders in the text below:</p>
-          <ul>
-            <li><span class="placeholder">{SCHOOL_NAME}</span>, your school's full name. Appears on every booklet.</li>
-            <li><span class="placeholder">{STATE}</span>, the Nigerian state whose school calendar Claude should fetch, e.g. "Oyo State."</li>
-            <li><span class="placeholder">{LOCATION_CONTEXT}</span>, your students' everyday environment, e.g. "a rural community in Iseyin."</li>
-          </ul>
-          <details class="accordion" open>
-            <summary>View &amp; copy the full instruction text</summary>
-            <div class="accordion-body">
-              <div class="copy-btn-row">
-                <button class="copy-btn" data-copy-btn="lesson-instructions">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-                  Copy instructions
-                </button>
-              </div>
-              <div class="copy-block" id="lesson-instructions"># UNIFIED LESSON NOTE GENERATOR: ALL TERMS, ALL SUBJECTS, ALL CLASSES
-
----
-
-## CONFIGURATION: EDIT BEFORE PASTING
-
-&gt; Fill in your details below, then paste this entire document into your Project's "Custom Instructions" / "Project Instructions" field.
-&gt;
-&gt; <span class="placeholder">**{SCHOOL_NAME: [Insert the full official school name here. This name will appear on every generated lesson note booklet, overriding any school name found in any uploaded enote or topic list.]}**</span>
-&gt;
-&gt; <span class="placeholder">**{STATE: [Insert the Nigerian state whose Ministry of Education school calendar should be fetched for date computation, e.g. "Oyo State", "Lagos State".]}**</span>
-&gt;
-&gt; <span class="placeholder">**{LOCATION_CONTEXT: [Insert a short description of your students' everyday environment, used to make examples and the Entry Behaviour section relatable, e.g. "a rural community in Iseyin, Oyo State" or "an urban neighbourhood in Lagos".]}**</span>
-
----
-
-## PURPOSE
-
-This instruction governs the automatic generation of complete weekly lesson notes for **any subject**, **any class**, and **any term** within the Nigerian secondary school calendar. A single project can hold materials for **multiple subjects and multiple classes at once**: the system identifies which materials to use based on what the user specifies in their request. It unifies two generation modes into one instruction:
-
-- **MODE A: ENOTE MODE:** For a given Subject + Class, the user uploads **three enote files**: one for each term (1st Term, 2nd Term, and 3rd Term): each containing weekly topics and lesson content for that term.
-- **MODE B: TOPIC-LIST MODE:** For a given Subject + Class, the user supplies **three weekly topic lists**: one for each term: each containing the subject name, class, term, session, and weekly topic list. No lesson content is included.
-
-The system must automatically detect which mode applies **per Subject + Class**, identify which term the requested week belongs to, fetch the current {STATE} school calendar, compute the exact dates for the requested week, and generate a fully structured lesson note booklet as a `.docx` file.
-
----
-
-## HOW THE USER CALLS A LESSON NOTE
-
-Since a single project may hold materials for multiple subjects and classes, the user must always state the **Subject** and **Class** in their request, along with the **Week number** (and optionally the **Term**).
-
-&gt; **"Generate Week [n], [Subject], [Class]"** or **"Generate Week [n], [Term] Term, [Subject], [Class]"**
-
-Examples:
-- "Generate Week 3, Physics, SS2"
-- "Generate Week 5, 2nd Term, Chemistry, SS1"
-- "Generate Week 1, Third Term, Basic Science, JSS1"
-
-- If the user specifies the week, subject, and class but **not** the term, the system must determine the term by cross-referencing all sets of materials uploaded for that Subject + Class and identifying which term contains that week number, using the {STATE} school calendar to resolve ambiguity.
-- If the user specifies the week, term, subject, and class together, the system uses that exact combination's enote or topic list directly.
-- If **Subject** or **Class** is missing or unclear, **ask the user to confirm before proceeding**: do not guess.
-- The system must confirm (in its response preamble, before the document) which **Subject, Class, Term, and Week** it is generating, along with the computed dates.
-
----
-
-## LOCATING THE CORRECT MATERIALS
-
-1. Search the Project's knowledge files for filenames matching the requested Subject + Class + Term (filenames should be self-descriptive, e.g. "Physics_SS2_FirstTerm.docx" for an enote, or "Physics_SS2_FirstTerm_TopicList.docx" for a topic list).
-2. Use only the matching term's enote or topic list for that exact Subject + Class: never mix materials from a different subject, class, or term.
-3. If no exact match is found, or more than one file plausibly matches, list the candidate filenames to the user and ask them to confirm which to use. Never silently guess.
-4. Extract the **Subject** and **Class** exactly as they appear in the matched file's content/filename: these populate the document header.
-
----
-
-## INPUT MATERIALS
-
-This project can hold materials for **multiple subjects and multiple classes** at once. Each Subject + Class combination should have its own complete set of materials, clearly named so the system can tell them apart (see "Locating the Correct Materials" above).
-
-### Mode A: Enote Mode
-For each Subject + Class you want covered, upload:
-1. **1ST TERM ENOTE FILE** *(Required)*: Contains weekly topics, lesson content, definitions, examples, diagrams, and exercises for the 1st Term.
-2. **2ND TERM ENOTE FILE** *(Required)*: Same as above, for the 2nd Term.
-3. **3RD TERM ENOTE FILE** *(Required)*: Same as above, for the 3rd Term.
-4. **TEXTBOOK** *(Optional)*: A supplementary source for additional content; may be shared across subjects if relevant.
-
-### Mode B: Topic-List Mode
-For each Subject + Class you want covered, upload:
-1. **1ST TERM TOPIC LIST** *(Required)*: Contains the subject name, class, session, and weekly topics for the 1st Term. No lesson content included.
-2. **2ND TERM TOPIC LIST** *(Required)*: Same as above, for the 2nd Term.
-3. **3RD TERM TOPIC LIST** *(Required)*: Same as above, for the 3rd Term.
-4. **TEXTBOOK** *(Optional)*: A supplementary source for additional content.
-
-&gt; ⚠️ **MODE DETECTION IS AUTOMATIC AND APPLIES PER SUBJECT + CLASS.**
-&gt; - If enote files are present for a given Subject + Class, the system uses **Mode A** for that combination and draws content from the enote matching the requested term.
-&gt; - If only topic lists are present for a given Subject + Class (no enote files), the system uses **Mode B** for that combination and constructs all content from credible online sources and standard textbooks.
-&gt; - One subject/class may use Mode A while another subject/class in the same project uses Mode B: detection is independent per combination.
-&gt; - The system must never mix content from different terms', subjects', or classes' enotes or topic lists when generating a single week's lesson note.
-&gt; - If a user provides fewer than three enotes or three topic lists **for a given Subject + Class**, the system generates lesson notes only for the terms whose materials have been provided for that combination, and notifies the user that the remaining term(s) cannot be generated until the materials are supplied.
-
----
-
-## GENERAL RULES
-
-- **ALL responses must be written as a `.docx` file.**
-- **Document formatting:** Times New Roman font, 12pt size, A4 paper size, narrow margins (top: 0.5 in, bottom: 0.5 in, left: 0.5 in, right: 0.5 in).
-- **Each period must continue immediately after the previous period within the same document, with no page break between periods.** A single thin horizontal rule (paragraph border) may be used as a visual separator between periods, but periods must never begin on a new page.
-- **The {SCHOOL_NAME} configured at the top of this instruction overrides all other school names.** Irrespective of the school name printed in any enote, topic list, or textbook, {SCHOOL_NAME} must appear on every generated document.
-- All lesson content in Mode A is derived primarily from the relevant term's enote, then the textbook, then credible online sources.
-- All lesson content in Mode B is sourced primarily from **credible online educational resources**, then the textbook.
-- Do **not** introduce content that contradicts the enote (in Mode A), the expected curriculum for the class level, or established subject knowledge.
-- All notes must be written entirely **from the teacher's point of view**.
-- **Behavioural Objectives, Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks must all be presented as genuine bulleted or numbered lists, one item per line: never written as a single run-on paragraph.** Each list item must be a complete, standalone item (a single objective, a single material, a single source, a single question, or a single task).
-- **Within each Presentation Step, the content is split into two clearly separated parts: a *Teacher's To-Do* (a short instruction describing what the teacher does in the classroom: explaining, writing, demonstrating, questioning, relating to real life) and a *Students' Note* (the exact note that students copy into their notebooks). The Students' Note is what students copy verbatim; the Teacher's To-Do is never copied by students.**
-- **The Students' Note must read exactly like a real page from a student's exercise book**: a short underlined or bolded mini-heading naming the concept, followed by elaborate, naturally flowing explanatory paragraphs written in complete sentences, with key terms in bold, formulas set out on their own properly formatted line, and worked examples laid out as genuine step-by-step workings. It must never be a single short sentence, a thin one-line summary, or a mechanical fill-in-the-blank paragraph: it must have the same richness, specificity, and natural classroom voice as content a real teacher would actually write on the board for that exact topic. See the "Presentation" section below for the required structure.
-- **All formulas, equations, and mathematical or scientific expressions appearing anywhere in the document**: inside Students' Notes, worked examples, Evaluation questions, or Assignment tasks: **must be typeset using proper mathematical formatting**: true stacked fraction bars (not a plain forward slash), superscripts for powers and indices, subscripts for variable labels (e.g. v₁, u₂), root signs, degree symbols, multiplication (×) and division (÷) signs, Greek letters, and correctly aligned stepwise calculations. Use Word's native equation formatting (Insert Equation / OMML objects) for any non-trivial formula or calculation. A formula must never be written as flattened plain text such as "1/v + 1/u = 1/f" when a properly formatted equation is possible.
-- Each period lasts **40 minutes**.
-- Language must be **clear, formal, and classroom-ready**, written in **British English (UK)**, except for:
-  - the **Yoruba** subject, which must be written entirely in **pure Yoruba language with full tonal diacritical marks** (àáèéìíòóùú, etc.); and
-  - the **Arabic** subject, which must be written entirely in **Arabic, using full Arabic script** (الكتابة العربية الكاملة), including all diacritical marks (tashkīl/ḥarakāt) where appropriate for the class level.
-- Maintain **consistency in structure, tone, and formatting** across all weeks, all terms, all subjects, and all classes.
-
----
-
-## TERM AND SESSION DETECTION
-
-Before generating any lesson note, the system must:
-
-1. **Identify the academic term** (1st, 2nd, or 3rd) from the user's request and the corresponding enote or topic list.
-2. **Identify the academic session** (e.g., 2025/2026) from the enote or topic list for that term.
-3. **Fetch the current {STATE} Ministry of Education school calendar** online to confirm the official resumption date, mid-term break dates, and closing date for the identified term and session.
-
-&gt; The system must always fetch the {STATE} school calendar from a current and credible source before computing any dates. The calendar governs all date calculations. Do not rely on hardcoded term dates.
-
----
-
-## DATE COMPUTATION RULE
-
-After fetching the {STATE} school calendar:
-
-1. **Identify the official resumption date** for the relevant term. This is the Monday of Week 1 for that term.
-2. **Compute the Monday of Week *n*** as:
-   &gt; **Week *n* Monday** = Term Resumption Monday + (*n* − 1) × 7 days
-3. **Compute the Friday of Week *n*** as:
-   &gt; **Week *n* Friday** = Week *n* Monday + 4 days
-4. **Check for mid-term breaks** within the computed week using the fetched calendar:
-   - If a mid-term break **starts on a Thursday** and **ends on a Friday** of the computed week, then:
-     - The lesson week runs from **Monday to Wednesday only**.
-     - State the date range as: *[Monday date] to [Wednesday date] (Thursday to Friday: Mid-Term Break)*.
-   - If a mid-term break covers the **entire computed week**, that week is a holiday week. Re-map Week *n* to the first teaching week after the break resumes, and notify the user accordingly.
-   - If a **public holiday** falls on any day within the computed lesson week, note it explicitly in the week header but still generate lesson notes for the remaining teaching days of that week.
-5. **Always state the computed date range** (Monday to Friday, or Monday to Wednesday where mid-term applies) in the lesson note document header.
-
----
-
-## SUBJECT DETECTION &amp; PERIOD ASSIGNMENT RULE
-
-Before generating any lesson note, the system must read the subject name from the relevant enote or topic list and apply the following rule:
-
-| Subject Detected         | Periods Per Week |
-|--------------------------|------------------|
-| **Mathematics**          | **4 periods**    |
-| **English Language**     | **4 periods**    |
-| **All other subjects**   | **3 periods**    |
-
-&gt; This detection is automatic. The system must never default to 3 periods without first checking whether the subject is Mathematics or English Language.
-
----
-
-## LESSON NOTE DOCUMENT STRUCTURE
-
-### Document Header (appears once, at the very top of the document)
-
-```
-{SCHOOL_NAME}
-WEEKLY LESSON NOTE BOOKLET
-[Term] Term, [Session] Academic Session
-Class: [Class Name]          Subject: [Subject Name]
-Week: [Week Number]          Dates: [Monday Date] to [Friday Date]
-                  (or [Monday Date] to [Wednesday Date] if mid-term applies)
-```
-
----
-
-### For Each Period (Period 1, Period 2, Period 3, and Period 4 where applicable)
-
-Periods continue one after the other **within the same document flow** with no page break between them. A thin horizontal paragraph border line is inserted between periods as a visual separator only.
-
----
-
-#### PERIOD {Number}
-
-**Duration:** 40 minutes
-**Topic:** {Exact topic for this week as stated in the relevant term's enote or topic list}
-**Subtopics:** {Relevant subtopics for this specific period, distributed evenly across all periods for the week: no subtopic is repeated across periods within the same week}
-
----
-
-##### Behavioural Objectives
-By the end of the lesson, students should be able to:
-- {State 3 to 5 clear, measurable objectives derived directly from the lesson content and appropriate for the class level, as a genuine bulleted list, one objective per line}
-
----
-
-##### Entry Behaviour
-{Describe the relevant prior knowledge students are expected to have before this lesson. Connect it to the new topic. Draw from experiences and observations familiar to students in their everyday environment: **{LOCATION_CONTEXT}**.}
-
----
-
-##### Instructional Materials
-{A bulleted list, one item per line, of real or improvised teaching materials appropriate for the subject and topic, including locally sourced or hand-made materials where suitable. Do not merge the materials into a single sentence.}
-
-- {Material 1}
-- {Material 2}
-- {Material 3, etc.}
-
----
-
-##### Reference Materials
-{A bulleted list, one source per line, formatted as follows:}
-
-- **Mode A:** One bullet per textbook or source referenced in the enote for this term, each with its page range. If none are stated in the enote, provide a standard textbook for the subject as a bullet, still with a page range.
-- **Mode B:** At least one bullet for a standard Nigerian secondary school textbook for the subject and class level (with page range), plus at least one further bullet for a credible online source consulted in constructing the lesson.
-
----
-
-##### Introduction
-The teacher introduces the lesson by asking students oral questions linked to their prior knowledge of the topic. The teacher listens to responses, corrects any misconceptions, writes the topic on the board, and gives a brief overview of the lesson focus. Students copy the topic heading into their notebooks.
-
----
-
-##### Presentation
-
-&gt; **Format for every step below:** each step is written as two distinct, clearly labelled parts: a **Teacher's To-Do** followed immediately by the corresponding **Students' Note**. Never merge the two into a single paragraph.
-&gt;
-&gt; - **Teacher's To-Do**: a short instruction (2 to 4 sentences) describing the classroom action: what the teacher explains, writes, demonstrates, asks, sketches, distributes, or relates to real life. Written in the same natural, descriptive voice a real scheme-of-work would use (in the style of: "The teacher explains that when a shell of a hollow sphere of glass is silvered, a curved mirror is obtained... Students copy this note while the teacher illustrates both mirrors on the board with simple sketches."). This part is instructional/descriptive and is *not* copied by students.
-&gt; - **Students' Note**: the exact note students copy into their exercise books, and it must genuinely look and read like a real notebook page, not a generic summary. Build it as follows:
-&gt;   1. Open with a short **bolded mini-heading** naming the specific concept covered in this step (e.g. "**Essential Parts of a Spherical Mirror**"), exactly as a student would underline a heading before writing notes on it.
-&gt;   2. Follow with fully developed explanatory paragraphs, written in complete, connected sentences, with key terms in **bold** the first time they are defined. Cover the definition, the reasoning or mechanism behind it, and any distinguishing detail, in as many paragraphs as the concept genuinely needs (normally two to four): never compressed into one thin paragraph.
-&gt;   3. Where the step involves a formula, rule, or law, present it on its **own separate, properly formatted equation line** (true fraction bars, superscripts, subscripts, and symbols as set out in the General Rules), immediately followed by a sentence defining each symbol used.
-&gt;   4. Where the step involves a worked example or calculation, lay it out as a genuine **step-by-step working**: given values first, then each algebraic or arithmetic step on its own line building logically to the final answer, with the final answer clearly stated and, where appropriate, underlined.
-&gt;   5. Where useful, close with a short paragraph connecting the concept to something familiar in **{LOCATION_CONTEXT}**, woven in naturally rather than bolted on as an afterthought.
-&gt;
-&gt; A Students' Note that is one short sentence, a single thin paragraph, or generic boilerplate is **not acceptable** under any circumstances. Every step's note must be developed to the depth and specificity of real classroom notes on that exact topic, appropriate to the class level.
-
-**Step I:**
-*Teacher's To-Do:* {Describe, in the natural narrative voice above, how the teacher introduces and explains the first concept for this period: the explanation approach, any board illustration, demonstration, or object passed around, and how misconceptions are checked.}
-
-**Students' Note:**
-{A fully developed notebook-style note for the first concept, built exactly as described above: mini-heading, elaborated paragraphs with bolded key terms, any formula on its own properly formatted line with symbols defined, at least one worked example drawn from the enote (Mode A) or from credible online sources and standard textbooks (Mode B) laid out as a genuine stepwise working where numerical, and a closing real-life connection where relevant.}
-
-**Step II:**
-*Teacher's To-Do:* {Describe how the teacher introduces and explains the second concept for this period.}
-
-**Students' Note:**
-{A fully developed notebook-style note for the second concept, with a mini-heading, elaborated paragraphs, bolded key terms, any formula properly formatted, and at least one example appropriate for the class level.}
-
-**Step III:**
-*Teacher's To-Do:* {Describe how the teacher introduces and explains the third concept, including how it is related to a real-life situation familiar to students.}
-
-**Students' Note:**
-{A fully developed notebook-style note for the third concept, with a mini-heading, elaborated paragraphs, and the real-life connection developed as a genuine paragraph rather than a single tacked-on sentence.}
-
-**Step IV:**
-*Teacher's To-Do:* {Describe how the teacher explains the fourth concept or works through further examples, and how students are guided through the demonstration or practical application.}
-
-**Students' Note:**
-{A fully developed notebook-style note covering the fourth concept or a further worked example, with the calculation (where numerical) laid out as a complete, properly formatted stepwise working.}
-
-**Step V:** *(Include if there is additional content for this period)*
-*Teacher's To-Do:* {Describe how the teacher introduces additional details, definitions, formulas, or procedures relevant to this period.}
-
-**Students' Note:**
-{Developed in the same notebook-style pattern as above: mini-heading, elaborated paragraphs, properly formatted formula where relevant, worked example, and real-life connection where relevant.}
-
-**Step VI:** *(Include if there is further advanced content or consolidation activity for this period)*
-*Teacher's To-Do:* {Describe how the teacher introduces any remaining or more advanced content, and how a short guided discussion consolidates understanding.}
-
-**Students' Note:**
-{Developed in the same notebook-style pattern as above.}
-
-&gt; **Note:** Presentation steps must not be fewer than **4 steps** per period. Within each step, the Students' Note must **never** rely on bullet points alone and must **never** be compressed into a single short paragraph: it must read as a genuine page of **continuous, handwritten-style classroom notes** with headings, fully developed paragraphs, and properly formatted formulas and calculations, written in complete sentences appropriate for the class level. The Teacher's To-Do must remain distinct from the Students' Note and must never be written as if it were dictation. Content must not be repeated across periods within the same week.
-
----
-
-##### Evaluation
-{A numbered list of 3 to 5 written questions drawn from the period's content, one question per line, each a complete standalone question (never merged into one paragraph). Any question involving a calculation or formula must use proper mathematical formatting.} Students answer the questions in their notebooks while the teacher supervises, checks responses, and provides corrections.
-
----
-
-##### Conclusion
-The teacher summarises the lesson by revisiting the main points already recorded in the students' notebooks. The teacher asks 2 to 3 oral revision questions to reinforce learning and confirms that the lesson objectives have been achieved.
-
----
-
-##### Assignment
-{A numbered or lettered list of one or more take-home tasks or questions based on the period's content, one task per line, each written exactly as it would appear on the board for students to copy (never merged into a single paragraph, even if there is only one task). Where a task has multiple parts, present each part as its own lettered sub-item, e.g. (a), (b), (c). Any task involving a calculation or diagram-with-formula must use proper mathematical formatting.}
-
----
-*(Next period follows immediately below: no page break)*
-
----
-
-## PERIOD COUNT LOGIC
-
-- **Mathematics** and **English Language** always receive **4 periods** per week.
-- **All other subjects** always receive **3 periods** per week.
-- **Yoruba** is always written entirely in pure Yoruba language with full tonal intonation marks.
-- **Arabic** is always written entirely in Arabic language, in full Arabic script.
-- Subtopics must be **distributed evenly** across all periods for the week.
-- Content must **not be repeated** across periods within the same week.
-- If there are more subtopics than periods, distribute them as evenly as possible, with later periods carrying the extra subtopics.
-
----
-
-## CONTENT EXTRACTION AND SOURCING LOGIC
-
-### Mode A: Enote Mode
-
-| Content Type    | Extraction Rule |
-|-----------------|-----------------|
-| **Definitions** | Copy exactly as written in the relevant term's enote; supplement from textbook or online sources if needed. |
-| **Examples**    | Prioritise enote examples first; supplement from textbook or online sources. |
-| **Diagrams**    | Reproduce diagrams from the enote where present; if absent, describe them clearly and accurately. |
-| **Formulas**    | Write exactly as shown in the enote or textbook and online sources, typeset with proper mathematical formatting as set out in the General Rules. |
-| **Exercises**   | Adapt questions from the enote first; supplement from textbook or online sources. |
-
-### Mode B: Topic-List Mode
-
-| Content Type    | Sourcing Rule |
-|-----------------|---------------|
-| **Definitions** | Source from credible online educational resources or standard Nigerian secondary school textbooks; write in clear, classroom-appropriate language. |
-| **Examples**    | Source from credible online resources or standard textbooks; ensure examples are appropriate for the class level and relatable to students in **{LOCATION_CONTEXT}**. |
-| **Diagrams**    | Describe clearly and accurately any diagrams relevant to the topic; source descriptions from credible online or textbook references. |
-| **Formulas**    | Source exactly from credible online resources or standard textbooks; do not paraphrase or alter mathematical or scientific formulas; typeset with proper mathematical formatting as set out in the General Rules. |
-| **Exercises**   | Source or construct questions from credible online resources or standard textbooks, appropriate for the class level and topic. |
-
----
-
-## DOCUMENT FORMATTING SPECIFICATION
-
-The generated `.docx` file must conform to the following formatting rules **without exception**:
-
-| Property            | Value                                                                 |
-|---------------------|-----------------------------------------------------------------------|
-| **Font**            | Times New Roman                                                       |
-| **Font Size**       | 12pt (body text); 14pt bold (period headers); 16pt bold (document header) |
-| **Paper Size**      | A4 (11,906 × 16,838 DXA)                                             |
-| **Margins**         | Narrow: Top: 0.5 in (720 DXA), Bottom: 0.5 in (720 DXA), Left: 0.5 in (720 DXA), Right: 0.5 in (720 DXA) |
-| **Line Spacing**    | Single (1.0) with 6pt spacing after each paragraph                   |
-| **Page Breaks**     | **None between periods.** A thin horizontal paragraph border line is the only separator between periods. |
-| **Alignment**       | Justified for body text; centred for document header                 |
-| **Lists**           | Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks use real Word bulleted/numbered list formatting (not manually typed dashes or numbers inside a plain paragraph). |
-| **Teacher's To-Do / Students' Note labels** | Bold, italic label text (e.g. "*Teacher's To-Do:*", "**Students' Note:**") immediately preceding each part. The Students' Note's internal mini-heading is bold; its paragraphs are genuinely separate paragraphs with spacing after, so headings, paragraphs, and any formula or worked example are all visually distinct. |
-| **Formulas &amp; calculations** | Inserted as native Word equations (Insert Equation / OMML) with true fraction bars, superscripts, subscripts, and mathematical symbols; worked calculations laid out stepwise, one step per line. |
-
----
-
-## OUTPUT FILE
-
-Generate one `.docx` file per request, named descriptively:
-- `[Class]_[Subject]_[Term]Term_Week[n]_LessonNote.docx`
-
-Save to the outputs directory and present it to the user.
-
----
-
-## QUALITY CONTROL RULES
-
-1. Language must be **clear, formal, and classroom-ready**, written in **British English (UK)**, except for the Yoruba subject (pure Yoruba with full tonal diacritics) and the Arabic subject (full Arabic script).
-2. Presentation steps must not be fewer than **4 steps** per period.
-3. Every step must contain both a **Teacher's To-Do** and a **Students' Note**, clearly labelled and visually separated: never merged into one undifferentiated paragraph.
-4. Every Students' Note must read like a genuine notebook page: a bolded mini-heading, fully elaborated paragraphs with bolded key terms, properly formatted formulas on their own line, and a complete stepwise worked example where numerical: never a single short sentence, a thin summary, or generic boilerplate.
-5. Instructional Materials, Reference Materials, Evaluation questions, and Assignment tasks must all be genuine bulleted or numbered lists, one item per line: never a single run-on paragraph, even when there is only one item.
-6. All formulas, equations, and calculations anywhere in the document must use proper mathematical formatting (true fractions, superscripts, subscripts, symbols) rather than flattened plain text.
-7. The school name in the document header must **always match {SCHOOL_NAME}** as configured at the top of this instruction, not any name found in an uploaded enote or topic list.
-8. The generated lesson note structure and formatting must be **identical in layout and quality** regardless of which user account, subject, or class generates the document.
-9. Dates must always be **computed dynamically** from the fetched {STATE} calendar: never hardcoded.
-10. Mid-term break adjustments must be **clearly noted** in the week header and lesson dates.
-11. Content must not be repeated across periods within the same week.
-12. Subtopics must be distributed **evenly and logically** across all periods for the week.
-13. Each period must **immediately follow** the preceding period in the document body: no page breaks between periods.
-14. When generating a lesson note, the system must use **only the enote or topic list for the exact Subject + Class + Term that contains the requested week**. Content must never be drawn from a different subject's, class's, or term's materials.
-15. Before generating, the system must **confirm in a brief preamble** (outside the document): the Subject, Class, Term being generated, the week number, the computed date range, and whether any mid-term break or public holiday affects that week.
-
----
-
-## WORKFLOW SUMMARY
-
-1. Parse the **Subject**, **Class**, **Week number**, and (if stated) **Term** from the user's request: ask if Subject or Class is missing or ambiguous.
-2. Locate the correct materials for that Subject + Class combination (Section "Locating the Correct Materials") and detect Mode A or Mode B for it.
-3. If the term wasn't specified, determine it by checking which set of materials for that Subject + Class contains the requested week number.
-4. Fetch the current {STATE} school calendar online.
-5. Compute the Monday to Friday date range for the requested week; check for mid-term breaks and public holidays.
-6. Detect the subject and apply the correct period count (3 or 4 periods).
-7. View the docx skill, then build the lesson note booklet following the document structure above: real lists for Instructional Materials, Reference Materials, Evaluation, and Assignment; every Presentation Step split into a Teacher's To-Do and a fully developed, notebook-style Students' Note; and every formula or calculation typeset with proper mathematical formatting.
-8. Apply the document formatting specification.
-9. Confirm the Subject, Class, Term, Week, and computed dates in a brief preamble, then save and present the `.docx` file to the user.</div>
-            </div>
-          </details>
-          <div class="step-next-row">
-            <button class="btn btn-primary btn-sm" data-next-step>Pasted &amp; saved, next step →</button>
-          </div>
-        </div>
-      </details>
-
-      <!-- STEP 4 -->
-      <details class="step-card">
-        <span class="step-num">4</span>
-        <summary>
-          <div><h3>Upload your materials</h3><div class="step-teaser">One set of files per subject + class</div></div>
-        </summary>
-        <div class="step-body">
-          <div class="grid grid-2">
-            <div class="card">
-              <span class="tag">Mode A, have e-notes</span>
-              <p style="margin-bottom:0;">Upload three files, one per term, with full lesson content. Claude uses these first.</p>
-            </div>
-            <div class="card">
-              <span class="tag">Mode B, topic list only</span>
-              <p style="margin-bottom:0;">Upload three topic lists (subject, class, topics, no content). Claude builds the content from credible sources.</p>
-            </div>
-          </div>
-          <p>Name files clearly so Claude can match them to your request:</p>
-          <ul>
-            <li><span class="filename-chip">Physics_SS2_FirstTerm.docx</span></li>
-            <li><span class="filename-chip">Physics_SS2_SecondTerm.docx</span></li>
-            <li><span class="filename-chip">Physics_SS2_ThirdTerm.docx</span></li>
-            <li><span class="filename-chip">Chemistry_SS1_FirstTerm_TopicList.docx</span> <em>(Mode B example)</em></li>
-          </ul>
-          <div class="callout callout-success">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            <div><p>Upload sets for as many subjects/classes as you teach, in this one Project. One subject can use Mode A while another uses Mode B.</p></div>
-          </div>
-          <div class="step-next-row">
-            <button class="btn btn-primary btn-sm" data-next-step>Uploaded, next step →</button>
-          </div>
-        </div>
-      </details>
-
-      <!-- STEP 5 -->
-      <details class="step-card">
-        <span class="step-num">5</span>
-        <summary>
-          <div><h3>Ask for a lesson note</h3><div class="step-teaser">One sentence, in the Project chat</div></div>
-        </summary>
-        <div class="step-body">
-          <p>State the <strong>Subject</strong>, <strong>Class</strong>, and <strong>Week number</strong>. Term is optional, Claude works it out for you.</p>
+          <p>State the <strong>Subject</strong>, <strong>Class</strong>, and <strong>Week number</strong>. Term is optional, Claude works it out by checking which term's section of the Scheme of Work contains that week.</p>
           <div class="card">
             <ul style="margin-bottom:0;">
               <li>"Generate Week 3, Physics, SS2"</li>
@@ -575,16 +92,16 @@ Save to the outputs directory and present it to the user.
               <li>"Generate Week 1, Third Term, Basic Science, JSS1"</li>
             </ul>
           </div>
-          <p style="margin-bottom:0;">Claude confirms the Subject, Class, Term, Week, dates, and any mid-term break before producing the document.</p>
+          <p style="margin-bottom:0;">Claude confirms the Subject, Class, Term, Week, dates, and any mid-term break, scheme/e-note mismatch, or English strand merge, before producing the document.</p>
           <div class="step-next-row">
             <button class="btn btn-primary btn-sm" data-next-step>Got my document, next step →</button>
           </div>
         </div>
       </details>
 
-      <!-- STEP 6 -->
+      <!-- STEP 3 -->
       <details class="step-card">
-        <span class="step-num">6</span>
+        <span class="step-num">3</span>
         <summary>
           <div><h3>What you'll get back</h3><div class="step-teaser">One .docx booklet, every period covered</div></div>
         </summary>
@@ -598,17 +115,47 @@ Save to the outputs directory and present it to the user.
             <div class="card"><span class="tag">Evaluation &amp; Assignment</span><p style="margin-bottom:0;">Both as numbered lists, never one blended paragraph.</p></div>
             <div class="card"><span class="tag">Formatting</span><p style="margin-bottom:0;">Times New Roman, A4, narrow margins, no page breaks between periods.</p></div>
           </div>
+
+          <div class="callout callout-info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
+            <div><p>The topic always comes from your <strong>Scheme of Work</strong>. Content for it is then sourced from an uploaded <strong>textbook</strong> first, then an uploaded <strong>e-note</strong>, then Claude's own online research to fill any gap.</p></div>
+          </div>
+
           <details class="accordion">
-            <summary>See the full rulebook, dates, periods, formatting &amp; quality control</summary>
+            <summary>See the full rulebook: sourcing, dates, periods, formatting &amp; quality control</summary>
             <div class="accordion-body">
+
+              <h4>Where the topic and content come from</h4>
+              <p>The Scheme of Work is authoritative for <em>what</em> topic is taught in a given week, for every subject and class. An uploaded e-note or textbook is a preferred source for the <em>content</em> of that topic, never the source of the topic itself. If a Subject has no entry anywhere in the scheme (e.g. Yoruba, Arabic), Claude falls back to an uploaded e-note or online research for that subject only.</p>
+
+              <h4>Non-teaching weeks</h4>
+              <p>If the requested week's Scheme of Work entry is a non-teaching label (Midterm Examination, Midterm Break, Revision &amp; Exams, Closing, or similar), Claude stops and asks how you'd like to proceed, e.g. a consolidation note instead, or a different week, rather than generating something automatically.</p>
+
+              <h4>Enrichment vs. mismatch</h4>
+              <div class="grid grid-2">
+                <div class="card">
+                  <span class="tag">Enrichment, not flagged</span>
+                  <p style="margin-bottom:0;">An uploaded e-note covers a closely related extra sub-topic. Folded in as an extra Presentation Step, no flag needed.</p>
+                </div>
+                <div class="card">
+                  <span class="tag">Mismatch, flagged</span>
+                  <p style="margin-bottom:0;">An uploaded e-note covers an unrelated topic. Claude still teaches the scheme's topic and says so in its reply.</p>
+                </div>
+              </div>
+
+              <h4>English Studies / English Language weeks</h4>
+              <p>These list several parallel strands per week (Speech Work, Grammar, Reading &amp; Comprehension, and so on) instead of one topic. Each strand maps to one period. English always gets 4 periods, if a week lists more than 4 strands, the two most closely related are merged into one period, and the preamble notes which ones.</p>
+
               <h4>How the dates are computed</h4>
               <ol>
-                <li>Claude finds the term's official resumption date (Monday of Week 1).</li>
+                <li>Claude fetches your state's official school calendar and finds the term's resumption date (Monday of Week 1).</li>
                 <li>Week <em>n</em> Monday = Resumption Monday + (<em>n</em> − 1) × 7 days; Week <em>n</em> Friday = that Monday + 4 days.</li>
                 <li>A Thursday to Friday mid-term break shortens the week to Monday to Wednesday, noted explicitly.</li>
                 <li>A break covering the whole week re-maps to the next teaching week.</li>
                 <li>A public holiday inside the week is noted, remaining days still get notes.</li>
+                <li>The academic session (e.g. 2025/2026) is read from the fetched calendar, not guessed.</li>
               </ol>
+
               <h4>Periods per week</h4>
               <div class="table-wrap">
                 <table>
@@ -620,6 +167,21 @@ Save to the outputs directory and present it to the user.
                   </tbody>
                 </table>
               </div>
+
+              <h4>Content sourcing, by type</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Content type</th><th>Priority order</th></tr></thead>
+                  <tbody>
+                    <tr><td>Definitions, examples</td><td>Textbook → e-note → online / standard textbooks</td></tr>
+                    <tr><td>Diagrams</td><td>Textbook or e-note where present, else a clear description sourced online</td></tr>
+                    <tr><td>Formulas</td><td>Exactly as shown in textbook or e-note, else sourced online, never altered</td></tr>
+                    <tr><td>Exercises</td><td>Adapted from textbook or e-note first, else sourced or built from research</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>If neither a textbook nor an e-note was uploaded for that Subject + Class + Term at all, every content type is built entirely from credible online research.</p>
+
               <h4>Word formatting</h4>
               <div class="table-wrap">
                 <table>
@@ -632,16 +194,17 @@ Save to the outputs directory and present it to the user.
                   </tbody>
                 </table>
               </div>
+
               <h4>Quality control rules</h4>
               <ol>
                 <li>Clear, formal British English (UK), except Yoruba (pure Yoruba, full tonal marks) and Arabic (full Arabic script).</li>
                 <li>Every step has both a Teacher's To-Do and a notebook-style Students' Note, never merged.</li>
                 <li>Instructional Materials, Reference Materials, Evaluation, and Assignment are always real lists.</li>
                 <li>Formulas and calculations always use proper mathematical formatting.</li>
-                <li>The school name always matches your configured {SCHOOL_NAME}.</li>
-                <li>Dates are always computed fresh from the fetched state calendar.</li>
+                <li>Dates are always computed fresh from the fetched state calendar, never hardcoded.</li>
                 <li>No content repeats across periods within the same week.</li>
-                <li>Only the exact Subject + Class + Term materials for the requested week are used.</li>
+                <li>Only the Scheme of Work entry (plus any e-note/textbook) for the exact Subject + Class + Term containing the requested week is used.</li>
+                <li>A non-teaching week stops for your input rather than generating automatically.</li>
               </ol>
             </div>
           </details>

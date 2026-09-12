@@ -2,33 +2,61 @@
 
 **Live:** https://babatundeawo.github.io/educator-ai-toolkit/
 
-A free, mobile-first reference site for Nigerian educators, covering two Claude AI setups:
+A free, mobile-first reference site for Nigerian educators, covering one unified
+Claude Project that generates two kinds of documents:
 
-1. **Exam, Marking Guide & Revision File Generator** (`exam-generator.html`)
-2. **Weekly Lesson Note Generator** (`lesson-note-generator.html`)
+1. Weekly **Lesson Notes**
+2. **Exam, Marking Guide & Revision Files**
 
-Plus `index.html` (a welcome screen that asks "What do you want to generate?"
-and sends the visitor straight into one of the two tools above),
-`resources.html` (links + e-note sources) and `faq.html`.
+## Pages
+
+- `index.html`, welcome screen: one path to setup, plus two "how to ask" cards.
+- `setup.html`, the one-time Project setup: sign up, create a Project, an
+  **interactive editor** that fills in the Master Instructions live as you type
+  your school's details, and download buttons for the required knowledge files.
+- `exam-generator.html`, how to ask for an exam/marking guide/revision file,
+  plus the full rules reference.
+- `lesson-note-generator.html`, how to ask for a lesson note, plus the full
+  rules reference.
+- `resources.html`, Project file downloads, official Claude links, e-note
+  sources by class, and community links.
+- `faq.html`.
 
 This is a plain static site, no build step, no framework, no dependencies beyond
 Google Fonts (loaded via CDN in `assets/style.css`). It works as-is on GitHub Pages.
 
 ## How this version is organised
 
-The old version opened on a busy marketing-style home page and kept account
-setup on a separate `getting-started.html` page, which left first-time visitors
-unsure where to start. This version instead:
+The site now mirrors a single unified Claude Project rather than two separate
+ones. Setup (signing up, creating the Project, pasting the Master Instructions,
+uploading the Scheme of Work and reference files) happens **once**, on
+`setup.html`. The two tool pages no longer repeat any setup steps, they only
+cover how to phrase a request and what you get back, since the same Project
+handles both based on whether your request includes a Week number (Lesson
+Note) or just a Term (Exam/Revision).
 
-- Opens on a single question: **"What do you want to generate?"**, with two
-  large choice cards and nothing else competing for attention.
-- Each tool page is now fully self-contained: Step 1 of both `exam-generator.html`
-  and `lesson-note-generator.html` is "Download Claude and sign up," so a visitor
-  never has to leave the page they landed on to get started. There is no
-  separate Getting Started page any more.
-- `resources.html` and `faq.html` stay as their own pages, linked from the top
-  nav and from the welcome screen, for people who want to browse before
-  committing to a tool.
+### The Master Instructions editor
+
+`setup.html` embeds the exact text of `Master_Project_Instructions.md` inside a
+hidden `<script type="text/plain" id="master-raw">` block. Four inputs (school
+name, school address, state, location context) drive a small inline script at
+the bottom of the page that live-substitutes those values into a preview
+(`#master-preview`), highlighting anything not yet filled in gold. The existing
+generic copy-button handler in `assets/script.js` (`data-copy-btn`) copies
+whatever the preview currently shows. If you ever need to update the master
+instructions text itself, edit the content of that `<script type="text/plain">`
+block directly, the substitution logic doesn't need to change.
+
+### Downloadable knowledge files
+
+`files/` holds the three files a Project needs uploaded as knowledge:
+`COMPLETE_NERDC_SCHEME_OF_WORK.pdf`, `Lesson_Note_Generator_Reference.md`, and
+`Exam_Marking_Revision_Generator_Reference.md`. They're linked with a plain
+`download` attribute from both `setup.html` (inline with the step that needs
+them) and `resources.html` (for re-downloading later). Swap a file by
+replacing it in `files/` with the same filename, no HTML changes needed unless
+the filename itself changes (update the `href` and the visible file name in
+both pages if so).
 
 ## What's in this version
 
@@ -37,7 +65,7 @@ unsure where to start. This version instead:
   straight to any page or step.
 - A scroll progress bar, a back-to-top button, and a skip-to-content link for
   keyboard and screen-reader users.
-- A step-by-step accordion on each tool page, with a "Step X of 6" progress
+- A step-by-step accordion on each tool page, with a "Step X of N" progress
   readout and a "next step" button that opens the following step and scrolls
   to it.
 - No em dashes or en dashes anywhere in the copy.
@@ -46,11 +74,12 @@ unsure where to start. This version instead:
 
 1. Create a new GitHub repository (public repos get free Pages hosting), or
    reuse the existing `educator-ai-toolkit` repo.
-2. Upload every file in this folder to the **root** of that repository, keeping the
-   `assets/` folder structure intact:
+2. Upload every file in this folder to the **root** of that repository, keeping
+   the `assets/` and `files/` folder structure intact:
    ```
    your-repo/
      index.html
+     setup.html
      exam-generator.html
      lesson-note-generator.html
      resources.html
@@ -59,6 +88,10 @@ unsure where to start. This version instead:
        style.css
        script.js
        favicon.svg
+     files/
+       COMPLETE_NERDC_SCHEME_OF_WORK.pdf
+       Lesson_Note_Generator_Reference.md
+       Exam_Marking_Revision_Generator_Reference.md
    ```
 3. In the repository, go to **Settings → Pages**.
 4. Under "Build and deployment", set **Source** to `Deploy from a branch`.
@@ -89,7 +122,7 @@ custom domain or inside a `/repo-name/` subpath.
   `SITE_INDEX` array near the top of `assets/script.js`.
 - To add a step to a tool page, copy an existing `<details class="step-card">`
   block, update its `<span class="step-num">` number, and renumber the ones
-  after it (also update the `Step X of 6` count wherever it's mentioned in copy).
+  after it (also update the `Step X of N` count wherever it's mentioned in copy).
 
 ## Credit
 

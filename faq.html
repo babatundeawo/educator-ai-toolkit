@@ -7,9 +7,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FAQ, Educator AI Toolkit</title>
-<meta name="description" content="Frequently asked questions about the Exam & Revision Generator and the Lesson Note Generator.">
+<meta name="description" content="Frequently asked questions about the one-Project setup, the Lesson Note Generator, and the Exam & Revision Generator.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<meta name="theme-color" content="#2B5C43">
+<meta name="theme-color" content="#078C4A">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Educator AI Toolkit">
 <meta property="og:title" content="FAQ, Educator AI Toolkit">
@@ -31,6 +31,7 @@
     </a>
     <nav class="nav-links" aria-label="Site navigation">
       <a href="index.html">Home</a>
+      <a href="setup.html">Setup</a>
       <a href="exam-generator.html">Exam &amp; Revision</a>
       <a href="lesson-note-generator.html">Lesson Notes</a>
       <a href="resources.html">Resources</a>
@@ -59,13 +60,28 @@
       </details>
 
       <details class="accordion faq-item">
+        <summary>Do I need separate Projects for lesson notes and exams?</summary>
+        <div class="accordion-body"><p>No, just one. A single Project, with the Master Instructions and the Scheme of Work uploaded, handles both. What you type decides which one you get: a Week number means a Lesson Note, a Term with no Week number means an exam or revision file.</p></div>
+      </details>
+
+      <details class="accordion faq-item">
         <summary>Do I need to set everything up again each time?</summary>
-        <div class="accordion-body"><p>No. You set up each Project once, the instruction and your materials stay saved permanently. After that, you only type a short request (like "Generate Week 3, Physics, SS2," or "Third term, Basic Science, JSS1 exam") whenever you need a new document.</p></div>
+        <div class="accordion-body"><p>No. You set up the Project once, the instructions and your files stay saved permanently. After that, you only type a short request (like "Generate Week 3, Physics, SS2," or "Third term, Basic Science, JSS1 exam") whenever you need a new document.</p></div>
+      </details>
+
+      <details class="accordion faq-item">
+        <summary>What if my request could be read as either a lesson note or an exam?</summary>
+        <div class="accordion-body"><p>Claude asks you to clarify rather than guessing. For example, "Third term, Physics, SS2" alone is ambiguous, since it has no Week number to signal a lesson note and no "exam" or "revision" keyword either. Adding either makes it unambiguous.</p></div>
       </details>
 
       <details class="accordion faq-item">
         <summary>What if I teach more than one subject or class?</summary>
-        <div class="accordion-body"><p>One Project can hold materials for as many subjects and classes as you need, just name your files clearly (Subject_Class_Term) and always state the Subject and Class in your request so Claude knows which materials to use. You don't need a separate Project for every subject, though you're welcome to organise it that way if you prefer.</p></div>
+        <div class="accordion-body"><p>The one Project covers every subject and class in your school automatically, since the Scheme of Work already lists all of them. Just always state the Subject and Class in your request so Claude knows which part of the scheme to use.</p></div>
+      </details>
+
+      <details class="accordion faq-item">
+        <summary>What if my subject is named differently from how the Scheme of Work names it?</summary>
+        <div class="accordion-body"><p>Common naming differences are handled automatically, e.g. "Agric" for "Agricultural Science," "PHE" for "Physical and Health Education," "Civic Education" for "Citizenship and Heritage Studies," and several others. If your subject still doesn't confidently match anything in the scheme, Claude lists the closest candidates and asks you to confirm rather than guessing.</p></div>
       </details>
 
       <details class="accordion faq-item">
@@ -75,12 +91,12 @@
 
       <details class="accordion faq-item">
         <summary>Will it work for the Yoruba subject?</summary>
-        <div class="accordion-body"><p>Yes. Yoruba content is generated entirely in pure Yoruba, with full tonal diacritical marks (àáèéìíòóùú, etc.), for both tools.</p></div>
+        <div class="accordion-body"><p>Yes. Yoruba content is generated entirely in pure Yoruba, with full tonal diacritical marks (àáèéìíòóùú, etc.). Arabic is generated entirely in full Arabic script. Both fall back to an uploaded e-note or online research, since the Scheme of Work doesn't cover them.</p></div>
       </details>
 
       <details class="accordion faq-item">
         <summary>Is this allowed? Will supervisors accept it?</summary>
-        <div class="accordion-body"><p>The output is a properly structured, curriculum-aligned document, the same content expected of every teacher, just produced faster and more consistently. It strengthens documentation standards rather than replacing the teacher's role: the teacher still decides what to upload, checks the result, and delivers the lesson or exam.</p></div>
+        <div class="accordion-body"><p>The output is a properly structured, curriculum-aligned document, built from your own official Scheme of Work, the same content expected of every teacher, just produced faster and more consistently. It strengthens documentation standards rather than replacing the teacher's role: the teacher still checks the result and delivers the lesson or exam.</p></div>
       </details>
 
       <details class="accordion faq-item">
@@ -94,14 +110,29 @@
       </details>
     </section>
 
+    <!-- SCHEME OF WORK -->
+    <section class="section">
+      <h2>The Scheme of Work</h2>
+
+      <details class="accordion faq-item">
+        <summary>What if I also upload an e-note that doesn't quite match the scheme?</summary>
+        <div class="accordion-body"><p>Depends how different it is. If the e-note simply goes into more depth within the same broad topic (e.g. the scheme says "Sequences and Series," the e-note adds "Geometric Sequences"), it's treated as enrichment and included automatically, no flag. If the e-note is about a genuinely different topic, Claude still follows the scheme, since it's authoritative, and flags the mismatch in its reply so you know why.</p></div>
+      </details>
+
+      <details class="accordion faq-item">
+        <summary>What happens on a week labelled "Midterm Break" or "Revision & Exams" in the scheme?</summary>
+        <div class="accordion-body"><p>For a Lesson Note request, Claude stops and asks how you'd like to proceed rather than generating something automatically. For an exam or revision file, that week is simply excluded from the topic list, no need to ask.</p></div>
+      </details>
+
+      <details class="accordion faq-item">
+        <summary>Do I still need e-notes or textbooks if I have the Scheme of Work?</summary>
+        <div class="accordion-body"><p>No, they're optional. The Scheme of Work alone is enough for Claude to produce a complete, accurate document, researching whatever it needs to fill in. Uploaded e-notes and textbooks simply take priority as sources when they cover a topic, and Claude only turns to its own research to fill what they don't cover.</p></div>
+      </details>
+    </section>
+
     <!-- EXAM TOOL -->
     <section class="section">
       <h2>Exam &amp; Revision Generator</h2>
-
-      <details class="accordion faq-item">
-        <summary>Is this ready for English Language or Mathematics?</summary>
-        <div class="accordion-body"><p>Not yet, hold off on those two subjects (Mathematics especially, due to diagrams) until a tailored version is released. Every other subject is fully supported today.</p></div>
-      </details>
 
       <details class="accordion faq-item">
         <summary>What's the difference between an exam request and a revision file request?</summary>
@@ -109,8 +140,8 @@
       </details>
 
       <details class="accordion faq-item">
-        <summary>Do I need e-notes for all three terms?</summary>
-        <div class="accordion-body"><p>For JSS1, JSS2, SS1 and SS2, yes, upload all three terms, since Third Term exams blend content from all of them. For JSS3 and SS3, only 1st and 2nd Term e-notes are needed, since there is no Third Term exam for those classes.</p></div>
+        <summary>Is there a Third Term exam for JSS3 or SS3?</summary>
+        <div class="accordion-body"><p>No, those classes don't sit a Third Term exam, so the Scheme of Work won't have Third Term exam content to draw on for them. First and Second Term exams work as normal.</p></div>
       </details>
 
       <details class="accordion faq-item">
@@ -126,18 +157,18 @@
       <h2>Lesson Note Generator</h2>
 
       <details class="accordion faq-item">
-        <summary>Do I need full e-notes, or is a topic list enough?</summary>
-        <div class="accordion-body"><p>Either works. Mode A (full e-notes) is used automatically if you upload them; Mode B (topic list only) is used automatically if you only have topics, Claude then builds the full content from credible online sources and standard textbooks. Detection happens automatically, per subject and class.</p></div>
-      </details>
-
-      <details class="accordion faq-item">
         <summary>Do I have to tell Claude the term every time?</summary>
-        <div class="accordion-body"><p>No, the term is optional. If you leave it out, Claude works out which term contains the week number you asked for by checking your uploaded materials and the school calendar.</p></div>
+        <div class="accordion-body"><p>No, the term is optional. If you leave it out, Claude works out which term contains the week number you asked for by checking the Scheme of Work.</p></div>
       </details>
 
       <details class="accordion faq-item">
         <summary>How does Claude know how many periods to plan?</summary>
         <div class="accordion-body"><p>It reads the subject automatically: Mathematics and English Language always get 4 periods a week, and every other subject gets 3.</p></div>
+      </details>
+
+      <details class="accordion faq-item">
+        <summary>What happens with English Studies or English Language, since they list several strands a week?</summary>
+        <div class="accordion-body"><p>Each strand (Grammar, Reading & Comprehension, and so on) maps to one period. Since English always gets 4 periods, if a week lists more than 4 strands, Claude merges the two most closely related ones into a single period and notes which ones it merged.</p></div>
       </details>
 
       <details class="accordion faq-item">

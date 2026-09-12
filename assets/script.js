@@ -77,17 +77,19 @@
   "use strict";
 
   var SITE_INDEX = [
-    { title: "Home", sub: "Choose which tool to set up", href: "index.html", group: "Overview" },
-    { title: "Exam and Revision Generator", sub: "Turns e-notes into an exam, marking guide, or revision file", href: "exam-generator.html", group: "The Tools" },
-    { title: "Download Claude and sign up", sub: "Browser, iPhone, Android, or desktop", href: "exam-generator.html", group: "Exam and Revision Generator" },
+    { title: "Home", sub: "One Project, two kinds of documents", href: "index.html", group: "Overview" },
+    { title: "Set up your Project", sub: "Sign up, create one Project, fill in the Master Instructions, upload files", href: "setup.html", group: "Overview" },
+    { title: "Fill in & copy the Master Instructions", sub: "Interactive editor for school name, address, state, and location", href: "setup.html", group: "Setup" },
+    { title: "Download the Scheme of Work and reference files", sub: "The knowledge files your Project needs", href: "setup.html", group: "Setup" },
+    { title: "Exam and Revision Generator", sub: "Turns your Scheme of Work into an exam, marking guide, or revision file", href: "exam-generator.html", group: "The Tools" },
     { title: "Exam composition rules", sub: "Section A, Section B, and the Third Term blend ratio", href: "exam-generator.html", group: "Exam and Revision Generator" },
     { title: "Revision file rules", sub: "Summary notes plus answered practice questions", href: "exam-generator.html", group: "Exam and Revision Generator" },
-    { title: "Lesson Note Generator", sub: "Turns e-notes or topic lists into a weekly lesson note booklet", href: "lesson-note-generator.html", group: "The Tools" },
-    { title: "Mode A and Mode B", sub: "Full e-notes versus topic lists only", href: "lesson-note-generator.html", group: "Lesson Note Generator" },
+    { title: "Lesson Note Generator", sub: "Turns your Scheme of Work into a weekly lesson note booklet", href: "lesson-note-generator.html", group: "The Tools" },
+    { title: "Non-teaching weeks and mismatches", sub: "How midterm breaks and e-note mismatches are handled", href: "lesson-note-generator.html", group: "Lesson Note Generator" },
     { title: "Date computation rule", sub: "How week numbers map to real calendar dates", href: "lesson-note-generator.html", group: "Lesson Note Generator" },
-    { title: "Resources and Links", sub: "Official Claude links, e-note downloads, community support", href: "resources.html", group: "Help" },
+    { title: "Resources and Links", sub: "Project files, official Claude links, e-note downloads, community support", href: "resources.html", group: "Help" },
     { title: "Download e-notes by class", sub: "Primary 1 through SS3 Telegram channels", href: "resources.html", group: "Resources and Links" },
-    { title: "FAQ", sub: "Frequently asked questions about both tools", href: "faq.html", group: "Help" }
+    { title: "FAQ", sub: "Frequently asked questions about setup and both request types", href: "faq.html", group: "Help" }
   ];
 
   var overlay = document.querySelector("[data-cmdk-overlay]");
