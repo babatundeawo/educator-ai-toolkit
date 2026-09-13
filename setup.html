@@ -307,7 +307,7 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
               <div class="file-name">COMPLETE_NERDC_SCHEME_OF_WORK.pdf</div>
               <div class="file-sub">Required, upload once. Covers the whole school, every subject and class.</div>
             </div>
-            <a class="btn btn-primary btn-sm" href="files/COMPLETE_NERDC_SCHEME_OF_WORK.pdf" download>Download</a>
+            <a class="btn btn-primary btn-sm" href="files/COMPLETE_NERDC_SCHEME_OF_WORK.pdf" download="COMPLETE_NERDC_SCHEME_OF_WORK.pdf" target="_blank" rel="noopener">Download</a>
           </div>
 
           <div class="file-card">
@@ -316,7 +316,7 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
               <div class="file-name">Lesson_Note_Generator_Reference.md</div>
               <div class="file-sub">Required. Full rules the Master consults for Lesson Note requests.</div>
             </div>
-            <a class="btn btn-primary btn-sm" href="files/Lesson_Note_Generator_Reference.md" download>Download</a>
+            <a class="btn btn-primary btn-sm" href="files/Lesson_Note_Generator_Reference.md" download="Lesson_Note_Generator_Reference.md" target="_blank" rel="noopener">Download</a>
           </div>
 
           <div class="file-card">
@@ -325,7 +325,7 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
               <div class="file-name">Exam_Marking_Revision_Generator_Reference.md</div>
               <div class="file-sub">Required. Full rules the Master consults for Exam, Marking Guide &amp; Revision File requests.</div>
             </div>
-            <a class="btn btn-primary btn-sm" href="files/Exam_Marking_Revision_Generator_Reference.md" download>Download</a>
+            <a class="btn btn-primary btn-sm" href="files/Exam_Marking_Revision_Generator_Reference.md" download="Exam_Marking_Revision_Generator_Reference.md" target="_blank" rel="noopener">Download</a>
           </div>
 
           <div class="callout callout-success">
@@ -346,21 +346,7 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
           <div><h3>You're ready</h3><div class="step-teaser">One setup, two things you can now ask for</div></div>
         </summary>
         <div class="step-body">
-          <p>That's it, this Project now handles everything. What you type decides what you get:</p>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Your request mentions...</th><th>You get</th></tr></thead>
-              <tbody>
-                <tr><td>A <strong>Week number</strong> (e.g. "Week 3")</td><td>A Lesson Note booklet</td></tr>
-                <tr><td>"Exam" / "marking guide", with a <strong>Term</strong> only</td><td>An Exam + Marking Guide</td></tr>
-                <tr><td>"Revision file" / "revision notes", with a <strong>Term</strong> only</td><td>A Revision File</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="callout callout-info">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
-            <div><p>If a request could be read either way (e.g. "Third term, Physics, SS2" with no other cue), the Master asks you to clarify which one you meant rather than guessing.</p></div>
-          </div>
+          <p>That's it, this Project now handles everything. Just ask, in plain words, for whichever one you need:</p>
           <div class="grid grid-2">
             <a class="link-card" href="lesson-note-generator.html" style="text-decoration:none; color:inherit;">
               <div><div class="label">How to ask for a Lesson Note →</div><div class="sub">Wording, dates, and what you get back</div></div>
@@ -430,7 +416,7 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
     if (closeIdx === -1) return null;
     var key = LINE_KEYS[m[1]];
     var val = inputs[key].value.trim();
-    if (val) return escapeHtml(val);
+    if (val) return "**{" + m[1] + ": [" + escapeHtml(val) + "]}**";
     return '<mark class="placeholder-mark">' + escapeHtml(line) + "</mark>";
   }
 

@@ -343,13 +343,27 @@ li p { margin: 0; }
   font-family: var(--font-mono);
 }
 .choice-cta {
-  display: flex; align-items: center; gap: 7px; font-weight: 700; color: var(--cover-deep);
-  font-size: .98rem; margin-top: 4px; transition: gap .2s var(--ease);
+  position: relative;
+  display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: #fff;
+  font-size: .96rem; margin-top: 6px; width: fit-content;
+  padding: 12px 20px; border-radius: 999px; overflow: hidden;
+  background: linear-gradient(150deg, var(--cover-bright), var(--cover) 55%, var(--cover-deep));
+  box-shadow: var(--glow-green), inset 0 1px 0 rgba(255,255,255,.3);
+  transition: transform .22s var(--ease), box-shadow .25s var(--ease), gap .2s var(--ease);
 }
-[data-theme="dark"] .choice-cta { color: var(--cover); }
-.choice-card:hover .choice-cta { gap: 11px; }
+.choice-cta::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.4) 45%, transparent 60%);
+  transform: translateX(-120%); transition: transform .6s var(--ease);
+}
+[data-theme="dark"] .choice-cta { color: #06150F; }
+.choice-card:hover .choice-cta {
+  gap: 12px; transform: translateY(-2px);
+  box-shadow: 0 14px 30px -8px rgba(7,140,74,.55), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.choice-card:hover .choice-cta::before { transform: translateX(120%); }
 .choice-card:hover .choice-cta svg { transform: translateX(2px); }
-.choice-cta svg { transition: transform .2s var(--ease); }
+.choice-cta svg { transition: transform .2s var(--ease); position: relative; }
 
 .welcome-note {
   max-width: 900px; margin: 38px auto 0; display: flex; align-items: flex-start; gap: 12px;
