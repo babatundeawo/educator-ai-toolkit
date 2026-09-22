@@ -623,3 +623,61 @@ tbody tr:last-child td { border-bottom: none; }
 
 /* ============ MISC ============ */
 strong { font-weight: 700; }
+
+/* ==========================================================
+   SCHEME PICKER — pick a class + subject(s), download just
+   the scheme file(s) you need instead of the whole document.
+   ========================================================== */
+.scheme-picker { margin: 18px 0; }
+.scheme-picker .class-tabs {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+}
+.scheme-picker .class-tab {
+  font-family: var(--font-body); font-weight: 700; font-size: .92rem;
+  padding: 9px 16px; border-radius: 999px; border: 1.5px solid var(--border-strong);
+  background: var(--paper-raised); color: var(--ink-soft); cursor: pointer;
+  transition: all .18s var(--ease);
+}
+.scheme-picker .class-tab:hover { border-color: var(--cover); color: var(--cover-deep); }
+.scheme-picker .class-tab.is-active {
+  background: linear-gradient(150deg, var(--cover-bright), var(--cover) 55%, var(--cover-deep));
+  border-color: transparent; color: #fff; box-shadow: var(--glow-green);
+}
+.scheme-picker .subject-toolbar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 10px; margin-bottom: 10px;
+}
+.scheme-picker .subject-toolbar .toolbar-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.scheme-picker .subject-toolbar .link-action {
+  background: none; border: none; color: var(--cover-deep); font-weight: 700;
+  font-size: .87rem; cursor: pointer; padding: 4px 2px; text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.scheme-picker .subject-list { display: flex; flex-direction: column; gap: 10px; }
+.scheme-picker .subject-row {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--paper-raised); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 13px 16px; transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease);
+}
+.scheme-picker .subject-row:hover { border-color: var(--border-strong); box-shadow: var(--shadow-sm); }
+.scheme-picker .subject-row input[type="checkbox"] {
+  width: 19px; height: 19px; accent-color: var(--cover); flex-shrink: 0; cursor: pointer;
+}
+.scheme-picker .subject-row .subject-meta { flex: 1; min-width: 0; }
+.scheme-picker .subject-row .subject-name { font-weight: 700; font-size: .95rem; }
+.scheme-picker .subject-row .subject-sub { font-size: .82rem; color: var(--ink-faint); margin-top: 2px; }
+.scheme-picker .subject-row .subject-sub.is-partial { color: var(--gold-deep); }
+.scheme-picker .subject-row .btn { flex-shrink: 0; }
+.scheme-picker .picker-bar {
+  position: sticky; bottom: 14px; margin-top: 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  background: var(--paper-raised); border: 1.5px solid var(--border-strong); border-radius: var(--radius-md);
+  padding: 14px 18px; box-shadow: var(--shadow-lg);
+}
+.scheme-picker .picker-bar .picker-count { font-weight: 700; font-size: .92rem; color: var(--ink-soft); }
+@media (max-width: 560px) {
+  .scheme-picker .subject-row { flex-wrap: wrap; }
+  .scheme-picker .subject-row .subject-meta { flex-basis: 100%; order: 2; }
+  .scheme-picker .subject-row .btn { order: 3; }
+  .scheme-picker .picker-bar { position: static; }
+}

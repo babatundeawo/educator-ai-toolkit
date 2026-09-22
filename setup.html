@@ -114,6 +114,12 @@
               </ol>
             </div>
           </div>
+
+          <div class="callout callout-important">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <div><p><strong>Turn on two Project capabilities</strong> (usually under the Project's settings or a tools/capabilities icon near the message box): <strong>Web search</strong> and <strong>Analysis / code execution</strong>. Lesson notes now embed real diagrams, graphs, charts, and maps directly in the document, generated or fetched using these two capabilities, instead of just telling you what to go and find yourself.</p></div>
+          </div>
+
           <div class="step-next-row">
             <button class="btn btn-primary btn-sm" data-next-step>Project created, next step →</button>
           </div>
@@ -178,7 +184,7 @@ This single Project generates three kinds of documents for **{SCHOOL_NAME}**, de
 3. A **Revision File** (one `.docx`)
 
 This Project's knowledge files include:
-- The official **Scheme of Work** (required, uploaded once — covers the whole school)
+- The official **Scheme of Work** (required — one file per Subject + Class you teach, or a single combined file covering the whole school; both formats are supported)
 - Optional per-Subject + Class + Term **e-notes**
 - Optional **textbooks**
 - Two reference documents holding the detailed mechanics for each mode:
@@ -207,8 +213,8 @@ Once the mode is identified, view the matching reference file in full and follow
 
 ## SOURCES AVAILABLE TO THIS PROJECT
 
-### Scheme of Work — *Required, uploaded once*
-A document (typically covering the whole school — multiple classes and subjects at once) listing, for each Subject and Class, the topics to be taught each Term and Week. This is the **authoritative source for what topic is taught when**, for every mode. It is identified as the knowledge file whose name or content indicates it is the official scheme of work (e.g. filename containing "Scheme" or "SOW"). If more than one candidate file could be the current scheme, list the candidates and ask the user to confirm which is authoritative — never guess. If the scheme has no entry for the exact requested Subject + Class + Term/Week, or its structure is ambiguous, say what was found and ask the user to confirm rather than guessing.
+### Scheme of Work — *Required*
+Lists, for each Subject and Class, the topics to be taught each Term and Week. This is the **authoritative source for what topic is taught when**, for every mode. It may be uploaded as **one file per Subject + Class** (the toolkit website's downloads are named this way, e.g. `jss1-mathematics.md`, `ss2-chemistry.md`, each covering every term available for that one subject and class), or as a **single combined file** covering multiple subjects/classes at once. Treat every uploaded knowledge file whose name or content indicates it is a scheme of work (filename containing "scheme," "sow," or matching a `{class}-{subject}` pattern) as part of one collective Scheme of Work source, regardless of how many separate files that spans. To find the entry for a given Subject + Class + Term/Week, check whichever uploaded scheme file(s) cover that Subject + Class. If no uploaded file covers the requested Subject + Class at all, say so and ask the user to confirm rather than guessing. If a file's status as a scheme file is genuinely unclear, ask rather than assume.
 
 **Non-teaching weeks.** Some scheme entries carry no real topic — labelled things like "Midterm Examination," "Midterm Break," "Revision & Exams," or "Closing," sometimes merged across a range of weeks (e.g. one row covering "Weeks 11–13"). Handling differs by mode: **Lesson Note mode stops and asks the user how to proceed**; **Exam/Revision mode excludes these automatically from the topic list**, no need to ask. See the relevant reference file for the exact mechanics.
 
@@ -299,15 +305,31 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
           <div><h3>Upload the knowledge files</h3><div class="step-teaser">The Scheme of Work, the two reference files, plus anything else you have</div></div>
         </summary>
         <div class="step-body">
-          <p>In the same Project, open <strong>Project Knowledge</strong> (or "Add content") and upload these three files. Download them here first, then add them to the Project exactly as downloaded, no need to rename them.</p>
+          <p>In the same Project, open <strong>Project Knowledge</strong> (or "Add content") and upload the Scheme of Work file(s) for the subjects and classes you actually teach, plus the two reference files below. Download them here first, then add them to the Project exactly as downloaded, no need to rename them.</p>
 
-          <div class="file-card">
-            <span class="file-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></span>
-            <div class="file-meta">
-              <div class="file-name">COMPLETE_NERDC_SCHEME_OF_WORK.pdf</div>
-              <div class="file-sub">Required, upload once. Covers the whole school, every subject and class.</div>
+          <div class="callout callout-info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
+            <div><p>You no longer need to download the whole 476-page scheme. Pick your class below, tick the subject(s) you teach, and download only those. If you teach several subjects or classes, select as many as you need and upload them all, the Project treats them as one combined Scheme of Work.</p></div>
+          </div>
+
+          <div class="scheme-picker" data-scheme-picker data-manifest="files/scheme/manifest.json" data-base="files/scheme/">
+            <div class="class-tabs" data-picker-tabs></div>
+            <div class="subject-toolbar">
+              <div class="toolbar-actions">
+                <button type="button" class="link-action" data-picker-select-all>Select all in this class</button>
+                <button type="button" class="link-action" data-picker-clear>Clear selection</button>
+              </div>
             </div>
-            <a class="btn btn-primary btn-sm" href="files/COMPLETE_NERDC_SCHEME_OF_WORK.pdf" download="COMPLETE_NERDC_SCHEME_OF_WORK.pdf" target="_blank" rel="noopener">Download</a>
+            <div class="subject-list" data-picker-list></div>
+            <div class="picker-bar" data-picker-bar style="display:none;">
+              <span class="picker-count" data-picker-count>No files selected</span>
+              <button type="button" class="btn btn-primary btn-sm" data-picker-download disabled>Download selected</button>
+            </div>
+          </div>
+
+          <div class="callout callout-warn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+            <div><p>A handful of subjects, mostly in SS3, genuinely only have First and Second Term entries in the official document, this is marked on each file below. It is not a missing download.</p></div>
           </div>
 
           <div class="file-card">

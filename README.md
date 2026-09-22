@@ -49,14 +49,56 @@ block directly, the substitution logic doesn't need to change.
 
 ### Downloadable knowledge files
 
-`files/` holds the three files a Project needs uploaded as knowledge:
-`COMPLETE_NERDC_SCHEME_OF_WORK.pdf`, `Lesson_Note_Generator_Reference.md`, and
-`Exam_Marking_Revision_Generator_Reference.md`. They're linked with a plain
-`download` attribute from both `setup.html` (inline with the step that needs
-them) and `resources.html` (for re-downloading later). Swap a file by
-replacing it in `files/` with the same filename, no HTML changes needed unless
-the filename itself changes (update the `href` and the visible file name in
-both pages if so).
+`files/` holds the files a Project needs uploaded as knowledge: the Scheme of
+Work (now split into one file per Class + Subject, see below),
+`Lesson_Note_Generator_Reference.md`, and
+`Exam_Marking_Revision_Generator_Reference.md`. The two reference files are
+linked with a plain `download` attribute from both `setup.html` (inline with
+the step that needs them) and `resources.html` (for re-downloading later).
+Swap a reference file by replacing it in `files/` with the same filename, no
+HTML changes needed unless the filename itself changes (update the `href` and
+the visible file name in both pages if so).
+
+### Scheme of Work: the picker, not the whole document
+
+`files/scheme/` holds 117 small Markdown files, one per Class + Subject
+combination (e.g. `jss1-mathematics.md`, `ss2-chemistry.md`), each containing
+every term the official NERDC scheme actually provides for that subject and
+class (a handful of subjects, mostly in SS3, genuinely only have First and
+Second Term entries in the source document; this is recorded per-file in the
+manifest and shown to the user, not treated as an error). `files/scheme/manifest.json`
+lists every file with its class, subject label, term coverage, and file size,
+and is the single source of truth the picker UI reads from, it is generated
+from the files themselves rather than hand-maintained.
+
+Both `setup.html` (Step 4) and `resources.html` embed the same picker
+component: a `<div data-scheme-picker>` block (see either file for the exact
+markup) that `assets/script.js`'s scheme-picker module turns into class tabs,
+a checkbox list of that class's subjects with an individual Download link and
+a term-coverage note on each row, and a sticky "Download selected" bar for
+grabbing several files in one go. Teachers only download and upload the
+Scheme of Work file(s) for what they actually teach, instead of one 476-page
+document covering the whole school. Uploading several small files works the
+same as uploading one big file, the Master Instructions treat every uploaded
+file that looks like a scheme of work as one collective source.
+
+If the source scheme document is ever revised, regenerate the files under
+`files/scheme/` from it (split by Class + Subject, one file per combination,
+all terms that subject/class actually has), rebuild `manifest.json` to match,
+and the picker UI picks up the change automatically, no HTML edits needed.
+
+### Embedded visuals in generated lesson notes
+
+`Lesson_Note_Generator_Reference.md` now has the generator embed real
+diagrams, graphs, charts, and maps directly into the `.docx` at the point
+they belong, rather than leaving a note for the teacher to source one
+separately. See its "Visual Sourcing Hierarchy" (under General Rules): generate
+directly when a visual is rule-based and verifiable (graphs, charts, geometric
+figures), otherwise fetch and verify an accurate image online, maps are always
+fetched and never hand-drawn, and a bolded bracketed placeholder remains only
+as the last resort when neither is possible. This needs the Project's **web
+search** and **analysis/code execution** capabilities turned on; the reference
+file's opening capability check explains the fallback if either is off.
 
 ## What's in this version
 
@@ -89,9 +131,13 @@ both pages if so).
        script.js
        favicon.svg
      files/
-       COMPLETE_NERDC_SCHEME_OF_WORK.pdf
        Lesson_Note_Generator_Reference.md
        Exam_Marking_Revision_Generator_Reference.md
+       scheme/
+         manifest.json
+         jss1-mathematics.md
+         jss1-english-studies.md
+         ... (117 files total, one per Class + Subject)
    ```
 3. In the repository, go to **Settings → Pages**.
 4. Under "Build and deployment", set **Source** to `Deploy from a branch`.

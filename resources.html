@@ -53,16 +53,27 @@
     <!-- PROJECT FILES -->
     <section class="section">
       <h2>Project files</h2>
-      <p>The files you upload to your Project's knowledge during <a href="setup.html">setup</a>. Come back here any time you need to re-download one.</p>
+      <p>The files you upload to your Project's knowledge during <a href="setup.html">setup</a>. Come back here any time you need to re-download one, or to add a subject you didn't need before.</p>
 
-      <div class="file-card">
-        <span class="file-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></span>
-        <div class="file-meta">
-          <div class="file-name">COMPLETE_NERDC_SCHEME_OF_WORK.pdf</div>
-          <div class="file-sub">Required, upload once. Covers the whole school, every subject and class.</div>
+      <h3>Scheme of Work, by class and subject</h3>
+      <p>Pick your class, tick the subject(s) you teach, and download only those files. No need to download the whole document.</p>
+
+      <div class="scheme-picker" data-scheme-picker data-manifest="files/scheme/manifest.json" data-base="files/scheme/">
+        <div class="class-tabs" data-picker-tabs></div>
+        <div class="subject-toolbar">
+          <div class="toolbar-actions">
+            <button type="button" class="link-action" data-picker-select-all>Select all in this class</button>
+            <button type="button" class="link-action" data-picker-clear>Clear selection</button>
+          </div>
         </div>
-        <a class="btn btn-primary btn-sm" href="files/COMPLETE_NERDC_SCHEME_OF_WORK.pdf" download="COMPLETE_NERDC_SCHEME_OF_WORK.pdf" target="_blank" rel="noopener">Download</a>
+        <div class="subject-list" data-picker-list></div>
+        <div class="picker-bar" data-picker-bar style="display:none;">
+          <span class="picker-count" data-picker-count>No files selected</span>
+          <button type="button" class="btn btn-primary btn-sm" data-picker-download disabled>Download selected</button>
+        </div>
       </div>
+
+      <h3>Reference files</h3>
 
       <div class="file-card">
         <span class="file-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></span>
