@@ -566,7 +566,10 @@
     }
 
     fetch(manifestUrl)
-      .then(function (r) { return r.json(); })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
       .then(function (data) {
         manifest = data;
         activeClass = manifest.classes[0] ? manifest.classes[0].code : null;
@@ -575,7 +578,14 @@
         updateBar();
       })
       .catch(function () {
-        listEl.innerHTML = '<p class="subject-sub">Could not load the scheme list right now. Try refreshing the page.</p>';
+        // The most common cause: this page was opened directly as a local
+        // file (file://) instead of through a web server, so the browser
+        // blocks the manifest fetch. Give a message that actually points
+        // at the fix instead of just "try refreshing", which won't help.
+        var msg = location.protocol === "file:"
+          ? "The scheme list can't load when this page is opened directly as a file. Please visit the live site instead (or run it through a local web server)."
+          : "Could not load the scheme list right now. Try refreshing the page.";
+        listEl.innerHTML = '<p class="subject-sub">' + msg + "</p>";
       });
   });
 })();
