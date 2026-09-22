@@ -22,8 +22,11 @@ Claude Project that generates two kinds of documents:
   sources by class, and community links.
 - `faq.html`.
 
-This is a plain static site, no build step, no framework, no dependencies beyond
-Google Fonts (loaded via CDN in `assets/style.css`). It works as-is on GitHub Pages.
+This is a plain static site, no build step, no framework. It loads Google Fonts
+and, only on `setup.html` and `resources.html` (for the "download selected as
+one zip" button), [JSZip](https://stuk.github.io/jszip/) via CDN, both from
+`<script>` tags in the page, no bundler or package manager involved. It works
+as-is on GitHub Pages.
 
 ## How this version is organised
 
@@ -46,6 +49,24 @@ generic copy-button handler in `assets/script.js` (`data-copy-btn`) copies
 whatever the preview currently shows. If you ever need to update the master
 instructions text itself, edit the content of that `<script type="text/plain">`
 block directly, the substitution logic doesn't need to change.
+
+### The step wizard
+
+`setup.html`, `lesson-note-generator.html`, and `exam-generator.html` each wrap
+their steps in `<div class="stepper" data-stepper">`, with every step as a
+plain `<div class="step-card" data-step>` (a `.step-head` with the number/title,
+then a `.step-body`), no `<details>`/`<summary>` involved. The stepper module
+in `assets/script.js` shows exactly one step at a time, animates the swap
+(slide + fade, direction-aware), builds the numbered progress rail at the top
+from however many `.step-card[data-step]` elements it finds, and auto-injects
+a "← Back" button into every step after the first (styled via `.btn-back`).
+Each step still carries its own `[data-next-step]` button in the HTML, with
+whatever confirmation wording fits that step (e.g. "Uploaded, next step →"),
+since that's more useful than one generic label. To add or remove a step,
+add or remove a `.step-card` block, the rail and Back buttons rebuild
+automatically, no other JS or HTML bookkeeping needed. Without JavaScript,
+every `.step-card` renders in normal document flow (nothing is hidden), so
+the page degrades to a plain, readable, scrollable page rather than breaking.
 
 ### Downloadable knowledge files
 
@@ -76,11 +97,17 @@ component: a `<div data-scheme-picker>` block (see either file for the exact
 markup) that `assets/script.js`'s scheme-picker module turns into class tabs,
 a checkbox list of that class's subjects with an individual Download link and
 a term-coverage note on each row, and a sticky "Download selected" bar for
-grabbing several files in one go. Teachers only download and upload the
-Scheme of Work file(s) for what they actually teach, instead of one 476-page
-document covering the whole school. Uploading several small files works the
-same as uploading one big file, the Master Instructions treat every uploaded
-file that looks like a scheme of work as one collective source.
+grabbing several files in one go. Selecting one file downloads it directly;
+selecting more than one bundles them into a single `.zip` via JSZip (fetched
+client-side, zipped in the browser, one download triggered), since triggering
+several separate downloads back-to-back is unreliable on Safari/iOS. If
+JSZip fails to load (blocked network, CDN outage) the picker automatically
+falls back to staggered individual downloads instead of failing silently.
+Teachers only download and upload the Scheme of Work file(s) for what they
+actually teach, instead of one 476-page document covering the whole school.
+Uploading several small files works the same as uploading one big file, the
+Master Instructions treat every uploaded file that looks like a scheme of
+work as one collective source.
 
 If the source scheme document is ever revised, regenerate the files under
 `files/scheme/` from it (split by Class + Subject, one file per combination,

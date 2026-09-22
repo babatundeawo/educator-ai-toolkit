@@ -57,14 +57,15 @@
     </div>
 
     <div class="stepper" data-stepper>
-      <p class="stepper-progress" data-stepper-progress><span class="dot"></span>Step 1 of 5</p>
+      <div class="stepper-rail" data-stepper-rail></div>
+      <p class="stepper-label" data-stepper-label><span class="dot"></span>Step 1 of 5</p>
 
       <!-- STEP 1 -->
-      <details class="step-card" open>
-        <span class="step-num">1</span>
-        <summary>
+      <div class="step-card" data-step>
+        <div class="step-head">
+          <span class="step-num">1</span>
           <div><h3>Download Claude and sign up</h3><div class="step-teaser">Free, takes about 2 minutes. Skip if you already have an account.</div></div>
-        </summary>
+        </div>
         <div class="step-body">
           <div class="table-wrap">
             <table>
@@ -86,16 +87,16 @@
             <button class="btn btn-primary btn-sm" data-next-step>Done, next step →</button>
           </div>
         </div>
-      </details>
+      </div>
 
       <!-- STEP 2 -->
-      <details class="step-card">
-        <span class="step-num">2</span>
-        <summary>
+      <div class="step-card" data-step>
+        <div class="step-head">
+          <span class="step-num">2</span>
           <div><h3>Create one Project</h3><div class="step-teaser">This single Project does everything, for every subject and class</div></div>
-        </summary>
+        </div>
         <div class="step-body">
-          <p>Unlike before, you only need <strong>one Project</strong> for the whole school. Name it something like <span class="filename-chip">School Document Generator</span>. It will generate lesson notes, exams, marking guides, and revision files, for any subject or class, once it's set up.</p>
+          <p>You only need <strong>one Project</strong> for your whole school. Name it something like <span class="filename-chip">School Document Generator</span>. It generates lesson notes, exams, marking guides, and revision files, for any subject or class, once it's set up.</p>
           <div class="grid grid-2">
             <div class="card">
               <span class="tag">Phone app</span>
@@ -124,14 +125,14 @@
             <button class="btn btn-primary btn-sm" data-next-step>Project created, next step →</button>
           </div>
         </div>
-      </details>
+      </div>
 
       <!-- STEP 3: interactive master editor -->
-      <details class="step-card">
-        <span class="step-num">3</span>
-        <summary>
+      <div class="step-card" data-step>
+        <div class="step-head">
+          <span class="step-num">3</span>
           <div><h3>Fill in your details &amp; copy the Master Instructions</h3><div class="step-teaser">Type your details below, the text updates as you go</div></div>
-        </summary>
+        </div>
         <div class="step-body">
           <p>Fill in the four fields below. The instructions underneath update automatically, so you can check exactly what you're about to paste. Anything still highlighted in gold hasn't been filled in yet.</p>
 
@@ -296,20 +297,20 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
             <button class="btn btn-primary btn-sm" data-next-step>Pasted &amp; saved, next step →</button>
           </div>
         </div>
-      </details>
+      </div>
 
       <!-- STEP 4: uploads -->
-      <details class="step-card">
-        <span class="step-num">4</span>
-        <summary>
+      <div class="step-card" data-step>
+        <div class="step-head">
+          <span class="step-num">4</span>
           <div><h3>Upload the knowledge files</h3><div class="step-teaser">The Scheme of Work, the two reference files, plus anything else you have</div></div>
-        </summary>
+        </div>
         <div class="step-body">
-          <p>In the same Project, open <strong>Project Knowledge</strong> (or "Add content") and upload the Scheme of Work file(s) for the subjects and classes you actually teach, plus the two reference files below. Download them here first, then add them to the Project exactly as downloaded, no need to rename them.</p>
+          <p>Open <strong>Project Knowledge</strong> in your Project (or "Add content") and upload the Scheme of Work file(s) for what you teach, plus the two reference files below.</p>
 
           <div class="callout callout-info">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
-            <div><p>You no longer need to download the whole 476-page scheme. Pick your class below, tick the subject(s) you teach, and download only those. If you teach several subjects or classes, select as many as you need and upload them all, the Project treats them as one combined Scheme of Work.</p></div>
+            <div><p>Pick your class below, tick the subject(s) you teach, and download only those. Teaching several subjects or classes? Select and download as many as you need, upload them all together.</p></div>
           </div>
 
           <div class="scheme-picker" data-scheme-picker data-manifest="files/scheme/manifest.json" data-base="files/scheme/">
@@ -329,7 +330,7 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
 
           <div class="callout callout-warn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
-            <div><p>A handful of subjects, mostly in SS3, genuinely only have First and Second Term entries in the official document, this is marked on each file below. It is not a missing download.</p></div>
+            <div><p>A handful of subjects, mostly in SS3, genuinely only have First and Second Term entries in the official document, this is marked on each file above. It is not a missing download.</p></div>
           </div>
 
           <div class="file-card">
@@ -359,14 +360,14 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
             <button class="btn btn-primary btn-sm" data-next-step>Uploaded, next step →</button>
           </div>
         </div>
-      </details>
+      </div>
 
       <!-- STEP 5 -->
-      <details class="step-card">
-        <span class="step-num">5</span>
-        <summary>
+      <div class="step-card" data-step>
+        <div class="step-head">
+          <span class="step-num">5</span>
           <div><h3>You're ready</h3><div class="step-teaser">One setup, two things you can now ask for</div></div>
-        </summary>
+        </div>
         <div class="step-body">
           <p>That's it, this Project now handles everything. Just ask, in plain words, for whichever one you need:</p>
           <div class="grid grid-2">
@@ -378,7 +379,7 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
             </a>
           </div>
         </div>
-      </details>
+      </div>
     </div>
 
   </div>
@@ -404,6 +405,7 @@ Use reasonable subject-matter judgement to tell the two apart: same unit/topic f
 
 <button class="back-to-top-btn" data-back-to-top type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script src="assets/script.js"></script>
 <script>
 (function () {
