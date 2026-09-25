@@ -232,6 +232,7 @@
         btn.classList.add("copied");
         btn.innerHTML =
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+        if (window.EATToast) window.EATToast("Copied to clipboard");
         setTimeout(function () {
           btn.classList.remove("copied");
           btn.innerHTML = original;
@@ -588,4 +589,93 @@
         listEl.innerHTML = '<p class="subject-sub">' + msg + "</p>";
       });
   });
+})();
+
+// ---- Toast notifications (small, unobtrusive confirmations) ----
+(function () {
+  "use strict";
+  var stack = document.querySelector(".toast-stack");
+  if (!stack) {
+    stack = document.createElement("div");
+    stack.className = "toast-stack";
+    stack.setAttribute("aria-live", "polite");
+    document.body.appendChild(stack);
+  }
+  window.EATToast = function (message) {
+    var el = document.createElement("div");
+    el.className = "toast";
+    el.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg><span></span>';
+    el.querySelector("span").textContent = message;
+    stack.appendChild(el);
+    requestAnimationFrame(function () {
+      el.classList.add("is-visible");
+    });
+    setTimeout(function () {
+      el.classList.remove("is-visible");
+      setTimeout(function () {
+        el.remove();
+      }, 300);
+    }, 2600);
+  };
+})();
+
+// ---- Mobile nav menu (hamburger toggle + off-canvas panel) ----
+(function () {
+  "use strict";
+  var toggle = document.querySelector("[data-menu-toggle]");
+  var nav = document.querySelector(".nav-links");
+  if (!toggle || !nav) return;
+
+  var scrim = document.querySelector(".nav-scrim");
+  if (!scrim) {
+    scrim = document.createElement("div");
+    scrim.className = "nav-scrim";
+    document.body.appendChild(scrim);
+  }
+
+  function closeMenu() {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
+  }
+  function openMenu() {
+    nav.classList.add("is-open");
+    toggle.setAttribute("aria-expanded", "true");
+    document.body.classList.add("menu-open");
+  }
+
+  toggle.addEventListener("click", function () {
+    var isOpen = nav.classList.contains("is-open");
+    if (isOpen) closeMenu();
+    else openMenu();
+  });
+  scrim.addEventListener("click", closeMenu);
+  nav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", closeMenu);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeMenu();
+  });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 760) closeMenu();
+  });
+})();
+
+// ---- Spotlight hover: cursor-tracking glow on cards/panels ----
+(function () {
+  "use strict";
+  if (window.matchMedia && window.matchMedia("(hover: none)").matches) return;
+  var selector = ".choice-card, .card, .file-card, .link-card";
+  document.addEventListener(
+    "pointermove",
+    function (e) {
+      var el = e.target.closest ? e.target.closest(selector) : null;
+      if (!el) return;
+      var rect = el.getBoundingClientRect();
+      el.style.setProperty("--mx", e.clientX - rect.left + "px");
+      el.style.setProperty("--my", e.clientY - rect.top + "px");
+    },
+    { passive: true }
+  );
 })();
