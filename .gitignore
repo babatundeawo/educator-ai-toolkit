@@ -1,0 +1,16 @@
+# Build output and tooling
+_site/
+node_modules/
+.lighthouseci/
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Never commit secrets
+.env
+.env.*
+*.pem
+*.key

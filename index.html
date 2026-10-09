@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Educator AI Toolkit | One Project, two kinds of documents</title>
+<meta name="description" content="Set up one Claude Project using your Scheme of Work, then just ask for a lesson note or an exam. A step-by-step setup guide for Nigerian teachers.">
+<link rel="canonical" href="https://babatundeawo.github.io/educator-ai-toolkit/">
+<meta name="theme-color" content="#fafbf9">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Educator AI Toolkit">
+<meta property="og:title" content="Educator AI Toolkit | One Project, two kinds of documents">
+<meta property="og:description" content="Set up once, then just ask for a lesson note or an exam.">
+<meta property="og:url" content="https://babatundeawo.github.io/educator-ai-toolkit/">
+<meta property="og:image" content="https://babatundeawo.github.io/educator-ai-toolkit/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Educator AI Toolkit: one Claude Project, two kinds of documents">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Educator AI Toolkit | One Project, two kinds of documents">
+<meta name="twitter:description" content="Set up once, then just ask for a lesson note or an exam.">
+<meta name="twitter:image" content="https://babatundeawo.github.io/educator-ai-toolkit/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<script src="assets/theme-init.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="flag-bar" aria-hidden="true"></div>
+<div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+
+<header class="topnav">
+  <div class="topnav-inner">
+    <a class="brand-link" href="index.html" aria-label="Educator AI Toolkit, home">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l8 4-8 4-8-4 8-4z"/><path d="M4 11v5c0 1.5 3.5 3 8 3s8-1.5 8-3v-5"/></svg></span>
+      <span class="brand-name"><span class="brand-name-full">Educator AI Toolkit</span></span>
+    </a>
+    <nav class="nav-links" id="site-nav" aria-label="Site navigation">
+      <a href="index.html">Home</a>
+      <a href="setup.html">Setup</a>
+      <a href="exam-generator.html">Exam &amp; Revision</a>
+      <a href="lesson-note-generator.html">Lesson Notes</a>
+      <a href="resources.html">Resources</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="nav-utility">
+      <button class="icon-btn search-trigger" data-cmdk-open type="button" aria-label="Search the toolkit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span>Search</span><kbd>Ctrl K</kbd></button>
+      <button class="icon-btn" data-theme-toggle type="button" aria-pressed="false" aria-label="Switch to dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.6A9 9 0 1 1 11.4 3a7 7 0 0 0 9.6 9.6z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+      <button class="icon-btn menu-toggle" data-menu-toggle type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="main" id="main-content">
+  <div class="container-wide">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+      <p class="hero-eyebrow"><i aria-hidden="true">&#10003;</i>For teachers using Claude</p>
+      <h1 id="hero-title">One Project. <span class="mark">Two kinds</span> of documents.</h1>
+      <p class="lede">Set it up once, using your Scheme of Work. After that, just ask, in plain words, for a lesson note or an exam.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="setup.html">Start setup <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#how-to-ask">How to ask</a>
+      </div>
+      <p class="hero-meta">One-time setup, about 15 minutes. New to Claude? Creating a free account is Step 1.</p>
+      </div>
+      <div class="ask-demo" aria-hidden="true">
+        <div class="ask-bubble"><span class="ask-who">You</span>Generate Week 3, Physics, SS2</div>
+        <div class="ask-file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg><span>Lesson note booklet<small>.docx, every period covered</small></span></div>
+        <div class="ask-bubble ask-bubble-2"><span class="ask-who">You</span>Generate First Term Examination for Physics SS2</div>
+        <div class="ask-file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg><span>Questions + Marking Guide<small>.docx, ready to print</small></span></div>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="how-title">
+      <div class="band-head">
+        <h2 id="how-title">Set up once, then just ask</h2>
+        <p>One Project does everything, for every subject and class.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="bento-card"><span class="bento-num" aria-hidden="true">1</span><h3>Set up your Project</h3><p>Sign up, create a Project, fill in your school's details, and upload the Scheme of Work.</p></div>
+        <div class="bento-card"><span class="bento-num" aria-hidden="true">2</span><h3>Ask in plain words</h3><p>Say a Week number for a lesson note, or just a Term for an exam. Claude works out which one you mean.</p></div>
+        <div class="bento-card"><span class="bento-num" aria-hidden="true">3</span><h3>Get a ready Word file</h3><p>Lesson notes and exams come back as formatted .docx files, ready to print.</p></div>
+      </div>
+    </section>
+
+    <section class="band" id="how-to-ask" aria-labelledby="ask-title">
+      <div class="band-head">
+        <h2 id="ask-title">Already set up? Here's how to ask for each</h2>
+      </div>
+      <div class="doc-grid">
+        <a class="doc-card" href="lesson-note-generator.html">
+          <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></span>
+          <h3>Weekly Lesson Notes</h3>
+          <p>Say a Week number, and Claude builds a complete lesson note booklet, with dates worked out for you.</p>
+          <span class="doc-say">Just say "Week [n]"</span>
+          <span class="doc-cta">How to ask <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="doc-card" href="exam-generator.html">
+          <span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></span>
+          <h3>Exam, Marking Guide &amp; Revision File</h3>
+          <p>Say a Term (no week number), and Claude builds a 70-mark exam with marking guide, or a self-study revision file.</p>
+          <span class="doc-say">Just say a Term, no week number</span>
+          <span class="doc-cta">How to ask <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+      <div class="note-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+        <p>New to Claude? Don't worry, installing it and creating a free account is Step 1 of setup, you don't need to do anything first.</p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <h2 id="cta-title">Not ready to set up yet?</h2>
+      <p>Browse the links and downloads first, or read the answers to common questions.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="resources.html">Resources &amp; Links</a>
+        <a class="btn btn-ghost" href="faq.html">Read the FAQ</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div class="footer-grid">
+        <div>
+          <p>Built by <a href="https://babatundeawo.github.io/" target="_blank" rel="noopener noreferrer">Babatunde Awoyemi</a> for <strong>Techbase Consultant Services</strong> (<a href="https://github.com/techbaseng" target="_blank" rel="noopener noreferrer">github.com/techbaseng</a>).</p>
+          <p>Powered by Claude (claude.ai), made by Anthropic. &copy; <span data-year>2026</span> Educator AI Toolkit.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="setup.html">Setup</a>
+          <a href="exam-generator.html">Exam &amp; Revision</a>
+          <a href="lesson-note-generator.html">Lesson Notes</a>
+          <a href="resources.html">Resources</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div class="cmdk-overlay" data-cmdk-overlay hidden>
+  <div class="cmdk-box" role="dialog" aria-modal="true" aria-label="Site search">
+    <div class="cmdk-input-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" data-cmdk-input placeholder="Search pages, steps, and rules" autocomplete="off" aria-label="Search the toolkit">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="cmdk-results" data-cmdk-results></div>
+  </div>
+</div>
+
+<button class="back-to-top-btn" data-back-to-top type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="assets/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1300 @@
+{
+  "classes": [
+    {
+      "code": "JSS1",
+      "label": "JSS1 (Junior Secondary One)",
+      "subjects": [
+        {
+          "file": "jss1-beauty-and-cosmetology.md",
+          "label": "Beauty and Cosmetology",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.4
+        },
+        {
+          "file": "jss1-business-studies.md",
+          "label": "Business Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 10.9
+        },
+        {
+          "file": "jss1-christian-religious-studies-crs.md",
+          "label": "Christian Religious Studies (CRS)",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.7
+        },
+        {
+          "file": "jss1-cultural-and-creative-arts.md",
+          "label": "Cultural and Creative Arts",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.2
+        },
+        {
+          "file": "jss1-digital-technologies.md",
+          "label": "Digital Technologies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 8.9
+        },
+        {
+          "file": "jss1-english-studies.md",
+          "label": "English Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 17.7
+        },
+        {
+          "file": "jss1-fashion-design-and-garment-making.md",
+          "label": "Fashion Design and Garment Making",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.7
+        },
+        {
+          "file": "jss1-french.md",
+          "label": "French",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.6
+        },
+        {
+          "file": "jss1-horticulture-and-crop-production.md",
+          "label": "Horticulture and Crop Production",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 9.4
+        },
+        {
+          "file": "jss1-intermediate-science.md",
+          "label": "Intermediate Science",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 10.0
+        },
+        {
+          "file": "jss1-islamic-religious-studies-irs.md",
+          "label": "Islamic Religious Studies (IRS)",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.5
+        },
+        {
+          "file": "jss1-livestock-farming.md",
+          "label": "Livestock Farming",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.5
+        },
+        {
+          "file": "jss1-mathematics.md",
+          "label": "Mathematics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.1
+        },
+        {
+          "file": "jss1-nigerian-history.md",
+          "label": "Nigerian History",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 8.4
+        },
+        {
+          "file": "jss1-physical-and-health-education.md",
+          "label": "Physical and Health Education",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.7
+        }
+      ]
+    },
+    {
+      "code": "JSS2",
+      "label": "JSS2 (Junior Secondary Two)",
+      "subjects": [
+        {
+          "file": "jss2-beauty-and-cosmetology.md",
+          "label": "Beauty and Cosmetology",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.1
+        },
+        {
+          "file": "jss2-business-studies.md",
+          "label": "Business Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 13.1
+        },
+        {
+          "file": "jss2-christian-religious-studies.md",
+          "label": "Christian Religious Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.3
+        },
+        {
+          "file": "jss2-cultural-creative-arts-cca.md",
+          "label": "Cultural & Creative Arts (CCA)",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.2
+        },
+        {
+          "file": "jss2-digital-technologies.md",
+          "label": "Digital Technologies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 6.3
+        },
+        {
+          "file": "jss2-english-studies.md",
+          "label": "English Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 15.4
+        },
+        {
+          "file": "jss2-fashion-design-and-garment-making.md",
+          "label": "Fashion Design and Garment Making",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.4
+        },
+        {
+          "file": "jss2-french.md",
+          "label": "French",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.0
+        },
+        {
+          "file": "jss2-horticulture-and-crop-production.md",
+          "label": "Horticulture and Crop Production",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 7.1
+        },
+        {
+          "file": "jss2-intermediate-science.md",
+          "label": "Intermediate Science",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 6.9
+        },
+        {
+          "file": "jss2-islamic-religious-studies-irs.md",
+          "label": "Islamic Religious Studies (IRS)",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.8
+        },
+        {
+          "file": "jss2-livestock-farming.md",
+          "label": "Livestock Farming",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.6
+        },
+        {
+          "file": "jss2-mathematics.md",
+          "label": "Mathematics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 6.9
+        },
+        {
+          "file": "jss2-nigerian-history.md",
+          "label": "Nigerian History",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.0
+        },
+        {
+          "file": "jss2-physical-health-education.md",
+          "label": "Physical & Health Education",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.1
+        }
+      ]
+    },
+    {
+      "code": "JSS3",
+      "label": "JSS3 (Junior Secondary Three)",
+      "subjects": [
+        {
+          "file": "jss3-beauty-and-cosmetology.md",
+          "label": "Beauty and Cosmetology",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.1
+        },
+        {
+          "file": "jss3-business-studies.md",
+          "label": "Business Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 14.8
+        },
+        {
+          "file": "jss3-christian-religious-studies.md",
+          "label": "Christian Religious Studies",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 3.5
+        },
+        {
+          "file": "jss3-cultural-and-creative-arts-cca.md",
+          "label": "Cultural and Creative Arts (CCA)",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.7
+        },
+        {
+          "file": "jss3-digital-technologies.md",
+          "label": "Digital Technologies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.5
+        },
+        {
+          "file": "jss3-english-studies.md",
+          "label": "English Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 12.7
+        },
+        {
+          "file": "jss3-fashion-design-and-garment-making.md",
+          "label": "Fashion Design and Garment Making",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.3
+        },
+        {
+          "file": "jss3-french.md",
+          "label": "French",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 3.5
+        },
+        {
+          "file": "jss3-horticulture-and-crop-production.md",
+          "label": "Horticulture and Crop Production",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.3
+        },
+        {
+          "file": "jss3-intermediate-science.md",
+          "label": "Intermediate Science",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.9
+        },
+        {
+          "file": "jss3-islamic-religious-studies-irs.md",
+          "label": "Islamic Religious Studies (IRS)",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.8
+        },
+        {
+          "file": "jss3-livestock-farming.md",
+          "label": "Livestock Farming",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.5
+        },
+        {
+          "file": "jss3-mathematics.md",
+          "label": "Mathematics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.7
+        },
+        {
+          "file": "jss3-nigerian-history.md",
+          "label": "Nigerian History",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.0
+        },
+        {
+          "file": "jss3-social-and-citizenship-studies.md",
+          "label": "Social and Citizenship Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.3
+        }
+      ]
+    },
+    {
+      "code": "SS1",
+      "label": "SS1 (Senior Secondary One)",
+      "subjects": [
+        {
+          "file": "ss1-agricultural-science.md",
+          "label": "Agricultural Science",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.6
+        },
+        {
+          "file": "ss1-beauty-and-cosmetology.md",
+          "label": "Beauty and Cosmetology",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.9
+        },
+        {
+          "file": "ss1-biology.md",
+          "label": "Biology",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.6
+        },
+        {
+          "file": "ss1-catering-and-craft-practice.md",
+          "label": "Catering and Craft Practice",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.7
+        },
+        {
+          "file": "ss1-chemistry.md",
+          "label": "Chemistry",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.9
+        },
+        {
+          "file": "ss1-christian-religious-studies.md",
+          "label": "Christian Religious Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.3
+        },
+        {
+          "file": "ss1-citizenship-and-heritage-studies.md",
+          "label": "Citizenship and Heritage Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.5
+        },
+        {
+          "file": "ss1-commerce.md",
+          "label": "Commerce",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.2
+        },
+        {
+          "file": "ss1-digital-technologies.md",
+          "label": "Digital Technologies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.0
+        },
+        {
+          "file": "ss1-economics.md",
+          "label": "Economics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 2.7
+        },
+        {
+          "file": "ss1-english-studies.md",
+          "label": "English Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 17.2
+        },
+        {
+          "file": "ss1-financial-accounting.md",
+          "label": "Financial Accounting",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.7
+        },
+        {
+          "file": "ss1-food-and-nutrition.md",
+          "label": "Food and Nutrition",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.7
+        },
+        {
+          "file": "ss1-further-mathematics.md",
+          "label": "Further Mathematics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.3
+        },
+        {
+          "file": "ss1-geography.md",
+          "label": "Geography",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.5
+        },
+        {
+          "file": "ss1-government.md",
+          "label": "Government",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.9
+        },
+        {
+          "file": "ss1-literature-in-english.md",
+          "label": "Literature in English",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.3
+        },
+        {
+          "file": "ss1-livestock-farming.md",
+          "label": "Livestock Farming",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.9
+        },
+        {
+          "file": "ss1-marketing.md",
+          "label": "Marketing",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.0
+        },
+        {
+          "file": "ss1-mathematics.md",
+          "label": "Mathematics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.4
+        },
+        {
+          "file": "ss1-nigerian-history.md",
+          "label": "Nigerian History",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.4
+        },
+        {
+          "file": "ss1-physics.md",
+          "label": "Physics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.9
+        },
+        {
+          "file": "ss1-technical-drawing.md",
+          "label": "Technical Drawing",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 7.2
+        },
+        {
+          "file": "ss1-visual-arts.md",
+          "label": "Visual Arts",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 8.4
+        }
+      ]
+    },
+    {
+      "code": "SS2",
+      "label": "SS2 (Senior Secondary Two)",
+      "subjects": [
+        {
+          "file": "ss2-agricultural-science.md",
+          "label": "Agricultural Science",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 6.4
+        },
+        {
+          "file": "ss2-beauty-and-cosmetology.md",
+          "label": "Beauty and Cosmetology",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.9
+        },
+        {
+          "file": "ss2-biology.md",
+          "label": "Biology",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.9
+        },
+        {
+          "file": "ss2-catering-and-craft.md",
+          "label": "Catering and Craft",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.4
+        },
+        {
+          "file": "ss2-chemistry.md",
+          "label": "Chemistry",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.4
+        },
+        {
+          "file": "ss2-christian-religious-studies.md",
+          "label": "Christian Religious Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.1
+        },
+        {
+          "file": "ss2-citizenship-and-heritage-studies.md",
+          "label": "Citizenship and Heritage Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.0
+        },
+        {
+          "file": "ss2-commerce.md",
+          "label": "Commerce",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.5
+        },
+        {
+          "file": "ss2-digital-technologies.md",
+          "label": "Digital Technologies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 2.5
+        },
+        {
+          "file": "ss2-economics.md",
+          "label": "Economics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 2.5
+        },
+        {
+          "file": "ss2-english-language.md",
+          "label": "English Language",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 16.1
+        },
+        {
+          "file": "ss2-financial-accounting.md",
+          "label": "Financial Accounting",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.6
+        },
+        {
+          "file": "ss2-food-and-nutrition.md",
+          "label": "Food and Nutrition",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.6
+        },
+        {
+          "file": "ss2-further-mathematics.md",
+          "label": "Further Mathematics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.5
+        },
+        {
+          "file": "ss2-geography.md",
+          "label": "Geography",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.1
+        },
+        {
+          "file": "ss2-government.md",
+          "label": "Government",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 6.8
+        },
+        {
+          "file": "ss2-literature-in-english.md",
+          "label": "Literature in English",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.9
+        },
+        {
+          "file": "ss2-livestock-farming.md",
+          "label": "Livestock Farming",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.5
+        },
+        {
+          "file": "ss2-marketing.md",
+          "label": "Marketing",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.2
+        },
+        {
+          "file": "ss2-mathematics.md",
+          "label": "Mathematics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.2
+        },
+        {
+          "file": "ss2-nigerian-history.md",
+          "label": "Nigerian History",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 5.3
+        },
+        {
+          "file": "ss2-physics.md",
+          "label": "Physics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.8
+        },
+        {
+          "file": "ss2-technical-drawing.md",
+          "label": "Technical Drawing",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.7
+        },
+        {
+          "file": "ss2-visual-arts.md",
+          "label": "Visual Arts",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 11.5
+        }
+      ]
+    },
+    {
+      "code": "SS3",
+      "label": "SS3 (Senior Secondary Three)",
+      "subjects": [
+        {
+          "file": "ss3-agricultural-science.md",
+          "label": "Agricultural Science",
+          "terms": [
+            "First"
+          ],
+          "full_year": false,
+          "size_kb": 2.9
+        },
+        {
+          "file": "ss3-beauty-and-cosmetology.md",
+          "label": "Beauty and Cosmetology",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.0
+        },
+        {
+          "file": "ss3-biology.md",
+          "label": "Biology",
+          "terms": [
+            "First"
+          ],
+          "full_year": false,
+          "size_kb": 3.4
+        },
+        {
+          "file": "ss3-catering-and-craft-practice.md",
+          "label": "Catering and Craft Practice",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 3.7
+        },
+        {
+          "file": "ss3-chemistry.md",
+          "label": "Chemistry",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 4.6
+        },
+        {
+          "file": "ss3-christian-religious-studies.md",
+          "label": "Christian Religious Studies",
+          "terms": [
+            "First"
+          ],
+          "full_year": false,
+          "size_kb": 3.0
+        },
+        {
+          "file": "ss3-citizenship-and-heritage-studies.md",
+          "label": "Citizenship and Heritage Studies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.0
+        },
+        {
+          "file": "ss3-commerce.md",
+          "label": "Commerce",
+          "terms": [
+            "First"
+          ],
+          "full_year": false,
+          "size_kb": 2.7
+        },
+        {
+          "file": "ss3-digital-technologies.md",
+          "label": "Digital Technologies",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 2.3
+        },
+        {
+          "file": "ss3-economics.md",
+          "label": "Economics",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 2.2
+        },
+        {
+          "file": "ss3-english-language-studies.md",
+          "label": "English Language / English Studies",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 6.3
+        },
+        {
+          "file": "ss3-financial-accounting.md",
+          "label": "Financial Accounting",
+          "terms": [
+            "First"
+          ],
+          "full_year": false,
+          "size_kb": 2.9
+        },
+        {
+          "file": "ss3-food-and-nutrition.md",
+          "label": "Food and Nutrition",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 8.1
+        },
+        {
+          "file": "ss3-further-mathematics.md",
+          "label": "Further Mathematics",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 2.9
+        },
+        {
+          "file": "ss3-geography.md",
+          "label": "Geography",
+          "terms": [
+            "First"
+          ],
+          "full_year": false,
+          "size_kb": 2.7
+        },
+        {
+          "file": "ss3-government.md",
+          "label": "Government",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 8.0
+        },
+        {
+          "file": "ss3-literature-in-english.md",
+          "label": "Literature in English",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 6.4
+        },
+        {
+          "file": "ss3-livestock-farming.md",
+          "label": "Livestock Farming",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 3.3
+        },
+        {
+          "file": "ss3-marketing.md",
+          "label": "Marketing",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 4.6
+        },
+        {
+          "file": "ss3-mathematics.md",
+          "label": "Mathematics",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 5.4
+        },
+        {
+          "file": "ss3-nigerian-history.md",
+          "label": "Nigerian History",
+          "terms": [
+            "First",
+            "Second",
+            "Third"
+          ],
+          "full_year": true,
+          "size_kb": 4.7
+        },
+        {
+          "file": "ss3-physics.md",
+          "label": "Physics",
+          "terms": [
+            "First"
+          ],
+          "full_year": false,
+          "size_kb": 3.0
+        },
+        {
+          "file": "ss3-technical-drawing.md",
+          "label": "Technical Drawing",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 4.5
+        },
+        {
+          "file": "ss3-visual-arts.md",
+          "label": "Visual Arts",
+          "terms": [
+            "First",
+            "Second"
+          ],
+          "full_year": false,
+          "size_kb": 13.0
+        }
+      ]
+    }
+  ]
+}

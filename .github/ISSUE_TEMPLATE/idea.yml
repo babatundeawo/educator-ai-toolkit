@@ -1,0 +1,11 @@
+name: Suggest an idea
+description: Suggest an improvement or a new subject, class or page
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: What would you like to see, and how would it help teachers?
+    validations:
+      required: true
