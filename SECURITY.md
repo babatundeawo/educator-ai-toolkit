@@ -8,4 +8,4 @@ Include what you found, the page involved, and steps to reproduce it. You will g
 
 ## What this site is
 
-A static website with no accounts, no database and no stored visitor data. It sets no cookies; the only thing it stores in your browser is your light or dark theme choice.
+A static website with no accounts, no database and no stored visitor data. It sets no cookies. Your browser stores your light or dark theme choice, whether you dismissed the install prompt, and a copy of pages you opened so they work offline. No analytics or third-party requests are used.

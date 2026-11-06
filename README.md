@@ -11,7 +11,7 @@
 
 </div>
 
-![The Educator AI Toolkit home page, showing two example requests and the documents they produce](assets/og-image.png)
+![Educator AI Toolkit social card with the book-and-spark logo and the line One Claude Project, two kinds of documents](assets/og-image.png)
 
 ## About
 
@@ -26,6 +26,7 @@ It is built by Babatunde Awoyemi for Techbase Consultant Services.
 - **Guided setup.** A five-step wizard with a live editor that fills your school's name, address, state and location into the Master Instructions.
 - **Scheme of Work picker.** Choose a class and subject, then download only the files you need (117 files covering JSS1 to SS3).
 - **Search and dark mode.** Press `Ctrl K` (or `/`) to search; light and dark themes follow your device and are remembered.
+- **Works like an app.** Install it from Chrome on Android or Add to Home Screen on iPhone. Pages you have opened keep working offline, and an update bar appears when a new version is published.
 - **Works on a phone.** Layouts, touch targets and downloads are designed for small screens first.
 
 ## How to use it
@@ -38,7 +39,8 @@ It is built by Babatunde Awoyemi for Techbase Consultant Services.
 
 - Static HTML, CSS and vanilla JavaScript, with no framework and no build step
 - [JSZip](https://stuk.github.io/jszip/) (loaded only when several scheme files are downloaded together)
-- Fonts: Bricolage Grotesque, Inter and JetBrains Mono via Google Fonts
+- Progressive Web App: web app manifest and a hand-written service worker
+- Fonts: Bricolage Grotesque, Inter and JetBrains Mono, self-hosted
 - Hosted on GitHub Pages, deployed by GitHub Actions
 
 ## Project structure
@@ -46,10 +48,12 @@ It is built by Babatunde Awoyemi for Techbase Consultant Services.
 ```
 index.html, setup.html, ...   The site's pages
 404.html                      Not-found page
-assets/                       Stylesheet, scripts, icons and social image
+assets/                       Stylesheet, scripts, logo, icons and social image
+sw.js, offline.html           Service worker and offline page
+manifest.webmanifest          App manifest
 files/                        Reference files and the Scheme of Work (files/scheme/)
 docs/                         Guides for maintaining the site
-scripts/                      Automated checks run by GitHub Actions
+scripts/                      Build and check scripts run by GitHub Actions
 .github/                      Workflows, Dependabot and issue templates
 ```
 
@@ -63,4 +67,4 @@ Please report vulnerabilities privately. See [SECURITY.md](SECURITY.md).
 
 ## Credits
 
-Fonts are used under the SIL Open Font License through Google Fonts. Claude is made by Anthropic.
+Fonts are used under the SIL Open Font License: Bricolage Grotesque, Inter and JetBrains Mono, distributed through [Fontsource](https://fontsource.org). The logo and icons are original artwork. Claude is made by Anthropic.

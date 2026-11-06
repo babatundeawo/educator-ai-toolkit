@@ -41,8 +41,10 @@
         b.setAttribute("aria-pressed", dark ? "true" : "false");
         b.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
       });
-      var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute("content", dark ? "#0a120e" : "#fafbf9");
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (meta) {
+        meta.removeAttribute("media");
+        meta.setAttribute("content", dark ? "#0a120e" : "#fafbf9");
+      });
     }
     sync();
     buttons.forEach(function (b) {

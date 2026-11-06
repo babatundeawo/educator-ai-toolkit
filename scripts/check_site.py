@@ -37,7 +37,7 @@ class Scan(HTMLParser):
 for page in PAGES:
     s = Scan(); s.feed(page.read_text(encoding="utf-8"))
     n = page.name
-    if n != "404.html":
+    if n not in ("404.html", "offline.html"):
         if not s.title.strip(): problems.append(f"{n}: missing <title>")
         if len(s.meta.get("description", "")) < 50: problems.append(f"{n}: meta description missing or too short")
         if not s.canon: problems.append(f"{n}: missing canonical link")
@@ -47,6 +47,7 @@ for page in PAGES:
     for ref in s.refs:
         if re.match(r"^(https?:|mailto:|tel:|data:|#|/educator-ai-toolkit/)", ref) or not ref: continue
         target = ref.split("#")[0].split("?")[0]
+        if target.startswith("assets/fonts/"): continue  # downloaded during the build
         if target and not (ROOT / target).exists(): problems.append(f"{n}: broken link or file -> {ref}")
 
 manifest = json.loads((ROOT / "files/scheme/manifest.json").read_text(encoding="utf-8"))
@@ -58,7 +59,40 @@ for c in manifest["classes"]:
 on_disk = {p.name for p in (ROOT / "files/scheme").glob("*.md") if p.name != "README.md"}
 for extra in sorted(on_disk - listed): warnings.append(f"scheme file not in manifest (invisible in the picker): {extra}")
 
+
+# ---- App checks: manifest, icons, service worker, third-party requests ----
+mf = json.loads((ROOT / "manifest.webmanifest").read_text(encoding="utf-8"))
+for key in ("id", "name", "short_name", "start_url", "scope", "display", "theme_color", "background_color", "icons"):
+    if key not in mf: problems.append(f"manifest.webmanifest: missing '{key}'")
+if mf.get("display") != "standalone": problems.append("manifest.webmanifest: display must be 'standalone' for the app to install as an app")
+purposes = {i.get("purpose", "any") for i in mf.get("icons", [])}
+if "maskable" not in purposes: problems.append("manifest.webmanifest: no maskable icon")
+sizes = {i.get("sizes") for i in mf.get("icons", [])}
+for need in ("192x192", "512x512"):
+    if need not in sizes: problems.append(f"manifest.webmanifest: no {need} icon")
+refs = [i["src"] for i in mf.get("icons", [])] + [i["src"] for sc in mf.get("shortcuts", []) for i in sc.get("icons", [])]
+refs += [sc["url"].split("?")[0] for sc in mf.get("shortcuts", [])] + [mf.get("start_url", "").split("?")[0]]
+for r in refs:
+    if r and not (ROOT / r).exists(): problems.append(f"manifest.webmanifest: missing file {r}")  # screenshots are generated at build time
+
+sw = (ROOT / "sw.js").read_text(encoding="utf-8")
+if "__BUILD_VERSION__" not in sw: problems.append("sw.js: missing the __BUILD_VERSION__ marker used to refresh caches")
+import ast
+pre = re.findall(r'"([^"]+\.(?:html|css|js|json|md|svg|png|webmanifest))"', sw)
+for r in pre:
+    if r.startswith("assets/fonts/"): continue
+    if not (ROOT / r).exists(): problems.append(f"sw.js: precache entry does not exist -> {r}")
+
+for page in PAGES:
+    t = page.read_text(encoding="utf-8")
+    if "fonts.googleapis.com" in t or "fonts.gstatic.com" in t: problems.append(f"{page.name}: still loads Google Fonts")
+    if "font-src 'self'" not in t: problems.append(f"{page.name}: Content Security Policy is missing font-src 'self'")
+    if page.name != "offline.html" and "pwa.js" not in t: problems.append(f"{page.name}: pwa.js is not loaded")
+    if 'rel="manifest"' not in t: problems.append(f"{page.name}: manifest link missing")
+if not (ROOT / "offline.html").exists(): problems.append("offline.html is missing")
+if "http-equiv" in (ROOT / "offline.html").read_text(encoding="utf-8") and "googleapis" in (ROOT / "offline.html").read_text(encoding="utf-8"): problems.append("offline.html: third-party request")
+
 for w in warnings: print("WARNING:", w)
 for p in problems: print("ERROR:", p)
-print(f"Checked {len(PAGES)} pages and {len(listed)} scheme files: {len(problems)} errors, {len(warnings)} warnings.")
+print(f"Checked {len(PAGES)} pages, the manifest and the service worker and {len(listed)} scheme files: {len(problems)} errors, {len(warnings)} warnings.")
 sys.exit(1 if problems else 0)

@@ -14,3 +14,7 @@ Thumbs.db
 .env.*
 *.pem
 *.key
+
+# Downloaded during the build, never committed
+assets/fonts/
+assets/screenshots/

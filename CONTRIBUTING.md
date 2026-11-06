@@ -22,4 +22,4 @@ Thank you for helping improve Educator AI Toolkit. You do not need to install an
 
 ## For developers
 
-The site is static. To preview locally, serve the folder with any static file server (for example `python3 -m http.server`) and open `index.html` through it. `python3 scripts/check_site.py` runs the same checks as CI.
+The site is static. To preview locally, serve the folder with any static file server (for example `python3 -m http.server`) and open `index.html` through it. `python3 scripts/check_site.py` runs the same checks as CI, and `python3 scripts/build.py assemble` builds `_site/` the way CI does (fonts are downloaded by `scripts/fetch_fonts.sh`, which needs Node).

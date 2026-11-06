@@ -1,15 +1,29 @@
 {
+  "id": "./",
   "name": "Educator AI Toolkit",
   "short_name": "Educator AI",
   "description": "Set up one Claude Project, then just ask for a lesson note or an exam.",
-  "start_url": "./index.html",
+  "lang": "en-NG",
+  "dir": "ltr",
+  "start_url": "./index.html?source=pwa",
   "scope": "./",
-  "display": "browser",
+  "display": "standalone",
+  "orientation": "any",
   "background_color": "#fafbf9",
   "theme_color": "#0a7f50",
+  "categories": ["education", "productivity"],
   "icons": [
-    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Set up your Project", "short_name": "Setup", "url": "setup.html?source=shortcut", "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Lesson notes", "short_name": "Lesson notes", "url": "lesson-note-generator.html?source=shortcut", "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Exam and revision", "short_name": "Exams", "url": "exam-generator.html?source=shortcut", "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ],
+  "screenshots": [
+    { "src": "assets/screenshots/wide.png", "sizes": "1280x800", "type": "image/png", "form_factor": "wide", "label": "Home page on a computer" },
+    { "src": "assets/screenshots/narrow.png", "sizes": "540x960", "type": "image/png", "form_factor": "narrow", "label": "Home page on a phone" }
   ]
 }
